@@ -1,0 +1,7 @@
+.nav li:hover .dropdown-menu{
+    display: block;
+}
+
+.navbar-custom .nav li a{
+    font-size: 12px;
+}

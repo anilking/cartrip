@@ -10,16 +10,31 @@
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
         <li>
-          <a href="#" class="animated finite lightSpeedIn">Home</a>
+          <a routerLink='' class="animated finite lightSpeedIn">Welcome to Qooley!</a>
         </li>
         <li>
-          <a href="#" class="animated finite lightSpeedIn">About As</a>
+          <a routerLink='about' class="animated finite lightSpeedIn">About As</a>
         </li>
         <li>
-          <a href="#" class="animated finite lightSpeedIn">Safety</a>
+          <a routerLink='safety-satisfaction' class="animated finite lightSpeedIn">Safety</a>
         </li>
+				<li class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown"> POLICIES <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li> <a routerLink='terms-conditions'> Terms & Conditions </a></li>
+						<li> <a routerLink='payment-policy'> Payment Policy </a></li>
+						<li> <a routerLink='incident-policy'> Incident Policy </a></li>
+						<li> <a routerLink='privacy-policy'> Privacy Policy </a></li>                      
+					</ul>
+				</li>
         <li>
-          <a href="#" class="animated finite lightSpeedIn">Contact Us</a>
+          <a routerLink='how-it-works' class="animated finite lightSpeedIn">How It Works</a>
+        </li>
+				<li>
+          <a routerLink='contact' class="animated finite lightSpeedIn">Contact Us</a>
+        </li>
+				<li>
+          <a routerLink='sign-up' class="animated finite lightSpeedIn">Sign Up</a>
         </li>
       </ul>
     </div>
@@ -37,98 +52,14 @@
           <p class="intro-text animated finite fadeInRightBig">
             Add Your Web site Tag line...
           </p>
-          <!--<a href="#about" class="btn btn-circle page-scroll">
-				<i class="fa fa-angle-double-down animated"></i>
-				</a>-->
         </div>
       </div>
     </div>
   </div>
 </header>
-<!-- About Section -->
-<!--<section id="about">
-<div class="container content-section text-center">
-	<div class="row">
-		<h2>LIL' ABOUT ME</h2>
-		<div class="col-lg-8 col-lg-offset-2">
-			<p>
-				Praesent ac dignissim diam. Aliquam lobortis elit et sapien eleifend, at sollicitudin metus elementum. Morbi imperdiet id ipsum at tristique. Nam suscipit tristique sem, <a href="#">quis</a> laoreet leo. Maecenas eget ante ipsum.
-			</p>
-			<p>
-				<a href="#" class="btnghost"><i class="fa fa-download"></i> Curriculum Vitae</a>
-			</p>
-		</div>
-	</div>
-</div>
-</section>-->
-<!--<section id="portfolio">
-<div class="gallery">
-	<ul>
-		<li class="col-md-3">
-		<a href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=8" alt="">
-		</a>
-		</li>
-		<li class="col-md-3">
-		<a href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=2" alt="">
-		</a>
-		</li>
-		<li class="col-md-3">
-		<a href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=3" alt="">
-		</a>
-		</li>
-		<li class="col-md-3">
-		<a class="image" href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=4" alt="">
-		</a>
-		</li>
-		<li class="col-md-3">
-		<a href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=5" alt="">
-		</a>
-		</li>
-		<li class="col-md-3">
-		<a href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=6" alt="">
-		</a>
-		</li>
-		<li class="col-md-3">
-		<a href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=7" alt="">
-		</a>
-		</li>
-		<li class="col-md-3">
-		<a href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=8" alt="">
-		</a>
-		</li>
-				<li class="col-md-3">
-		<a href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=10" alt="">
-		</a>
-		</li>
-		<li class="col-md-3">
-		<a href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=11" alt="">
-		</a>
-		</li>
-		<li class="col-md-3">
-		<a href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=12" alt="">
-		</a>
-		</li>
-		<li class="col-md-3">
-		<a href="portfolio-item.html">
-		<img src="http://unsplash.it/680/380?random=13" alt="">
-		</a>
-		</li>
-	</ul>
-</div>
-</section>-->
+
 <!-- Contact Section -->
-<section id="contact">
+<!--<section id="contact">
   <div class="container content-section text-center">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
@@ -138,7 +69,7 @@
           saw fluffy little rabbit ears! ... No!
         </p>
         <p>
-          <i><a href="#" style="border-bottom:1px dashed #ccc;">addyour_e-mail@gmail.com</a></i>
+          <i><a routerLink='' style="border-bottom:1px dashed #ccc;">addyour_e-mail@gmail.com</a></i>
         </p>
         <ul class="list-inline banner-social-buttons">
           <li>
@@ -154,7 +85,13 @@
       </div>
     </div>
   </div>
-</section>
+</section>-->
+
+<!-- Child Routing -->
+<router-outlet>
+
+</router-outlet>
+
 <!-- Footer -->
 <footer>
   <div class="container text-center">
