@@ -4,7 +4,7 @@ body {
 	height:100%;
 	font-family:Open Sans,"Helvetica Neue",Helvetica,Arial,sans-serif;
 	color:#fff;
-	background-color:#000;
+	background-color:#E0B104;
 	 font-weight:300;
 }
 html {
@@ -272,6 +272,7 @@ footer {
 	z-index:1;
 	position:relative;
 	clear:both;
+	background-color: #303030;
 }
 footer p {
 	margin:0;
