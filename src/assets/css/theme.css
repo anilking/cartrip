@@ -445,3 +445,7 @@ section {
 	outline:0;
 	outline: none;
 }
+
+.li-data-margin{
+    margin-left: 5%;
+}
