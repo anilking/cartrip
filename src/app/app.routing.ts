@@ -23,28 +23,28 @@ const appRoutes: Routes = [
 		path: 'about', component: AboutUsComponent
 	},
 	{
-		path: 'safety-satisfaction',component:SafetyComponent
+		path: 'safety-satisfaction', component: SafetyComponent
 	},
 	{
-		path: 'terms-conditions',component:TermsConditionsComponent
+		path: 'terms-conditions', component: TermsConditionsComponent
 	},
 	{
 		path: 'payment-policy', component: PaymentPolicyComponent
 	},
 	{
-		path: 'privacy-policy',component:PaymentPolicyComponent
+		path: 'privacy-policy', component: PrivacyPolicyComponent
 	},
 	{
-		path: 'incident-policy',component:IncidentPolicyComponent
+		path: 'incident-policy', component: IncidentPolicyComponent
 	},
 	{
 		path: 'how-it-works', component: ItWorksComponent
 	},
 	{
-		path: 'contact',component:ContactUsComponent
+		path: 'contact', component: ContactUsComponent
 	},
 	{
-		path: 'sign-up',component:SignUpComponent
+		path: 'sign-up', component: SignUpComponent
 	},
 	{
 		path: '', redirectTo: '', pathMatch: 'full'
