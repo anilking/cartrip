@@ -25,19 +25,33 @@
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
   <div id="loader-wrapper">
-      <div id="loader"></div>
-      <div class="loader-bg"></div>
-      <div class="loader-logo-section">
-        <img class="loader-logo-img" src="https://qooley.files.wordpress.com/2017/04/q.png?w=300%20300w,%20https://qooley.files.wordpress.com/2017/04/q.png?w=600%20600w,%20https://qooley.files.wordpress.com/2017/04/q.png?w=150%20150w" />
-      </div>
-      <div class="loader-msg-section">
-        Please Wait...
-      </div>
-      <div class="loader-section section-left"></div>
-      <div class="loader-section section-right"></div>
+    <div id="loader"></div>
+    <div class="loader-bg"></div>
+    <div class="loader-logo-section">
+      <img class="loader-logo-img" src="https://qooley.files.wordpress.com/2017/04/q.png?w=300%20300w,%20https://qooley.files.wordpress.com/2017/04/q.png?w=600%20600w,%20https://qooley.files.wordpress.com/2017/04/q.png?w=150%20150w"
+      />
     </div>
+    <div class="loader-msg-section">
+      Please Wait...
+    </div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+  <script src="assets/js/jquery.backstretch.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#firstGrid').backstretch(["assets/img/portfolio/1.jpg", "assets/img/portfolio/2.jpg"], {
+        duration: 2000, fade: 100
+      }); $('#secondGrid').backstretch(["assets/img/portfolio/3.jpg", "assets/img/portfolio/4.jpg"],
+        { duration: 1000, fade: 100 }); $('#thirdGrid').backstretch(["assets/img/portfolio/5.jpg", "assets/img/portfolio/6.jpg"],
+          { duration: 4000, fade: 100 }); $('#fourthGrid').backstretch(["assets/img/portfolio/7.jpg", "assets/img/portfolio/8.jpg"],
+            { duration: 3000, fade: 100 }); $('#fifthGrid').backstretch(["assets/img/portfolio/9.jpg", "assets/img/portfolio/10.jpg"],
+              { duration: 1000, fade: 100 }); $('#sixthGrid').backstretch(["assets/img/portfolio/11.jpg", "assets/img/portfolio/12.jpg"],
+                { duration: 5000, fade: 100 });
+    });
+  </script>
   <app-root>
-    
+
   </app-root>
   <!-- jQuery -->
   <script src="assets/js/jquery.js"></script>
@@ -47,6 +61,7 @@
   <script src="assets/js/jquery.easing.min.js"></script>
   <!-- Custom Theme JavaScript -->
   <script src="assets/js/theme.js"></script>
+  <script src="assets/js/jquery.backstretch.min.js"></script>
 </body>
 
 </html>

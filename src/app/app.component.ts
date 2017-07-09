@@ -10,7 +10,7 @@ export class AppComponent {
   @ViewChild('mainScreen') elementView: ElementRef;
 
   scrollToDown(){
-    window.scrollTo(0,this.elementView.nativeElement.offsetHeight);
+    window.scrollTo( 0, this.elementView.nativeElement.offsetHeight);
   }
 
 }

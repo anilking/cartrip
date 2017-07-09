@@ -18,23 +18,23 @@
         <li>
           <a routerLink='safety-satisfaction' (click)="scrollToDown()" class="animated finite lightSpeedIn">Safety</a>
         </li>
-				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown"> POLICIES <span class="caret"></span></a>
-					<ul class="dropdown-menu">
-						<li> <a routerLink='terms-conditions' (click)="scrollToDown()"> Terms & Conditions </a></li>
-						<li> <a routerLink='payment-policy' (click)="scrollToDown()"> Payment Policy </a></li>
-						<li> <a routerLink='incident-policy' (click)="scrollToDown()"> Incident Policy </a></li>
-						<li> <a routerLink='privacy-policy' (click)="scrollToDown()"> Privacy Policy </a></li>                      
-					</ul>
-				</li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown"> POLICIES <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li> <a routerLink='terms-conditions' (click)="scrollToDown()"> Terms & Conditions </a></li>
+            <li> <a routerLink='payment-policy' (click)="scrollToDown()"> Payment Policy </a></li>
+            <li> <a routerLink='incident-policy' (click)="scrollToDown()"> Incident Policy </a></li>
+            <li> <a routerLink='privacy-policy' (click)="scrollToDown()"> Privacy Policy </a></li>
+          </ul>
+        </li>
         <li>
           <a routerLink='how-it-works' (click)="scrollToDown()" class="animated finite lightSpeedIn">How It Works</a>
         </li>
-				<li>
+        <li>
           <a routerLink='contact' (click)="scrollToDown()" class="animated finite lightSpeedIn">Contact Us</a>
         </li>
-				<li>
-          <a routerLink='sign-up'(click)="scrollToDown()" class="animated finite lightSpeedIn">Sign Up</a>
+        <li>
+          <a routerLink='sign-up' (click)="scrollToDown()" class="animated finite lightSpeedIn">Sign Up</a>
         </li>
       </ul>
     </div>
@@ -43,16 +43,73 @@
   <!-- /.container -->
 </nav>
 <!-- Intro Header -->
-<header class="intro animated finite zoomIn"  #mainScreen>
-  <div class="intro-body">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-          <h1 class="brand-heading animated finite rollIn">Qooley</h1>
-          <p class="intro-text animated finite fadeInRightBig">
-            
-          </p>
-        </div>
+<header class="col-lg-12 intro animated finite zoomIn" #mainScreen>
+  <div class="main_div">
+    <div class="grid">
+      <div class="row reduce_width">
+        <figure class="col-lg-4 col_grid">
+          <div id="firstGrid">
+            <img class="firstImg" />
+          </div>
+          <!--<figcaption>
+          <h2>Nature</h2>
+          <p>Lily likes to play with crayons and pencils<br>
+            <a href="assets/img/portfolio/1.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>-->
+        </figure>
+        <figure class="col-lg-4 col_grid">
+          <div id="secondGrid">
+            <img class="firstImg" />
+          </div>
+          <!--<figcaption>
+          <h2>Events</h2>
+          <p>Lily likes to play with crayons and pencils<br>
+            <a href="assets/img/portfolio/2.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>-->
+        </figure>
+        <figure class="col-lg-4 col_grid">
+          <div id="thirdGrid">
+            <img class="firstImg" />
+          </div>
+          <!--<figcaption>
+          <h2>music</h2>
+          <p>Lily likes to play with crayons and pencils<br>
+            <a href="assets/img/portfolio/3.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>-->
+        </figure>
+      </div>
+      <div class="row reduce_width">
+        <figure class="col-lg-4 col_grid">
+          <div id="fourthGrid">
+            <img class="firstImg" />
+          </div>
+          <!--<figcaption>
+          <h2>Vintage</h2>
+          <p>Lily likes to play with crayons and pencils<br>
+            <a href="assets/img/portfolio/4.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>-->
+        </figure>
+        <figure class="col-lg-4 col_grid">
+          <div id="fifthGrid">
+            <img class="firstImg" />
+          </div>
+          <!--<figcaption>
+          <h2>Typers</h2>
+          <p>Lily likes to play with crayons and pencils<br>
+            <a href="assets/img/portfolio/5.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>-->
+        </figure>
+
+        <figure class="col-lg-4 col_grid">
+          <div id="sixthGrid">
+            <img class="firstImg" />
+          </div>
+          <!--<figcaption>
+          <h2>hotel</h2>
+          <p>Lily likes to play with crayons and pencils<br>
+            <a href="assets/img/portfolio/6.jpg" title="1" data-gallery>View more</a></p>
+        </figcaption>-->
+        </figure>
       </div>
     </div>
   </div>
@@ -96,13 +153,13 @@
 <footer>
   <div class="container text-center">
     <div class="row">
-    <div class="col-sm-7 social-links">
+      <div class="col-sm-7 social-links">
         <h3 class="text-short text-shorth3 pull-left title">
           <a><span>Follow us</span></a>
         </h3>
         <ul class="pull-left list-inline">
           <li class="gplus"><a title="Add Upwork to Google+ circles" target="_blank" href="https://plus.google.com"> <i class="fa fa-google-plus-square social-icons"></i> </a></li>
-          <li class="facebook"><a title="Visit Upwork on Facebook" target="_blank" href="https://www.facebook.com"> <i class="fa fa-facebook-square social-icons"></i> </a> </li>
+          <li class="facebook"><a title="Visit Upwork on Facebook" target="_blank" href="https://www.facebook.com"> <i class="fa fa-facebook-square social-icons"></i> </a>            </li>
           <li class="linkedin"><a title="Read Upwork company news on LinkedIn" target="_blank" href="https://www.linkedin.com"> <i class="fa fa-linkedin-square social-icons"></i> </a></li>
           <li class="twitter"><a title="Follow @Upwork on Twitter" target="_blank" href="https://twitter.com"> <i class="fa fa-twitter-square social-icons"></i> </a></li>
           <li class="youtube"><a title="Watch Upwork videos on YouTube" target="_blank" href="https://www.youtube.com"> <i class="fa fa-youtube-square social-icons"></i> </a></li>
@@ -110,16 +167,16 @@
         </ul>
       </div>
       <div class="col-sm-5 apps-links text-right">
-          <div class="item ng-scope">
-            <h3 class="text-short text-shorth3"><span>Download</span> mobile app</h3>
-            <ul class="pull-right list-inline">
-              <li class="apple"><a title="Download  app from Itunes" target="_blank" href="https://itunes.apple.com"> <i class="fa fa-apple social-icons"></i> </a></li>
-              <li class="android"><a title="Download  app from Google Play" target="_blank" href="https://play.google.com"> <i class="fa fa-android social-icons"></i> </a></li>
-            </ul>
-          </div>
+        <div class="item ng-scope">
+          <h3 class="text-short text-shorth3"><span>Download</span> mobile app</h3>
+          <ul class="pull-right list-inline">
+            <li class="apple"><a title="Download  app from Itunes" target="_blank" href="https://itunes.apple.com"> <i class="fa fa-apple social-icons"></i> </a></li>
+            <li class="android"><a title="Download  app from Google Play" target="_blank" href="https://play.google.com"> <i class="fa fa-android social-icons"></i> </a></li>
+          </ul>
         </div>
-  </div>
-  <hr class="hidden-xs">
+      </div>
+    </div>
+    <hr class="hidden-xs">
     <p class="credits">
       Copyright &copy; Your Website 2017.</p>
   </div>
