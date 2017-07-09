@@ -78,9 +78,16 @@ a:hover,a:focus {
 	color:#1ba39c;
 	background-color:transparent;
 }
+.navbar-custom .nav li:hover{
+	-ms-transform: scale(1, 1.5);
+    -webkit-transform: scale(1, 1.5);
+    transform: scale(1, 1.5);
+}
+
 .navbar-custom .nav li a:focus,.navbar-custom .nav li a:active {
 	outline:0;
 	background-color:transparent;
+	color:#1ba39c;
 }
 .navbar-custom .nav li.active {
 	outline:0;
