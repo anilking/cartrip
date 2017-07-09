@@ -15,6 +15,7 @@
   <link href="assets/css/theme.css" rel="stylesheet">
   <!-- Custom Fonts -->
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <script src="assets/js/jquery.min.js"></script>
@@ -22,7 +23,22 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <app-root>Loading...</app-root>
+
+  <div id="loader-wrapper">
+      <div id="loader"></div>
+      <div class="loader-bg"></div>
+      <div class="loader-logo-section">
+        <img class="loader-logo-img" src="https://qooley.files.wordpress.com/2017/04/q.png?w=300%20300w,%20https://qooley.files.wordpress.com/2017/04/q.png?w=600%20600w,%20https://qooley.files.wordpress.com/2017/04/q.png?w=150%20150w" />
+      </div>
+      <div class="loader-msg-section">
+        Please Wait...
+      </div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+  <app-root>
+    
+  </app-root>
   <!-- jQuery -->
   <script src="assets/js/jquery.js"></script>
   <!-- Bootstrap Core JavaScript -->

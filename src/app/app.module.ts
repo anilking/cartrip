@@ -39,4 +39,14 @@ import { AboutUsComponent } from './../pages/about-us/about-us';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  /* hiding page loading wrapper */ 
+  public loaderEl = document.getElementById("loader-wrapper");
+  
+  constructor(){
+    if(this.loaderEl){
+        this.loaderEl.style.setProperty("display", "none");
+    }
+  }
+  
+}
