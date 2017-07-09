@@ -10,31 +10,31 @@
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
         <li>
-          <a routerLink='' class="animated finite lightSpeedIn">Welcome to Qooley!</a>
+          <a routerLink='' (click)="scrollToDown()" class="animated finite lightSpeedIn">Welcome to Qooley!</a>
         </li>
         <li>
-          <a routerLink='about' class="animated finite lightSpeedIn">About As</a>
+          <a routerLink='about' (click)="scrollToDown()" class="animated finite lightSpeedIn">About As</a>
         </li>
         <li>
-          <a routerLink='safety-satisfaction' class="animated finite lightSpeedIn">Safety</a>
+          <a routerLink='safety-satisfaction' (click)="scrollToDown()" class="animated finite lightSpeedIn">Safety</a>
         </li>
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown"> POLICIES <span class="caret"></span></a>
 					<ul class="dropdown-menu">
-						<li> <a routerLink='terms-conditions'> Terms & Conditions </a></li>
-						<li> <a routerLink='payment-policy'> Payment Policy </a></li>
-						<li> <a routerLink='incident-policy'> Incident Policy </a></li>
-						<li> <a routerLink='privacy-policy'> Privacy Policy </a></li>                      
+						<li> <a routerLink='terms-conditions' (click)="scrollToDown()"> Terms & Conditions </a></li>
+						<li> <a routerLink='payment-policy' (click)="scrollToDown()"> Payment Policy </a></li>
+						<li> <a routerLink='incident-policy' (click)="scrollToDown()"> Incident Policy </a></li>
+						<li> <a routerLink='privacy-policy' (click)="scrollToDown()"> Privacy Policy </a></li>                      
 					</ul>
 				</li>
         <li>
-          <a routerLink='how-it-works' class="animated finite lightSpeedIn">How It Works</a>
+          <a routerLink='how-it-works' (click)="scrollToDown()" class="animated finite lightSpeedIn">How It Works</a>
         </li>
 				<li>
-          <a routerLink='contact' class="animated finite lightSpeedIn">Contact Us</a>
+          <a routerLink='contact' (click)="scrollToDown()" class="animated finite lightSpeedIn">Contact Us</a>
         </li>
 				<li>
-          <a routerLink='sign-up' class="animated finite lightSpeedIn">Sign Up</a>
+          <a routerLink='sign-up'(click)="scrollToDown()" class="animated finite lightSpeedIn">Sign Up</a>
         </li>
       </ul>
     </div>
@@ -43,7 +43,7 @@
   <!-- /.container -->
 </nav>
 <!-- Intro Header -->
-<header class="intro animated finite zoomIn">
+<header class="intro animated finite zoomIn"  #mainScreen>
   <div class="intro-body">
     <div class="container">
       <div class="row">
