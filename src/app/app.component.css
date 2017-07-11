@@ -48,3 +48,10 @@
 .reduce_width{
     margin-right: 0 !important;
 }
+.margin-hrcls{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.set-fontsize-menu{
+    font-size: 10px !important;
+}
