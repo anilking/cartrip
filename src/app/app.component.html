@@ -22,7 +22,7 @@
           <a class="dropdown-toggle" data-toggle="dropdown"> POLICIES <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li> <a routerLink='terms-conditions' class="set-fontsize-menu" (click)="scrollToDown()"> Terms & Conditions </a></li>
-            <li> <a routerLink='payment-policy' class="set-fontsize-menu"(click)="scrollToDown()"> Payment Policy </a></li>
+            <li> <a routerLink='payment-policy' class="set-fontsize-menu" (click)="scrollToDown()"> Payment Policy </a></li>
             <li> <a routerLink='incident-policy' class="set-fontsize-menu" (click)="scrollToDown()"> Incident Policy </a></li>
             <li> <a routerLink='privacy-policy' class="set-fontsize-menu" (click)="scrollToDown()"> Privacy Policy </a></li>
           </ul>
@@ -44,38 +44,44 @@
 </nav>
 <!-- Intro Header -->
 <header class="col-lg-12 intro animated finite zoomIn" #mainScreen>
+
+  <video width="100%" autoplay loop preload="metadata">
+    <source src="https://www.tesla.com/ns_videos/homepage-video-spring-2017.mp4?20170613" type="video/mp4">
+    <source src="https://www.tesla.com/ns_videos/homepage-video-spring-2017.mp4?20170613" type="video/ogg"> Your browser does not support HTML5 video.
+  </video>
+
   <div class="main_div">
     <div class="grid">
       <div class="row reduce_width">
-        <figure class="col-lg-4 col_grid">
+        <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('firstGrid');" (mouseleave)="resumeImage('firstGrid');">
           <div id="firstGrid">
             <img class="img_height" />
           </div>
           <figcaption>
-          <h2>Adventure</h2>
-          <p>Lily likes to play with crayons and pencils<br>
-            <a href="assets/img/portfolio/1.jpg" title="1" data-gallery>View more</a></p>
-        </figcaption>
+            <h2>Adventure</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+              <a href="assets/img/portfolio/1.jpg" title="1" data-gallery>View more</a></p>
+          </figcaption>
         </figure>
-        <figure class="col-lg-4 col_grid">
+        <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('secondGrid');" (mouseleave)="resumeImage('secondGrid');">
           <div id="secondGrid">
             <img class="img_height" />
           </div>
-        <figcaption>
-          <h2>Entertainment</h2>
-          <p>Lily likes to play with crayons and pencils<br>
-            <a href="assets/img/portfolio/2.jpg" title="1" data-gallery>View more</a></p>
-        </figcaption>
+          <figcaption>
+            <h2>Entertainment</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+              <a href="assets/img/portfolio/2.jpg" title="1" data-gallery>View more</a></p>
+          </figcaption>
         </figure>
-        <figure class="col-lg-4 col_grid">
+        <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('thirdGrid');" (mouseleave)="resumeImage('thirdGrid');">
           <div id="thirdGrid">
             <img class="img_height" />
           </div>
           <figcaption>
-          <h2>Foodie</h2>
-          <p>Lily likes to play with crayons and pencils<br>
-            <a href="assets/img/portfolio/3.jpg" title="1" data-gallery>View more</a></p>
-        </figcaption>
+            <h2>Foodie</h2>
+            <p>Lily likes to play with crayons and pencils<br>
+              <a href="assets/img/portfolio/3.jpg" title="1" data-gallery>View more</a></p>
+          </figcaption>
         </figure>
       </div>
       <!--<div class="row reduce_width">

@@ -39,7 +39,7 @@
     height: 562px !important;
 }
 .main_div{
-    padding-top: 7%;
+    margin-top: -5px;
 }
 .col_grid{
     padding-left: 0 !important;

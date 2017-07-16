@@ -78,6 +78,13 @@ export class AppComponent {
       { duration: 5000, fade: 100 });
   };
 
+  pauseImage(id) {
+    $('#' + id).backstretch("pause");
+  }
+  resumeImage(id) {
+    $('#' + id).backstretch("resume");
+  }
+
   scrollToDown() {
     window.scrollTo(0, this.elementView.nativeElement.offsetHeight);
   }
