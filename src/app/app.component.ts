@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { AppService } from './../providers/services/app.service';
 
 declare var $;
 @Component({
@@ -7,8 +8,13 @@ declare var $;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'app works!';
   @ViewChild('mainScreen') elementView: ElementRef;
+
+  constructor(private appService : AppService ) {
+
+  }
 
   ngOnInit() {
     $('#firstGrid').backstretch([
@@ -76,6 +82,8 @@ export class AppComponent {
       "assets/img/SightseeingTheme/5.jpg",
       "assets/img/SightseeingTheme/6.jpg"],
       { duration: 5000, fade: 100 });
+
+      this.appService.hide();
   };
 
   pauseImage(id) {
@@ -86,6 +94,7 @@ export class AppComponent {
   }
 
   scrollToDown() {
+    //this.appService.show();
     window.scrollTo(0, this.elementView.nativeElement.offsetHeight);
   }
 

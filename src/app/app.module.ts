@@ -16,6 +16,9 @@ import { IncidentPolicyComponent } from './../pages/incident-policy/incident-pol
 import { ContactUsComponent } from './../pages/contact-us/contact-us';
 import { AboutUsComponent } from './../pages/about-us/about-us';
 
+//serivces
+import { AppService } from './../providers/services/app.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +39,7 @@ import { AboutUsComponent } from './../pages/about-us/about-us';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
