@@ -36,7 +36,10 @@
 }
 
 .img_height{
-    height: 562px !important;
+    height: 281px !important;
+}
+#mainGrid{
+    height: 600px;
 }
 .main_div{
     margin-top: -5px;
@@ -62,7 +65,7 @@ figure.col_grid:hover figcaption {
     cursor: pointer;
 }
 figure.col_grid figcaption {
-    padding: 50% 15% 15% 15% !important;
+    padding: 15% !important;
 }
 
 .reduce_width figure figcaption, .reduce_width figure figcaption > a {
@@ -108,4 +111,12 @@ figure.col_grid figcaption::before, figure.col_grid p {
     transition: opacity 0.35s, transform 0.35s;
     -webkit-transform: scale(0);
     transform: scale(0);
+}
+.head-logo{
+    display: inline-block;
+    width: 45px;
+    padding: 0px 0px 18px 0px;
+}
+.head-logo-img{
+    margin-bottom: 15px;
 }

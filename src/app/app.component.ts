@@ -17,22 +17,28 @@ export class AppComponent {
   }
 
   ngOnInit() {
+
+    $('#mainGrid').backstretch([
+      'assets/img/portfolio/1.jpg',
+      'assets/img/portfolio/2.jpg',
+      'assets/img/portfolio/3.jpg',
+      'assets/img/portfolio/4.jpg'],
+      { duration: 4000, fade: 100 });
+
     $('#firstGrid').backstretch([
       'assets/img/AdventureTheme/1.jpg',
-      'assets/img/AdventureTheme/2.jpg'
-      /* 'assets/img/AdventureTheme/3.jpg',
+      'assets/img/AdventureTheme/2.jpg',
+      'assets/img/AdventureTheme/3.jpg',
       'assets/img/AdventureTheme/4.jpg',
       'assets/img/AdventureTheme/5.jpg',
       'assets/img/AdventureTheme/6.jpg',
       'assets/img/AdventureTheme/7.jpg',
       'assets/img/AdventureTheme/8.jpg',
       'assets/img/AdventureTheme/9.jpg',
-      'assets/img/AdventureTheme/10.jpg' */],
+      'assets/img/AdventureTheme/10.jpg' ],
       { duration: 3000, fade: 100 });
 
     $('#secondGrid').backstretch([
-      'assets/img/QooleyFinalLogo.jpg'
-      /* 
       'assets/img/EntertainmentTheme/1.jpg',
       'assets/img/EntertainmentTheme/2.jpg',
       'assets/img/EntertainmentTheme/3.jpg',
@@ -40,11 +46,10 @@ export class AppComponent {
       'assets/img/EntertainmentTheme/5.jpg',
       'assets/img/EntertainmentTheme/6.jpg',
       'assets/img/EntertainmentTheme/7.jpg',
-      'assets/img/EntertainmentTheme/8.jpg' */
-    ],
+      'assets/img/EntertainmentTheme/8.jpg'],
       { duration: 4000, fade: 100 });
 
-    $('#thirdGrid').backstretch([/* 
+    $('#thirdGrid').backstretch([
       'assets/img/FoodieTheme/1.jpg',
       'assets/img/FoodieTheme/2.jpg',
       'assets/img/FoodieTheme/3.jpg',
@@ -53,12 +58,12 @@ export class AppComponent {
       'assets/img/FoodieTheme/6.jpg',
       'assets/img/FoodieTheme/7.jpg',
       'assets/img/FoodieTheme/8.jpg',
-      'assets/img/FoodieTheme/9.jpg', */
+      'assets/img/FoodieTheme/9.jpg',
       'assets/img/FoodieTheme/10.jpg',
       'assets/img/FoodieTheme/11.jpg'],
       { duration: 5000, fade: 100 });
 
-    /*  $('#fourthGrid').backstretch([
+      $('#fourthGrid').backstretch([
        'assets/img/Hobbies/1.jpg',
        'assets/img/Hobbies/2.jpg',
        'assets/img/Hobbies/3.jpg',
@@ -83,7 +88,7 @@ export class AppComponent {
        'assets/img/SightseeingTheme/4.jpg',
        'assets/img/SightseeingTheme/5.jpg',
        'assets/img/SightseeingTheme/6.jpg'],
-       { duration: 5000, fade: 100 }); */
+       { duration: 5000, fade: 100 });
 
     this.appService.hide();
   };
