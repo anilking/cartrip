@@ -36,10 +36,10 @@
 }
 
 .img_height{
-    height: 281px !important;
+    height: 322px !important;
 }
 #mainGrid{
-    height: 600px;
+    height: 710px;
 }
 .main_div{
     margin-top: -5px;
@@ -119,4 +119,12 @@ figure.col_grid figcaption::before, figure.col_grid p {
 }
 .head-logo-img{
     margin-bottom: 15px;
+}
+.main-log{
+    padding: 12% 15% 0 15%;
+    width: 50%;
+}
+.tag_line{
+    padding-bottom: 5%;
+    color: #01679A;
 }

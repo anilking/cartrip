@@ -321,20 +321,20 @@ p.lead {
 	line-height:1.9;
 }
 .btnghost {
-	border:2px solid #333;
+	border:2px solid #ffffff;
 	background-color:transparent;
 	padding:15px 20px;
 	letter-spacing:3px;
 	font-size:12px;
 	text-transform:uppercase;
 	font-weight:400;
-	color:#333;
+	color:#ffffff;
 	margin-top:20px;
 	display:inline-block;
 }
 .btnghost:hover {
-	background-color:#333;
-	color:#fff;
+	background-color:#ffffff;
+	color:#333;
 	border:2px solid #333;
 }
 .bgcover {

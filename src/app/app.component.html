@@ -4,9 +4,9 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
 		<i class="fa fa-bars"></i>
     </button>
-  <div>
-      <a class="navbar-brand page-scroll"> <img class="head-logo" src="assets/img/qlogo.png" />OOLEY</a>
-  </div>
+      <div>
+        <a class="navbar-brand page-scroll"> <img class="head-logo" src="assets/img/qlogo.png" />OOLEY</a>
+      </div>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
@@ -47,16 +47,18 @@
 <!-- Intro Header -->
 <header class="col-lg-12 intro animated finite zoomIn" #mainScreen>
 
-  <video width="100%" autoplay loop preload="metadata" muted>
-    <source src="assets/videos/qooley.mov" type="video/mp4">
-    <source src="assets/videos/qooley.mov" type="video/ogg"> Your browser does not support HTML5 video.
-  </video>
   <div class="col-lg-12" id="mainGrid">
-      <img/>
-            <!-- <p><img class="loader-logo-img" src="assets/img/qlogo.png" />
-              <br>
-              <a href="http://www.qooley.com" title="qooley">Qooley</a>
-            </p> -->
+    <img/>
+    <img class="main-log" src="assets/img/qlogo.png" />
+    <h3 class="tag_line">Live The Local Experience !</h3>
+    <ul class="list-inline banner-social-buttons">
+      <li class="col-lg-6">
+        <a href="#" class="btn btnghost btn-lg"><span class="network-name">TRAVEL WITH QUOOLEY</span></a>
+      </li>
+      <li class="col-lg-6">
+        <a href="#" class="btn btnghost btn-lg"><span class="network-name">BECOME A QUOOLEY</span></a>
+      </li>
+    </ul>
   </div>
 
   <div class="main_div">
@@ -129,9 +131,12 @@
     </div>
   </div>
 </header>
-
+<video controls width="100%" preload="metadata">
+  <source src="assets/videos/qooley.mov" type="video/mp4">
+  <source src="assets/videos/qooley.mov" type="video/ogg"> Your browser does not support HTML5 video.
+</video>
 <!-- Contact Section -->
-<!--<section id="contact">
+<!-- <section id="contact">
   <div class="container content-section text-center">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
@@ -157,7 +162,7 @@
       </div>
     </div>
   </div>
-</section>-->
+</section> -->
 
 <!-- Child Routing -->
 <router-outlet>
