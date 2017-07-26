@@ -1,11 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'terms-conditions',
-  templateUrl: 'terms-conditions.html'
+  templateUrl: 'terms-conditions.html',
+  styleUrls:['terms-conditions.scss']
 })
 export class TermsConditionsComponent {
+
     public title: any = "Terms Conditions";
+
+    public scrollElement(id) {
+    let element = document.getElementById(id);
+    window.scrollTo(0, element.offsetHeight);
+  }
 }
 
 
