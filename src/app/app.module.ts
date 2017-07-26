@@ -15,6 +15,7 @@ import { ItWorksComponent } from './../pages/it-works/it-works';
 import { IncidentPolicyComponent } from './../pages/incident-policy/incident-policy';
 import { ContactUsComponent } from './../pages/contact-us/contact-us';
 import { AboutUsComponent } from './../pages/about-us/about-us';
+import { MainComponent } from './../pages/main/main';
 
 //serivces
 import { AppService } from './../providers/services/app.service';
@@ -32,6 +33,7 @@ import { AppService } from './../providers/services/app.service';
     SignUpComponent,
     TermsConditionsComponent,
     WelcomeToComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,

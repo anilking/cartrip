@@ -14,10 +14,14 @@ import { ItWorksComponent } from './../pages/it-works/it-works';
 import { IncidentPolicyComponent } from './../pages/incident-policy/incident-policy';
 import { ContactUsComponent } from './../pages/contact-us/contact-us';
 import { AboutUsComponent } from './../pages/about-us/about-us';
+import { MainComponent } from './../pages/main/main';
 
 const appRoutes: Routes = [
 	{
-		path: '', component: WelcomeToComponent
+		path: '', component: MainComponent
+	},
+	{
+		path: 'welcome', component: WelcomeToComponent
 	},
 	{
 		path: 'about', component: AboutUsComponent

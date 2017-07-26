@@ -1,23 +1,18 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { AppService } from './../providers/services/app.service';
-
+import { Component } from '@angular/core';
 declare var $;
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'main',
+  templateUrl: 'main.html',
+  styleUrls: ['main.scss']
 })
-export class AppComponent {
+export class MainComponent {
 
-  title = 'app works!';
-  @ViewChild('mainScreen') elementView: ElementRef;
-
-  constructor(private appService: AppService) {
+  constructor() {
 
   }
 
   ngOnInit() {
-
     $('#mainGrid').backstretch([
       /* 'assets/img/portfolio/1.jpg', */
       'assets/img/portfolio/2.jpg',
@@ -35,7 +30,7 @@ export class AppComponent {
       'assets/img/AdventureTheme/7.jpg',
       'assets/img/AdventureTheme/8.jpg',
       'assets/img/AdventureTheme/9.jpg',
-      'assets/img/AdventureTheme/10.jpg' ],
+      'assets/img/AdventureTheme/10.jpg'],
       { duration: 3000, fade: 100 });
 
     $('#secondGrid').backstretch([
@@ -63,34 +58,32 @@ export class AppComponent {
       'assets/img/FoodieTheme/11.jpg'],
       { duration: 5000, fade: 100 });
 
-      $('#fourthGrid').backstretch([
-       'assets/img/Hobbies/1.jpg',
-       'assets/img/Hobbies/2.jpg',
-       'assets/img/Hobbies/3.jpg',
-       'assets/img/Hobbies/4.jpg',
-       'assets/img/Hobbies/5.jpg',
-       'assets/img/Hobbies/6.jpg',
-       'assets/img/Hobbies/7.jpg'],
-       { duration: 3000, fade: 100 });
- 
-     $('#fifthGrid').backstretch([
-       'assets/img/RideAlongTheme/1.jpg',
-       'assets/img/RideAlongTheme/2.jpg',
-       'assets/img/RideAlongTheme/3.jpg',
-       'assets/img/RideAlongTheme/4.jpg',
-       'assets/img/RideAlongTheme/5.jpg'],
-       { duration: 2000, fade: 100 });
- 
-     $('#sixthGrid').backstretch([
-       'assets/img/SightseeingTheme/1.jpg',
-       'assets/img/SightseeingTheme/2.jpg',
-       'assets/img/SightseeingTheme/3.jpg',
-       'assets/img/SightseeingTheme/4.jpg',
-       'assets/img/SightseeingTheme/5.jpg',
-       'assets/img/SightseeingTheme/6.jpg'],
-       { duration: 5000, fade: 100 });
+    $('#fourthGrid').backstretch([
+      'assets/img/Hobbies/1.jpg',
+      'assets/img/Hobbies/2.jpg',
+      'assets/img/Hobbies/3.jpg',
+      'assets/img/Hobbies/4.jpg',
+      'assets/img/Hobbies/5.jpg',
+      'assets/img/Hobbies/6.jpg',
+      'assets/img/Hobbies/7.jpg'],
+      { duration: 3000, fade: 100 });
 
-    this.appService.hide();
+    $('#fifthGrid').backstretch([
+      'assets/img/RideAlongTheme/1.jpg',
+      'assets/img/RideAlongTheme/2.jpg',
+      'assets/img/RideAlongTheme/3.jpg',
+      'assets/img/RideAlongTheme/4.jpg',
+      'assets/img/RideAlongTheme/5.jpg'],
+      { duration: 2000, fade: 100 });
+
+    $('#sixthGrid').backstretch([
+      'assets/img/SightseeingTheme/1.jpg',
+      'assets/img/SightseeingTheme/2.jpg',
+      'assets/img/SightseeingTheme/3.jpg',
+      'assets/img/SightseeingTheme/4.jpg',
+      'assets/img/SightseeingTheme/5.jpg',
+      'assets/img/SightseeingTheme/6.jpg'],
+      { duration: 5000, fade: 100 });
   };
 
   pauseImage(id) {
@@ -100,9 +93,6 @@ export class AppComponent {
     $('#' + id).backstretch('resume');
   }
 
-  scrollToDown() {
-    // this.appService.show();
-    window.scrollTo(0, this.elementView.nativeElement.offsetHeight - 10);
-  }
-
 }
+
+

@@ -5,14 +5,14 @@
 		<i class="fa fa-bars"></i>
     </button>
       <div>
-        <a class="navbar-brand page-scroll"> <img class="head-logo" src="assets/img/qlogo.png" />OOLEY</a>
+        <a routerLink='' class="navbar-brand page-scroll"> <img class="head-logo" src="assets/img/qlogo.png" />OOLEY</a>
       </div>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
       <ul class="nav navbar-nav">
         <li>
-          <a routerLink='' (click)="scrollToDown()" class="animated finite lightSpeedIn">Welcome to Qooley!</a>
+          <a routerLink='welcome' (click)="scrollToDown()" class="animated finite lightSpeedIn">Welcome to Qooley!</a>
         </li>
         <li>
           <a routerLink='about' (click)="scrollToDown()" class="animated finite lightSpeedIn">About Us</a>
@@ -56,85 +56,11 @@
         <a href="#" class="btn btnghost btn-lg"><span class="network-name">TRAVEL WITH QUOOLEY</span></a>
       </li>
       <li class="col-lg-6">
-        <a href="#" class="btn btnghost btn-lg"><span class="network-name">BECOME A QUOOLEY</span></a>
+        <a routerLink='sign-up' class="btn btnghost btn-lg"><span class="network-name">BECOME A QUOOLEY</span></a>
       </li>
     </ul>
   </div>
-
-  <div class="main_div">
-    <div class="grid">
-      <div class="row reduce_width">
-        <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('firstGrid');" (mouseleave)="resumeImage('firstGrid');">
-          <div id="firstGrid">
-            <img class="img_height" />
-          </div>
-          <figcaption>
-            <h2>Adventure</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-              <a href="assets/img/portfolio/1.jpg" title="1" data-gallery>View more</a></p>
-          </figcaption>
-        </figure>
-        <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('secondGrid');" (mouseleave)="resumeImage('secondGrid');">
-          <div id="secondGrid">
-            <img class="img_height" />
-          </div>
-          <figcaption>
-            <h2>Entertainment</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-              <a href="assets/img/portfolio/2.jpg" title="1" data-gallery>View more</a></p>
-          </figcaption>
-        </figure>
-        <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('thirdGrid');" (mouseleave)="resumeImage('thirdGrid');">
-          <div id="thirdGrid">
-            <img class="img_height" />
-          </div>
-          <figcaption>
-            <h2>Foodie</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-              <a href="assets/img/portfolio/3.jpg" title="1" data-gallery>View more</a></p>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="row reduce_width">
-        <figure class="col-lg-4 col_grid">
-          <div id="fourthGrid">
-            <img class="img_height" />
-          </div>
-          <figcaption>
-            <h2>Vintage</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-              <a href="assets/img/portfolio/4.jpg" title="1" data-gallery>View more</a></p>
-          </figcaption>
-        </figure>
-        <figure class="col-lg-4 col_grid">
-          <div id="fifthGrid">
-            <img class="img_height" />
-          </div>
-          <figcaption>
-            <h2>Typers</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-              <a href="assets/img/portfolio/5.jpg" title="1" data-gallery>View more</a></p>
-          </figcaption>
-        </figure>
-
-        <figure class="col-lg-4 col_grid">
-          <div id="sixthGrid">
-            <img class="img_height" />
-          </div>
-          <figcaption>
-            <h2>hotel</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-              <a href="assets/img/portfolio/6.jpg" title="1" data-gallery>View more</a></p>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
 </header>
-<video controls width="100%" preload="metadata">
-  <source src="assets/videos/qooley.mov" type="video/mp4">
-  <source src="assets/videos/qooley.mov" type="video/ogg"> Your browser does not support HTML5 video.
-</video>
 <!-- Contact Section -->
 <!-- <section id="contact">
   <div class="container content-section text-center">
