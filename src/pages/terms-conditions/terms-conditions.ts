@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'terms-conditions',
@@ -11,7 +11,7 @@ export class TermsConditionsComponent {
 
     public scrollElement(id) {
     let element = document.getElementById(id);
-    window.scrollTo(0, element.offsetHeight);
+    window.scrollTo(0, element.offsetTop - 70);
   }
 }
 
