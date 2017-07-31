@@ -15,6 +15,7 @@ import { IncidentPolicyComponent } from './../pages/incident-policy/incident-pol
 import { ContactUsComponent } from './../pages/contact-us/contact-us';
 import { AboutUsComponent } from './../pages/about-us/about-us';
 import { MainComponent } from './../pages/main/main';
+import { BecomeQooleyComponent } from './../pages/become-qooley/become-qooley';
 
 const appRoutes: Routes = [
 	{
@@ -49,6 +50,9 @@ const appRoutes: Routes = [
 	},
 	{
 		path: 'sign-up', component: SignUpComponent
+	},
+	{
+		path: 'become-qooley', component: BecomeQooleyComponent
 	},
 	{
 		path: '', redirectTo: '', pathMatch: 'full'

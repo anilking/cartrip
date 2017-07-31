@@ -4,8 +4,8 @@ body {
 	height:100%;
 	font-family:'Futura PT Multilingual W01',Futura,'Trebuchet MS',Arial,sans-serif;
 	color:#fff;
-	background-color:#E0B104;
-	 font-weight:300;
+	background-color: rgb(80, 179, 187);
+	font-weight:300;
 }
 html {
 	width:100%;

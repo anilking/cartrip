@@ -16,6 +16,7 @@ import { IncidentPolicyComponent } from './../pages/incident-policy/incident-pol
 import { ContactUsComponent } from './../pages/contact-us/contact-us';
 import { AboutUsComponent } from './../pages/about-us/about-us';
 import { MainComponent } from './../pages/main/main';
+import { BecomeQooleyComponent } from './../pages/become-qooley/become-qooley';
 
 //serivces
 import { AppService } from './../providers/services/app.service';
@@ -33,7 +34,8 @@ import { AppService } from './../providers/services/app.service';
     SignUpComponent,
     TermsConditionsComponent,
     WelcomeToComponent,
-    MainComponent
+    MainComponent,
+    BecomeQooleyComponent
   ],
   imports: [
     BrowserModule,

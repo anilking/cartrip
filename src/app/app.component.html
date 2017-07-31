@@ -53,10 +53,10 @@
     <h3 class="tag_line">Live The Local Experience !</h3>
     <ul class="list-inline banner-social-buttons">
       <li class="col-lg-6">
-        <a href="#" class="btn btnghost btn-lg"><span class="network-name">TRAVEL WITH QUOOLEY</span></a>
+        <a routerLink='welcome' (click)="scrollToDown()" class="btn btnghost btn-lg"><span class="network-name">TRAVEL WITH QUOOLEY</span></a>
       </li>
       <li class="col-lg-6">
-        <a routerLink='sign-up' class="btn btnghost btn-lg"><span class="network-name">BECOME A QUOOLEY</span></a>
+        <a routerLink='become-qooley' (click)="scrollToDown()" class="btn btnghost btn-lg"><span class="network-name">BECOME A QUOOLEY</span></a>
       </li>
     </ul>
   </div>
@@ -100,18 +100,21 @@
   <div class="container text-center">
     <div class="row">
       <div class="col-sm-7 social-links">
-        <h3 class="text-short text-shorth3 pull-left title">
-          <a><span>Follow us</span></a>
-        </h3>
-        <ul class="pull-left list-inline">
-          <li class="gplus"><a title="Add Upwork to Google+ circles" target="_blank" href="https://plus.google.com"> <i class="fa fa-google-plus-square social-icons"></i> </a></li>
-          <li class="facebook"><a title="Visit Upwork on Facebook" target="_blank" href="https://www.facebook.com"> <i class="fa fa-facebook-square social-icons"></i> </a>            </li>
-          <li class="linkedin"><a title="Read Upwork company news on LinkedIn" target="_blank" href="https://www.linkedin.com"> <i class="fa fa-linkedin-square social-icons"></i> </a></li>
-          <li class="twitter"><a title="Follow @Upwork on Twitter" target="_blank" href="https://twitter.com"> <i class="fa fa-twitter-square social-icons"></i> </a></li>
-          <li class="youtube"><a title="Watch Upwork videos on YouTube" target="_blank" href="https://www.youtube.com"> <i class="fa fa-youtube-square social-icons"></i> </a></li>
-          <li class="instagram"><a title="Follow Upwork on Instagram" target="_blank" href="https://www.instagram.com"> <i class="fa fa-instagram social-icons"></i> </a></li>
-        </ul>
-      </div>
+       <h3 class="text-short text-shorth3 pull-left title">
+         <a><span>Follow us</span></a>
+       </h3>
+         <ul class="pull-left list-inline">
+           <li class="facebook"><a title="Visit Upwork on Facebook" target="_blank" href="https://www.facebook.com/Qooley-1853729341570437/"> <i class="fa fa-facebook-square social-icons"></i> </a></li>
+           <li class="twitter"><a title="Follow @Upwork on Twitter" target="_blank" href="https://twitter.com/qooley_official/"> <i class="fa fa-twitter-square social-icons"></i> </a></li>
+           <li class="instagram"><a title="Follow Upwork on Instagram" target="_blank" href="https://www.instagram.com/qooley_official/"> <i class="fa fa-instagram social-icons"></i> </a></li>
+           <li class="linkedin"><a title="Read Upwork company news on LinkedIn" target="_blank" href="https://www.linkedin.com/m/login/"> <i class="fa fa-linkedin-square social-icons"></i> </a></li>
+           <li class="gplus"><a title="Add Upwork to Google+ circles" target="_blank" href="https://plus.google.com/u/0/111547401743450398274"> <i class="fa fa-google-plus-square social-icons"></i> </a></li>
+           <!-- <li class="youtube"><a title="Watch Upwork videos on YouTube" target="_blank" href="https://www.youtube.com"> <i class="fa fa-youtube-square social-icons"></i> </a></li>-->
+           <li class="flickr"><a title="Follow Upwork on flickr" target="_blank" href="https://www.flickr.com/photos/149825155@N08/"> <i class="fa fa-flickr social-icons"></i> </a></li>
+           <li class="tumblr"><a title="Follow Upwork on tumblr" target="_blank" href="https://qooleyofficial.tumblr.com/"> <i class="fa fa-tumblr social-icons"></i> </a></li>
+         </ul>
+         <a routerLink='terms-conditions' (click)="scrollToDown()">Terms</a>
+     </div>
       <div class="col-sm-5 apps-links text-right">
         <div class="item ng-scope">
           <h3 class="text-short text-shorth3"><span>Download</span> mobile app</h3>
