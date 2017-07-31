@@ -131,3 +131,7 @@ figure.col_grid figcaption::before, figure.col_grid p {
 .navbar-nav{
     margin-top: 15px;
 }
+.termscls{
+    float: right;
+    margin-top: 5px;
+}
