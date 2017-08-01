@@ -16,6 +16,7 @@ import { ContactUsComponent } from './../pages/contact-us/contact-us';
 import { AboutUsComponent } from './../pages/about-us/about-us';
 import { MainComponent } from './../pages/main/main';
 import { BecomeQooleyComponent } from './../pages/become-qooley/become-qooley';
+import { CategoriesComponent } from './../pages/categories/categories';
 
 const appRoutes: Routes = [
 	{
@@ -53,6 +54,9 @@ const appRoutes: Routes = [
 	},
 	{
 		path: 'become-qooley', component: BecomeQooleyComponent
+	},
+	{
+		path: 'categories/:category', component: CategoriesComponent
 	},
 	{
 		path: '', redirectTo: '', pathMatch: 'full'

@@ -7,7 +7,7 @@
             <img class="img_height" />
           </div>
           <figcaption>
-            <h2>Adventure</h2>
+            <h2 [routerLink]="['/categories', 'adventure']">Adventure</h2>
           </figcaption>
         </figure>
         <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('secondGrid');" (mouseleave)="resumeImage('secondGrid');">
@@ -15,7 +15,7 @@
             <img class="img_height" />
           </div>
           <figcaption>
-            <h2>Entertainment</h2>
+            <h2 [routerLink]="['/categories', 'entertainment']">Entertainment</h2>
           </figcaption>
         </figure>
         <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('thirdGrid');" (mouseleave)="resumeImage('thirdGrid');">
@@ -23,7 +23,7 @@
             <img class="img_height" />
           </div>
           <figcaption>
-            <h2>Foodie</h2>
+            <h2  [routerLink]="['/categories', 'food']">Food & Drinks</h2>
           </figcaption>
         </figure>
       </div>
@@ -33,7 +33,7 @@
             <img class="img_height" />
           </div>
           <figcaption>
-            <h2>Vintage</h2>
+            <h2 [routerLink]="['/categories', 'hobbies']">Hobbies</h2>
           </figcaption>
         </figure>
         <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('fifthGrid');" (mouseleave)="resumeImage('fifthGrid');">
@@ -41,7 +41,7 @@
             <img class="img_height" />
           </div>
           <figcaption>
-            <h2>Typers</h2>
+            <h2 [routerLink]="['/categories', 'drive']">Drive</h2>
           </figcaption>
         </figure>
 
@@ -50,7 +50,7 @@
             <img class="img_height" />
           </div>
           <figcaption>
-            <h2>Hotel</h2>
+            <h2 [routerLink]="['/categories', 'sightseeing']">Sightseeing</h2>
           </figcaption>
         </figure>
       </div>
