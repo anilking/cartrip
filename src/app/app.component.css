@@ -134,4 +134,6 @@ figure.col_grid figcaption::before, figure.col_grid p {
 .termscls{
     float: right;
     margin-top: 5px;
+    margin-left: 30px;
+    text-decoration: underline;
 }
