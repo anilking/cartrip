@@ -1,3 +1,4 @@
+import { CategoriesComponent } from './../pages/categories/categories';
 import { AppRoutingModule } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -35,7 +36,8 @@ import { AppService } from './../providers/services/app.service';
     TermsConditionsComponent,
     WelcomeToComponent,
     MainComponent,
-    BecomeQooleyComponent
+    BecomeQooleyComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
