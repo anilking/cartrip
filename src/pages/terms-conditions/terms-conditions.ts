@@ -8,20 +8,14 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 export class TermsConditionsComponent {
 
     public title: any = "Terms Conditions";
-
+    public page : string = 'terms';
     public scrollElement(id) {
       let element = document.getElementById(id);
-      window.scrollTo(0, element.offsetTop - 70);
+      window.scrollTo(0, element.offsetTop - (-670));
     }
 
-    toggleIcon(e) {
-      if (e.target.children[0].className == "more-less glyphicon glyphicon-plus") {
-        e.target.children[0].className = "more-less glyphicon glyphicon-minus";
-      }
-      else {
-        e.target.children[0].className = "more-less glyphicon glyphicon-plus";
-      }
+    toggleIcon(value){
+      this.page = value;
     }
+
 }
-
-

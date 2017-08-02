@@ -1,774 +1,694 @@
 <div class="container content-section">
-    <div class="panel-group">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" href="#terms_conditions" (click)="toggleIcon($event)"> <i class="more-less glyphicon glyphicon-plus"></i> Terms Conditions </a>
-                </h4>
-            </div>
-            <div id="terms_conditions" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <p>Please read these terms of service carefully as they contain important information regarding your legal
-                        rights, remedies and obligations. These include various limitations and exclusions, a clause that
-                        governs the jurisdiction and venue of disputes, and obligations to comply with applicable laws and
-                        regulations.
-                    </p>
-                    <p>In particular, a Qooley should understand how the laws work in their respective cities. Depending on
-                        the type or nature of a services offered, there may be certain laws restricting the Qooley from offering
-                        those services without a permit, or a license. Local governments vary greatly in how they enforce
-                        these laws. Penalties may include fines or other enforcement. A Qooley should review local laws before
-                        listing a “Activity” on QooleyBiz.</p>
+    <div class="row">
+        <div class="col-lg-2">
+            <ul class="side-menu">
+                <li (click)="toggleIcon('terms')">Terms Conditions </li>
+                <li (click)="toggleIcon('payment')">Payment Policy</li>
+                <li (click)="toggleIcon('privacy')">Privacy Policy</li>
+                <li (click)="toggleIcon('incident')">Incident Policy</li>
+            </ul>
+        </div>
 
-                    <div class="menu-index">
-                        <h3>Table of Contents</h3>
-                        <ol>
-                            <li (click)="scrollElement('1');"> General Terms</li>
-                            <li (click)="scrollElement('2');"> Definitions</li>
-                            <li (click)="scrollElement('3');">Terms of Service</li>
-                            <li (click)="scrollElement('4');"> Modifications to Terms & Conditions</li>
-                            <li (click)="scrollElement('5');">Member Eligibility</li>
-                            <li (click)="scrollElement('6');">Member Account Registration</li>
-                            <li (click)="scrollElement('7');">Activity (or “Service”) Listings</li>
-                            <li (click)="scrollElement('8');">No Endorsement</li>
-                            <li (click)="scrollElement('9');">Damage to Property</li>
-                            <li (click)="scrollElement('10');">User Conduct</li>
-                            <li (click)="scrollElement('11');">Reporting Misconduct</li>
-                            <li (click)="scrollElement('12');">Intellectual Property Ownership and Rights Notices</li>
-                            <li (click)="scrollElement('13');"> Application License</li>
-                            <li (click)="scrollElement('14');">Qooley, LLC Content and Member Content License</li>
-                            <li (click)="scrollElement('15');"> Member Content</li>
-                            <li (click)="scrollElement('16');">Links & APIs</li>
-                            <li (click)="scrollElement('17');">Copyright Policy</li>
-                            <li (click)="scrollElement('18');">Termination, Suspension and Other Measures</li>
-                            <li (click)="scrollElement('19');">Disclaimers</li>
-                            <li (click)="scrollElement('20');">Limitation of Liability</li>
-                            <li (click)="scrollElement('21');">Indemnification</li>
-                            <li (click)="scrollElement('22');">Entire Agreement</li>
-                            <li (click)="scrollElement('23');">Controlling Law and Jurisdiction</li>
-                            <li (click)="scrollElement('24');">Dispute Resolution</li>
-                            <li (click)="scrollElement('25');">Third party beneficiary</li>
-                        </ol>
-                    </div>
+        <div class="col-lg-10">
+            <div *ngIf="page == 'terms'">
+                <h1 class="animated finite rollIn">{{title}}</h1>
+                <p>Please read these terms of service carefully as they contain important information regarding your legal rights,
+                    remedies and obligations. These include various limitations and exclusions, a clause that governs the
+                    jurisdiction and venue of disputes, and obligations to comply with applicable laws and regulations.</p>
+                <p>In particular, a Qooley should understand how the laws work in their respective cities. Depending on the
+                    type or nature of a services offered, there may be certain laws restricting the Qooley from offering
+                    those services without a permit, or a license. Local governments vary greatly in how they enforce these
+                    laws. Penalties may include fines or other enforcement. A Qooley should review local laws before listing
+                    a “Activity” on QooleyBiz.
+                </p>
 
-                    <p id="1">1.      General Terms</p>
-                    <p class="li-data-margin">Qooley provides an online platform that connects locals (the “Qooley”, or “Service Provider”) who offer
-                        various travel-related activities (collectively, the “Activities”, or the “Services”). These Activities
-                        are accessible via applications available on mobile, tablet and other smart devices and application
-                        program interfaces (collectively, the “Application”).</p>
-                    <p class="li-data-margin">If you are using the Application or Activities and you reside in the USA, these Terms of Service are
-                        between you and Qooley, LLC. If you are a traveler residing in a different country, but utilize services
-                        offered on the Application when visiting USA, these Terms &amp; Conditions are between you and Qooley,
-                        LLC.
-                    </p>
-                    <p class="li-data-margin">Payment Services provided via the Application by Qooley, LLC are subject to the Payment Policies (“Payments
-                        Terms“).
-                    </p>
-                    <p id="2">2.      Definitions</p>
-                    <p class="li-data-margin">“Qooley Application” means the Application used by Traveler to book any “Activity” or “Service”</p>
-                    <p class="li-data-margin">“QooleyBiz Application” means the Application on which a local can register to be a “Qooley”.</p>
-                    <p class="li-data-margin">“Site” means the website <a href="#" rel="nofollow">http://www.Qooley.com</a></p>
-                    <p class="li-data-margin">“Qooley” means the local (or, the “Service Provider”) who creates “Service” or “Activity” on QooleyBiz
-                        Application for the purposes of listing the “Service” or “Activity” on Qooley Application for the
-                        travelers to be able to book.
-                    </p>
-                    <p class="li-data-margin">“Traveler” means the person(s) booking any “Activity” or “Service” via the Qooley Application.</p>
-                    <p class="li-data-margin">“Activity” means services offered by a Qooley (or, the “Service Providers”).</p>
-                    <p class="li-data-margin">“Member” means any user registered on the Application or Site (Traveler and/or Qooley).</p>
-                    <p class="li-data-margin">“Qooley Content” means all Content that Qooley, LLC makes available through the Site, Application, Services,
-                        or its related promotional campaigns and official social media channels, including any Content licensed
-                        from a third party, but excluding Member Content.</p>
-                    <p class="li-data-margin">“Booking Request Period” means the time period starting from the time when a Booking is requested by
-                        a Traveler (as determined by Qooley, LLC in its sole discretion), within which a Qooley (or, the
-                        “Service Provider”) may decide whether to confirm or reject that Booking Request, as stated on the
-                        Site, Application or Services. Different Booking Request Periods may apply in different places.
-                    </p>
-                    <p class="li-data-margin">“Communication” means an email, message via the Application, text message or phone call.</p>
-                    <p class="li-data-margin">“Content” means text, graphics, images, music, software (excluding the Application), audio, video, information
-                        or other materials.
-                    </p>
-                    <p class="li-data-margin">“Collective Content” means Member Content and Qooley Content.</p>
-                    <p class="li-data-margin">“Qooley Credit” means credits earned by Members as awarded by Qooley, LLC for using the Application or
-                        Site.
-                    </p>
-                    <p id="3">3.      Terms of Service</p>
-                    <p class="li-data-margin">By using the Site, Application or Services, you agree to comply with and be legally bound by the terms
-                        and conditions of these Terms of Service, whether or not you become a registered user. These Terms
-                        govern your access to and use of the Site, Application and Services and all Collective Content (defined
-                        below), and your participation in the Referral Program (defined below), and constitute a binding
-                        legal agreement between you and Qooley, LLC. Please also read carefully our Privacy Policy at www.Qooley.com/terms/privacy_policy.</p>
-                    <p class="li-data-margin">In addition, certain areas of the Site and Application (and your access to or use of certain aspects
-                        of the Services or Collective Content) may have different terms and conditions, standards, guidelines,
-                        or policies posted or may require you to agree with and accept additional terms and conditions. If
-                        there is a conflict between these Terms and terms and conditions posted for a specific area of the
-                        Site, Application, Services, or Collective Content, the latter terms and conditions will take precedence
-                        with respect to your use of or access to that area of the Site, Application, Services, or Collective
-                        Content.
-                    </p>
-                    <p class="li-data-margin">If you do not agree to these Terms, you have no right to obtain information from or otherwise continue
-                        using the Site, Application or Services. Failure to use the Site, Application or Services in accordance
-                        with these Terms may subject you to civil and criminal penalties.</p>
-                    <p class="li-data-margin">The site, application and services comprise an online platform through which a “Qooley” may create listings
-                        for an “Activity” (or “Service”) and travelers may learn about and book the “Activity” (or “Service”)
-                        directly with the Qooley. You understand and agree that Qooley, LLC is not a party to any agreements
-                        entered into between Qooley (or “Service Providers”) and Travelers, nor is Qooley, LLC a travel agent
-                        or travel agency. Qooley has no control over the conduct of Qooley (or “Service Providers”), travelers
-                        and other users of the site, application and services, and disclaims all liability in this regard
-                        to the maximum extent permitted by law.</p>
-                    <p class="li-data-margin">As a Qooley, if you choose to create an “Activity” or “Service” on QooleyBiz application for the purposes
-                        of listing it on Qooley Application, you understand and agree that your relationship with Qooley,
-                        LLC is limited to being a member and an independent, third-party contractor, and not an employee,
-                        agent, a joint venture or partner of Qooley, LLC for any reason, and you act exclusively on your
-                        own behalf and for your own benefit, and not on behalf of or for the benefit of Qooley, LLC. Qooley,
-                        LLC does not control, and has no right to control, your listing, your offline activities associated
-                        with your listing, or any other matters related to any listing, that you provide. As a member, you
-                        agree not to do anything to create a false impression that you are endorsed by, partnering with,
-                        or acting on behalf of or for the benefit of Qooley, LLC, including by inappropriately using any
-                        Qooley, LLC’s intellectual property.
-                    </p>
-                    <p class="li-data-margin">You acknowledge and agree that, by accessing or using the site, application or services or by downloading
-                        or posting any content from or on the site, via the application or through the services, you are
-                        indicating that you have read, and that you understand and agree to be bound by these terms and receive
-                        our services (including, where applicable, programs such as the traveler protection insurance program,
-                        whether or not you have registered with the site and application.
-                    </p>
-                    <p class="li-data-margin">If you do not agree to these terms, then you have no right to access or use the site, application, services,
-                        or collective content. If you accept or agree to these Terms &amp; conditions on behalf of a company
-                        or other legal entity, you represent and warrant that you have the authority to bind that company
-                        or other legal entity to these Terms and, in such event, “you” and “your” will refer and apply to
-                        that company or other legal entity.</p>
-                    <p id="4">4.      Modifications to Terms &amp; Conditions</p>
-                    <p class="li-data-margin">Qooley, LLC reserves the right, at its sole discretion, to modify the Site, Application or Services or
-                        to modify these Terms, including the Service Fees, at any time and without prior notice. If we modify
-                        these Terms, we will post the modification on the Site or via the Application and/or provide you
-                        notice of the modification by email. We will also update the “Last Updated” date at the top of these
-                        Terms. Changes to the Terms will be effective at the time of posting. Your continued access or use
-                        of the Site, Application or Services will constitute acceptance of the modified Terms. Additionally,
-                        if the modified Terms contain material changes applicable to existing Members (by decreasing your
-                        rights or increasing your responsibilities), we will provide you with notice prior to the changes
-                        taking effect. If the modified Terms are not acceptable to you, your only recourse is to cease using
-                        the Site, Application and Services. If you do not close your Member Account with Qooley, LLC you
-                        will be deemed to have accepted the changes.</p>
-                    <p id="5">5.      Member Eligibility</p>
-                    <p class="li-data-margin">The use of Application and Site are intended solely for persons who are 18 or older. Any access to or
-                        use of the Application and Site by anyone under 18 is expressly prohibited. By accessing or using
-                        the Application and Site you represent and warrant that you are 18 or older.</p>
-                    <p class="li-data-margin">For users in the United States, Qooley, LLC will, to the extent permitted by applicable laws and if we
-                        have sufficient information to identify a user, obtain reports from public records of criminal convictions
-                        or sex offender registrations of the user. For users outside the United States, we may, to the extent
-                        permitted by applicable laws and if we have sufficient information to identify a user, obtain the
-                        local version of background or registered sex offender checks in our sole discretion.
-                    </p>
-                    <p class="li-data-margin">You agree and authorize us to use your personal information, such as your full name and date of birth,
-                        to obtain such reports, including from Qooley, LLC’s vendors.</p>
-                    <p id="6">6.      Member Account Registration</p>
-                    <p class="li-data-margin">In order to access certain features of the Site and Application, and to book an “Activity” (or “Service”)
-                        or create a listing, you must register to create an account (“Qooley Member Account”) and become
-                        a Member. You may register to join directly via the Application or as described in this section.
-                        As a Traveler, you can register to join by logging into your account with certain third-party social
-                        networking sites (“SNS”) (including, but not limited to, Facebook or Google; each such account, a
-                        “Third-Party Account”), via our Application, as described below.</p>
-                    <p class="li-data-margin">As a Member, you can become a Qooley by registering on the QooleyBiz Application. To become a Qooley,
-                        you must register with your telephone number. Qooley, LLC will verify the telephone number by sending
-                        a verification code. In order to proceed with the registration process as a Qooley, the member must
-                        be able to verify the phone number provided at the time of registration.</p>
-                    <p class="li-data-margin">As part of the functionality of the Application and Site, you may link your Qooley Member Account with
-                        Third-Party Accounts, by either: (i) providing your Third-Party Account login information to Qooley
-                        through the Application; or (ii) allowing Qooley, LLC to access your Third-Party Account, as permitted
-                        under the applicable terms and conditions that govern your use of each Third-Party Account. You represent
-                        that you are entitled to disclose your Third-Party Account login information to Qooley, LLC and/or
-                        grant Qooley, LLC access to your Third-Party Account (including, but not limited to, for use for
-                        the purposes described herein), without breach by you of any of the terms and conditions that govern
-                        your use of the applicable Third-Party Account and without obligating Qooley, LLC to pay any fees
-                        or making Qooley, LLC subject to any usage limitations imposed by such third-party service providers.
-                        By granting Qooley, LLC access to any Third-Party Accounts, you understand that Qooley, LLC will
-                        access, make available and store (if applicable) any Content that you have provided to and stored
-                        in your Third-Party Account (“SNS Content”) so that it is available on and through the Site and Application
-                        via your Qooley Member Account and Qooley Member Account profile page. Unless otherwise specified
-                        in these Terms, all SNS Content, if any, will be considered to be Member Content for all purposes
-                        of these Terms. Depending on the Third-Party Accounts you choose and subject to the privacy settings
-                        that you have set in such Third-Party Accounts, personally identifiable information that you post
-                        to your Third-Party Accounts will be available on and through your Qooley Member Account on the Site,
-                        Services and Application. Please note that if a Third-Party Account or associated service becomes
-                        unavailable or Qooley, LLC’s access to such Third-Party Account is terminated by the third-party
-                        service provider, then SNS Content will no longer be available on and through the Site, Services
-                        and Application. You have the ability to disable the connection between your Qooley Member Account
-                        and your Third-Party Accounts, at any time, by accessing the “Settings” section of the Site and Application.</p>
-                    <p class="li-data-margin">PLEASE NOTE THAT YOUR RELATIONSHIP WITH THE THIRD-PARTY SERVICE PROVIDERS ASSOCIATED WITH YOUR THIRD-PARTY
-                        ACCOUNTS IS GOVERNED SOLELY BY YOUR AGREEMENT(S) WITH SUCH THIRD-PARTY SERVICE PROVIDERS.</p>
-                    <p class="li-data-margin">Qooley, LLC makes no effort to review any SNS Content for any purpose, including but not limited to for
-                        accuracy, legality or non-infringement and Qooley, LLC is not responsible for any SNS Content.
-                    </p>
-                    <p class="li-data-margin">Your Qooley Member Account and your Qooley Member Account profile page will be created for your use of
-                        the Site and Application based upon the personal information you provide to us or that we obtain
-                        via an SNS as described above. You may not have more than one (1) active Qooley Member Account. You
-                        agree to provide accurate, current and complete information during the registration process and to
-                        update such information to keep it accurate, current and complete. Qooley, LLC reserves the right
-                        to suspend or terminate your Qooley Member Account and your access to the Site, Application and Services
-                        if you create more than one (1) Qooley Member Account, or if any information provided during the
-                        registration process or thereafter proves to be inaccurate, fraudulent, not current, incomplete,
-                        or otherwise in violation of these Terms of Service.</p>
-                    <p class="li-data-margin">You are responsible for safeguarding your password. You agree that you will not disclose your password
-                        to any third party.
-                    </p>
-                    <p class="li-data-margin">Unless expressly authorized by a specific feature on Qooley Application you are not permitted to share
-                        your Qooley Member Account with anyone or allow others to access or use your Qooley Member Account.
-                        Qooley, LLC may enable Application features, in our discretion, that allow other Members to take
-                        certain actions associated with your Qooley Member Account, on your behalf with your express authorization,
-                        such as having your executive assistant, travel agent, or employer book on your behalf or adding
-                        a family member to your account as an additional “Service Provider”. You agree that you will take
-                        sole responsibility for any activities or actions under your Qooley Member Account, whether or not
-                        you have authorized such activities or actions. You will immediately notify Qooley, LLC of any unauthorized
-                        use of your Qooley Member Account.</p>
-                    <p id="7">7.      Activity (or “Service”) Listings</p>
-                    <p class="li-data-margin">As a registered Qooley, you may create “Activities” (or “Services”). To create an “Activity” (or “Service”),
-                        you will be asked a variety of questions about the “Activity” (or “Service”) to be listed, including,
-                        but not limited to, the location, capacity, size, features, and availability of the “Activity” (or
-                        “Service”) and pricing and related rules and financial terms. In order to be featured in search results
-                        via the Application and Site, all “Activities” (or “Services”) must have valid physical addresses.
-                        Listings of your “Activity” (or “Service”) will be made publicly available via the Application and
-                        Site. You understand and agree that the placement or ranking of such listings in search results may
-                        depend on a variety of factors, including, but not limited to, Traveler and Qooley preferences, ratings,
-                        distance and/or ease of Booking.</p>
-                    <p class="li-data-margin">Other Travelers will be able to book your “Activity” (or “Service”) via the Application and Site based
-                        upon the information provided in your listing, your requirements, and Travelers’ search parameters
-                        and preferences. You understand and agree that once a Traveler requests a Booking of your “Activity”
-                        (or “Service”), you may not request the Traveler to pay a higher price than in the Booking request.</p>
-                    <p class="li-data-margin">You acknowledge and agree that you alone are responsible for any and all “Activity” (or “Service”) listings
-                        and Member Content you post. Accordingly, you represent and warrant that any listing you post and
-                        the Booking of, or a Traveler’s experience at, an “Activity” (or “Service”) in a listing you post
-                        (i) will not breach any agreements you have entered into with any third parties (ii) will (a) be
-                        in compliance with all applicable laws, Tax requirements, Intellectual Property laws, and rules and
-                        regulations that may apply to any “Activity” (or “Service”)you post (including having all required
-                        permits, licenses and registrations), and (b) not conflict with the rights of third parties.</p>
-                    <p class="li-data-margin">PLEASE NOTE THAT QOOLEY, LLC ASSUMES NO RESPONSIBILITY FOR A QOOLEY’S COMPLIANCE WITH ANY AGREEMENTS
-                        WITH OR DUTIES TO THIRD PARTIES, APPLICABLE LAWS, RULES AND REGULATIONS. QOOLEY, LLC RESERVES THE
-                        RIGHT, AT ANY TIME AND WITHOUT PRIOR NOTICE, TO REMOVE OR DISABLE ACCESS TO ANY LISTING OF “ACTIVITY”
-                        (OR “SERVICE”) FOR ANY REASON, INCLUDING LISTINGS THAT QOOLEY, LLC, IN ITS SOLE DISCRETION, CONSIDERS
-                        TO BE OBJECTIONABLE FOR ANY REASON, IN VIOLATION OF THESE TERMS OR QOOLEY, LLC’S THEN-CURRENT POLICIES
-                        AND COMMUNITY GUIDELINES OR STANDARDS, TRADEMARK &amp; BRANDING GUIDELINES, OR OTHERWISE HARMFUL
-                        TO THE SITE AND APPLICATION.</p>
-                    <p class="li-data-margin">If you are a Qooley, you understand and agree that Qooley, LLC does not act as an insurer or as your
-                        contracting agent. If a Traveler requests a Booking of your “Activity” (or “Service”) and participates
-                        in your “Activity” (or “Service”), any agreement you enter into with such Traveler is between you
-                        and the Traveler and Qooley, LLC is not a party to it.
-                    </p>
-                    <p class="li-data-margin">If you are a registered Qooley, Qooley, LLC makes certain tools available to you to help you to make
-                        informed decisions about which Members you choose to confirm or preapprove for Booking for your “Activity”
-                        (or “Service”). You acknowledge and agree that, as a registered Qooley, you are responsible for your
-                        own acts and omissions and are also responsible for the acts and omissions of any individuals who
-                        present themselves at the “Activity” (or “Service”) at your request or invitation, excluding the
-                        Traveler (and the individuals the Traveler invites to the “Activity” (or “Service”), if applicable).</p>
-                    <p class="li-data-margin">Qooley, LLC recommends that the Qooley(s) obtain appropriate insurance (including, but not limited to
-                        Vehicle Insurance) for their “Activity” (or “Service”). Please review any insurance policy that you
-                        may have for your “Activity” (or “Service”) carefully, and in particular please make sure that you
-                        are familiar with and understand any exclusions to, and any deductibles that may apply for, such
-                        insurance policy, including, but not limited to, whether or not your insurance policy will cover
-                        the actions or inactions of or relating to Travelers (and the individuals the Traveler invites to
-                        the “Activity” (or “Service”), if applicable) while participating in your “Activity” (or “Service”).</p>
-                    <p id="8">8.      No Endorsement</p>
-                    <p class="li-data-margin">Members are required by these Terms to provide accurate information. Although Qooley, LLC may, for transparency
-                        or fraud prevention or detection purposes, directly or through third parties, ask you to provide
-                        a form of government identification, your date of birth, and other information, or undertake additional
-                        checks and processes designed to help verify or check the identities or backgrounds of Members and/or
-                        screen Member information against third party databases or other sources, we do not make any representations
-                        about, confirm, or endorse any Member or the Member’s purported identity or background.</p>
-                    <p class="li-data-margin">By registering for a Qooley Member Account, you agree that Qooley, LLC may &#8211; but is not obligated
-                        to &#8211; request a consumer report on you from a Consumer Reporting Agency. If we do request a
-                        consumer report, we’ll request and use it in compliance with applicable law, including the Fair Credit
-                        Reporting Act.</p>
-                    <p class="li-data-margin">Any references in the Site and Application to a Member being “verified” or “connected” (or similar language)
-                        only indicate that the Member has completed a relevant verification or identification process, and
-                        does not represent anything else. Any such description is not an endorsement, certification or guarantee
-                        by Qooley, LLC about any Member, including of the Member’s identity and whether the Member is trustworthy,
-                        safe or suitable. Instead, any such description is intended to be useful information for you to evaluate
-                        when you make your own decisions about the identity and suitability of others whom you contact or
-                        interact with via the Application and Site. We therefore recommend that you always exercise due diligence
-                        and care when deciding whether to interact with a Qooley or to accept or preapprove a Booking request
-                        from a Traveler, or to have any other interaction with any other Member.</p>
-                    <p class="li-data-margin">By using the Application or Site, you agree that any legal remedy or liability that you seek to obtain
-                        for actions or omissions of other Members or other third parties will be limited to a claim against
-                        the particular Members or other third parties who caused you harm. You agree not to attempt to impose
-                        liability on or seek any legal remedy from Qooley, LLC with respect to such actions or omissions.
-                        Accordingly, we encourage you to communicate directly with other Members on the Application or Site
-                        regarding any Bookings or “Activity” (or “Service”) listings made by you. This limitation shall not
-                        apply to any claim by a Qooley against Qooley, LLC regarding the remittance of payments received
-                        from a Traveler by Qooley, LLC on behalf of a Qooley, which instead shall be subject to the limitations
-                        described elsewhere in this agreement.</p>
-                    <p id="9">9.      Damage to Property</p>
-                    <p class="li-data-margin">You acknowledge and agree that, as a Traveler, you are responsible for your own acts and omissions and
-                        are also responsible for the acts and omissions of any individuals whom you invite to, or otherwise
-                        provide access to, the “Activity” (or “Service”). In the event that a Qooley claims otherwise and
-                        provides evidence of damage, including but not limited to photographs, you agree to pay the cost
-                        of replacing the damaged items with equivalent items.</p>
-                    <p class="li-data-margin">Both Travelers and Qooley(s) agree to cooperate with and assist Qooley, LLC in good faith, and to provide
-                        Qooley, LLC with such information and take such actions as may be reasonably requested by Qooley,
-                        LLC, in connection with any Damage Claims or other complaints or claims made by Members relating
-                        to “Activity” (or “Service”) or with respect to any investigation undertaken by Qooley, LLC or a
-                        representative of Qooley, LLC regarding use or abuse of the Application or Site. If you are a Traveler,
-                        upon Qooley, LLC’s reasonable request, and to the extent you are reasonably able to do so, you agree
-                        to participate in mediation or similar resolution process with a Qooley, at no cost to you, which
-                        process will be conducted by Qooley, LLC or a third party selected by Qooley, LLC or its insurer,
-                        with respect to losses for which the Qooley is requesting payment from Qooley, LLC.</p>
-                    <p id="10">10.    User Conduct</p>
-                    <p class="li-data-margin">You understand and agree that you are solely responsible for compliance with any and all laws, rules,
-                        regulations, and Tax obligations that may apply to your use of the Application, Site, “Activity”
-                        (or “Services”) and Collective Content. In connection with your use of the Site, Application, “Activity”
-                        (or “Service”) and Collective Content, you may not and you agree that you will not:</p>
-                    <p class="li-data-margin">a.       Violate any local, state, provincial, national, or other law or regulation, or any order of
-                        a court.</p>
-                    <p class="li-data-margin">b.      Use manual or automated software, devices, scripts, robots, backdoors or other means or processes
-                        to access any web pages or other services contained in the Application, Site or Collective Content</p>
-                    <p class="li-data-margin">c.       Access or use our Application, Site or the Qooley, LLC API to use, expose, or allow to be used
-                        or exposed, any Qooley, LLC Content: (i) that is not publicly displayed by Qooley, LLC in its search
-                        results pages or listing pages before a Booking is confirmed; (ii) in any way that is inconsistent
-                        with the Qooley, LLC Privacy Policy or Terms &amp; Conditions; or (iii) in any way that otherwise
-                        violates the privacy rights or any other rights of Qooley, LLC’s users or any other third party.</p>
-                    <p class="li-data-margin">d.      Use the Application, Site or Collective Content for any commercial or other purposes that are
-                        not expressly permitted by these Terms &amp; Conditions or in a manner that falsely implies Qooley,
-                        LLC endorsement, partnership or otherwise misleads others as to your affiliation with Qooley, LLC;
-                        dilute, tarnish or otherwise harm the Qooley, LLC brand in any way, including through unauthorized
-                        use of Collective Content, registering and/or using Qooley, LLC or derivative terms in domain names,
-                        trade names, trademarks or other source identifiers, or registering and/or using domains names, trade
-                        names, trademarks or other source identifiers that closely imitate or are confusingly similar to
-                        Qooley, LLC domains, trademarks, taglines, promotional campaigns or Collective Content copy, store
-                        or otherwise access or use any information contained on the Application, Site or Collective Content
-                        for purposes not expressly permitted by these Terms&amp; Conditions; infringe the rights of Qooley,
-                        LLC or the rights of any other person or entity, including without limitation, their intellectual
-                        property, privacy, publicity or contractual right interfere with or damage our Application or Site,
-                        including, without limitation, through the use of viruses, cancel bots, Trojan horses, harmful code,
-                        flood pings, denial-of-service attacks, backdoors, packet or IP spoofing, forged routing or electronic
-                        mail address information or similar methods or technology; use our Application or Site to transmit,
-                        distribute, post or submit any information concerning any other person or entity, including without
-                        limitation, photographs of others without their permission, personal contact information or credit,
-                        debit, calling card or account numbers.</p>
-                    <p class="li-data-margin">e.       Use our Application, Site or Collective Content in connection with the distribution of unsolicited
-                        commercial email (“spam”) or advertisements unrelated to “Activity” (or “Service”) offered on the
-                        platform; “stalk” or harass any other user of our Application, Site or Collective Content, or collect
-                        or store any personally identifiable information about any other user other than for purposes of
-                        transacting as an Qooley, LLC Traveler or Qooley; offer, as a Qooley, any “Activity” (or “Service”)
-                        that you do not yourself list.</p>
-                    <p class="li-data-margin">f.       Register for more than one Qooley, LLC Account or register for an Qooley, LLC Account on behalf
-                        of an individual other than yourself; unless Qooley, LLC explicitly permits otherwise.</p>
-                    <p class="li-data-margin">g.      Contact another Member for any purpose other than asking a question related to a Booking or “Activity”
-                        (or “Service”) listing; recruit or otherwise solicit any Qooley or other Member to join third-party
-                        services or websites that are competitive to Qooley, LLC, without Qooley, LLC’s prior written approval;
-                        recruit or otherwise solicit any Member to join third-party services, applications or websites, without
-                        our prior written approval.</p>
-                    <p class="li-data-margin">h.      Impersonate any person or entity, or falsify or otherwise misrepresent yourself or your affiliation
-                        with any person or entity; use automated scripts to collect information from or otherwise interact
-                        with the Site, Application, Services or Collective Content; use the Application, Site or Collective
-                        Content to find a Qooley or Traveler and then complete a Booking of an “Activity” (or “Service”)
-                        independent of the Site, Application or Services, in order to circumvent the obligation to pay any
-                        Service Fees related to Qooley, LLC’s provision of the Services or for any other reasons.</p>
-                    <p class="li-data-margin">i.        As a Qooley, submit any listing of “Activity” (or “Service”) with false or misleading information,
-                        including price information, or submit any listing of “Activity” (or “Service”) with a price that
-                        you do not intend to honor.
-                    </p>
-                    <p class="li-data-margin">j.        As a Member,  engage in disruptive, circumventive, abusive or harassing behavior in any area
-                        or aspect of our Application or Site; post, upload, publish, submit or transmit any Content that:
-                        (i) infringes, misappropriates or violates a third party’s patent, copyright, trademark, trade secret,
-                        moral rights or other intellectual property rights, or rights of publicity or privacy; (ii) violates,
-                        or encourages any conduct that would violate, any applicable law or regulation or would give rise
-                        to civil liability; (iii) is fraudulent, false, misleading (directly or by omission or failure to
-                        update information) or deceptive; (iv) is defamatory, obscene, pornographic, vulgar or offensive;
-                        (v) promotes discrimination, bigotry, racism, hatred, harassment or harm against any individual or
-                        group; (vi) is violent or threatening or promotes violence or actions that are threatening to any
-                        other person; or (vii) promotes illegal or harmful activities or substances
-                    </p>
-                    <p class="li-data-margin">k.      As a registered Member or not, systematically retrieve data or other content from our Application
-                        or Site to create or compile, directly or indirectly, in single or multiple downloads, a collection,
-                        compilation, database, directory or the like, whether by manual methods, through the use of bots,
-                        “crawlers”, or “spiders”, or otherwise; use, display, mirror or frame the Site, Application, or Collective
-                        Content, or any individual element within the Site, Application, or Collective Content, our company’s
-                        (Qooley, LLC) name, any Qooley, LLC trademark, logo or other proprietary information, or the layout
-                        and design of any page or form contained on a page in the Application or Site without Qooley, LLC’s
-                        express written consent.</p>
-                    <p class="li-data-margin">l.        Access, tamper with, or use non-public areas of the Application or Site, or our company’s (Qooley,
-                        LLC) computer systems, or the technical delivery systems of Qooley, LLC’s providers; attempt to probe,
-                        scan, or test the vulnerability of any Qooley, LLC system or network or breach any security or authentication
-                        measures; avoid, bypass, remove, deactivate, impair, descramble, or otherwise circumvent any technological
-                        measure implemented by Qooley, LLC or any of Qooley, LLC’s providers or any other third party (including
-                        another user) to protect the Site, Application or Collective Content; forge any TCP/IP packet header
-                        or any part of the header information in any email or newsgroup posting, or in any way use the Site,
-                        Application or Collective Content to send altered, deceptive or false source-identifying information;
-                        attempt to decipher, decompile, disassemble or reverse engineer any of the software used to provide
-                        the Site, Application or Collective Content;</p>
-                    <p class="li-data-margin">m.     Advocate, encourage, or assist any third party in doing any of the foregoing; or accept or make
-                        a payment for any listings of “Activity” (or “Service”) Fees outside Qooley, LLC Payments. If you
-                        do so, you acknowledge and agree that you: (i) would be in breach of these Terms; (ii) accept all
-                        risks and responsibility for such payment, and (iii) hold Qooley, LLC harmless from any liability
-                        for such payment. Qooley, LLC has the right to investigate and prosecute violations of any of the
-                        above to the fullest extent of the law. In addition, and as set in these Terms &amp; Conditions,
-                        Qooley, LLC may take a range of actions against you, including but not limited to removing or disabling
-                        access to any or all of your Member Content or deactivating or canceling your Qooley Member Account,
-                        for a violation of this Section or these Terms &amp; Conditions.</p>
-                    <p class="li-data-margin">n.      Qooley, LLC may access, preserve and disclose any of your information if we are required to do
-                        so by law, or if we believe in good faith that it is reasonably necessary to (i) respond to claims
-                        asserted against Qooley, LLC or to comply with legal process (for example, subpoenas or warrants),
-                        (ii) enforce or administer our agreements with users, such as these Terms &amp; Conditions, (iii)
-                        for fraud prevention, risk assessment, investigation, customer support, product development and de-bugging
-                        purposes, or (iv) protect the rights, property or safety of Qooley, LLC, its users, or members of
-                        the public. You acknowledge that Qooley, LLC has no obligation to monitor your access to or use of
-                        the Site, Application, or Collective Content or to review, remove, disable access to or edit any
-                        Member Content, but has the right to do so for the purpose of operating and improving the Site and
-                        Application (including without limitation for fraud prevention, risk assessment, investigation and
-                        customer support purposes), to ensure your compliance with these Terms &amp; Conditions, to comply
-                        with applicable law or the order or requirement of a court, administrative agency or other governmental
-                        body, to respond to content that it determines is otherwise objectionable or as set forth in these
-                        Terms &amp; Conditions. Qooley, LLC reserves the right, at any time and without prior notice, to
-                        remove or disable access to any Collective Content that Qooley, LLC, at its sole discretion, considers
-                        to be objectionable for any reason, in violation of these Terms &amp; Conditions or otherwise harmful
-                        to the Application or Site.</p>
-                    <p id="11">11.    Reporting Misconduct</p>
-                    <p class="li-data-margin">If you feel the Member(s) participating in any “Activity” (or Service) is acting or has acted inappropriately,
-                        including but not limited to anyone who (i) engages in offensive, violent or sexually inappropriate
-                        behavior, (ii) you suspect of stealing from you, or (iii) engages in any other disturbing conduct,
-                        you should immediately report such person to the appropriate authorities and then to Qooley, LLC
-                        by contacting us with your police station and report number; provided that your report will not obligate
-                        us to take any action beyond that required by law (if any) or cause us to incur any liability to
-                        you.
-                    </p>
-                    <p id="12">12.    Intellectual Property Ownership and Rights Notices</p>
-                    <p class="li-data-margin">The Site, Application, and Collective Content are protected by copyright, trademark, and other laws of
-                        the United States and foreign countries. You acknowledge and agree that the Site, Application, and
-                        Collective Content, including all associated intellectual property rights, are the exclusive property
-                        of Qooley, LLC and its licensors. You will not remove, alter or obscure any copyright, trademark,
-                        service mark or other proprietary rights notices incorporated in or accompanying the Site, Application,
-                        or Collective Content. All trademarks, service marks, logos, trade names, and any other proprietary
-                        designations of Qooley, LLC used on or in connection with the Application or Site are trademarks
-                        or registered trademarks of Qooley, LLC in the US and abroad. Trademarks, service marks, logos, trade
-                        names and any other proprietary designations of third parties used on or in connection with the Site,
-                        Application, and Qooley, LLC Content are used for identification purposes only and may be the property
-                        of their respective owners.</p>
-                    <p id="13">13.    Application License</p>
-                    <p class="li-data-margin">Subject to your compliance with these Terms &amp; Conditions, Qooley, LLC grants you a limited non-exclusive,
-                        non-transferable license to download and install a copy of the Application on each mobile device
-                        or computer that you own or control and run such copy of the Application solely for your own personal
-                        use. Furthermore, with respect to any Apple App Store Sourced Application, you will only use the
-                        App Store Sourced Application (i) on an Apple-branded product that runs the iOS (Apple’s proprietary
-                        operating system) and (ii) as permitted by the “Usage Rules” set forth in the Apple App Store Terms
-                        of Service. Qooley, LLC reserves all rights in the Application not expressly granted to you by these
-                        Terms &amp; Conditions.</p>
-                    <p id="14">14.    Qooley, LLC Content and Member Content License</p>
-                    <p class="li-data-margin">Subject to your compliance with these Terms &amp; Conditions, Qooley, LLC grants you a limited, non-exclusive,
-                        non-transferable license, to (i) access and view any Qooley, LLC Content solely for your personal
-                        and non-commercial purposes and (ii) access and view any Member Content to which you are permitted
-                        access, solely for your personal and non-commercial purposes. You have no right to sublicense the
-                        license rights granted in this section.</p>
-                    <p class="li-data-margin">You will not use, copy, adapt, modify, prepare derivative works based upon, distribute, license, sell,
-                        transfer, publicly display, publicly perform, transmit, broadcast or otherwise exploit the Site,
-                        Application, Services, or Collective Content, except as expressly permitted in these Terms &amp;
-                        Conditions. No licenses or rights are granted to you by implication or otherwise under any intellectual
-                        property rights owned or controlled by Qooley, LLC or its licensors, except for the licenses and
-                        rights expressly granted in these Terms.</p>
-                    <p id="15">15.    Member Content</p>
-                    <p class="li-data-margin">We may, in our sole discretion, permit you to post, upload, publish, submit or transmit Member Content.
-                        By making available any Member Content on or through the Site, Application, or through Qooley, LLC’s
-                        promotional campaigns, you hereby grant to Qooley, LLC a worldwide, irrevocable, perpetual (or for
-                        the term of the protection), non-exclusive, transferable, royalty-free license, with the right to
-                        sublicense, to use, view, copy, adapt, translate, modify, distribute, license, sell, transfer, publicly
-                        display, publicly perform, transmit, stream, broadcast, access, view, and otherwise exploit such
-                        Member Content on, through, by means of or to promote or market the Application and Site. Qooley,
-                        LLC does not claim any ownership rights in any such Member Content and nothing in these Terms will
-                        be deemed to restrict any rights that you may have to use and exploit any such Member Content.</p>
-                    <p class="li-data-margin">You acknowledge and agree that you are solely responsible for all Member Content that you make available
-                        through the Site, Application, or through Qooley, LLC’s promotional campaigns. Accordingly, you represent
-                        and warrant that: (i) you either are the sole and exclusive owner of all Member Content that you
-                        make available through the Site, Application, or through Qooley, LLC’s promotional campaigns or you
-                        have all rights, licenses, consents and releases that are necessary to grant to Qooley, LLC the rights
-                        in such Member Content, as contemplated under these Terms; and (ii) neither the Member Content nor
-                        your posting, uploading, publication, submission or transmittal of the Member Content or Qooley,
-                        LLC’s use of the Member Content (or any portion thereof) on, through or by means of the Site, Application,
-                        or Qooley, LLC’s promotional campaigns will infringe, misappropriate or violate a third party’s patent,
-                        copyright, trademark, trade secret, moral rights or other proprietary or intellectual property rights,
-                        or rights of publicity or privacy, or result in the violation of any applicable law or regulation.</p>
-                    <p id="16">16.    Links &amp; APIs</p>
-                    <p class="li-data-margin">The Application and Site may contain links to third-party websites or resources. You acknowledge and
-                        agree that Qooley, LLC is not responsible or liable for: (i) the availability or accuracy of such
-                        websites or resources; or (ii) the content, products, or services on or available from such websites
-                        or resources. Links to such websites or resources do not imply any endorsement by Qooley, LLC of
-                        such websites or resources or the content, products, or services available from such websites or
-                        resources. You acknowledge sole responsibility for and assume all risk arising from your use of any
-                        such websites or resources or the Content, products or services on or available from such websites
-                        or resources.</p>
-                    <p class="li-data-margin">Some portions of the Qooley Application or Site platform may implement Google Maps/Earth mapping services,
-                        including Google Maps API(s). Your use of Google Maps/Earth is subject to Google’s terms of use.</p>
-                    <p id="17">17.    Copyright Policy</p>
-                    <p class="li-data-margin">Qooley, LLC respects copyright law and expects its users to do the same. It is our company’s (Qooley,
-                        LLC) policy to terminate in appropriate circumstances the Qooley Member Accounts or other account
-                        holders who repeatedly infringe or are believed to be repeatedly infringing the rights of copyright
-                        holders.
-                    </p>
-                    <p id="18">18.    Termination, Suspension and Other Measures</p>
-                    <p class="li-data-margin">Termination<br /> You may terminate these Terms &amp; Conditions at any time via the “Deactivate Account”
-                        feature on the Application or Site. If you cancel your Qooley Member Account as a Qooley, any confirmed
-                        Bookings will be automatically cancelled and your Travelers will receive a full refund. If you cancel
-                        your Qooley, LLC Account as a Traveler, any confirmed Booking will be automatically cancelled and
-                        any refund will depend upon the terms of the applicable cancellation policy.
-                    </p>
-                    <p class="li-data-margin">Without limiting our rights specified below, Qooley, LLC may terminate these Terms for convenience at
-                        any time by giving you 30 days’ notice via email to your registered email address.</p>
-                    <p class="li-data-margin">Termination for breach, suspension and other measures<br /> Qooley, LLC may immediately, without notice
-                        terminate your Qooley Member Account if (i) you have materially breached these Terms &amp; Conditions
-                        or our Policies, including but not limited to any breach of your warranties outlined in these Terms
-                        &amp; Conditions or breach of the “User Conduct” provisions in these Terms &amp; Conditions, (ii)
-                        you have provided inaccurate, fraudulent, outdated or incomplete information during the Qooley Member
-                        Account registration, or listing process of any “Activity” (or “Service”) or thereafter, (iii) you
-                        have violated applicable laws, regulations or third party rights, or (iv) Qooley, LLC believes in
-                        good faith that such action is reasonably necessary to protect the safety or property of other Members,
-                        our company (Qooley, LLC) or third parties, for fraud prevention, risk assessment, security or investigation
-                        purposes.
-                    </p>
-                    <p class="li-data-margin">In addition Qooley, LLC may deactivate or delay listings of any “Activity” (or “Service”), reviews, or
-                        other Member Content, cancel any pending or confirmed Bookings, limit your use of or access to your
-                        Qooley Member Account and the Application or Site, temporarily or permanently revoke any special
-                        status associated with your Qooley Member Account, or temporarily or permanently suspend your Qooley
-                        Member Account if (i) you have breached these Terms &amp; Conditions or our Policies, including material
-                        and non-material breaches and receiving poor ratings from Qooley(s) or Traveler(s) or (ii) our company
-                        (Qooley, LLC) believes in good faith that such action is reasonably necessary to protect the safety
-                        or property of Members, our company (Qooley, LLC) or third parties, for fraud prevention, risk assessment,
-                        security or investigation purposes.
-                    </p>
-                    <p class="li-data-margin">If we take any of the measures described in this Section 18 (c), we may (i) communicate to your Traveler(s)
-                        or Qooley(s) that a pending or confirmed Booking has been cancelled, (ii) refund your Traveler(s)
-                        in full for any and all confirmed Bookings, irrespective of preexisting cancellation policies, (iii)
-                        support your Traveler(s), on an exceptional basis, in finding potential alternative “Activity” (or
-                        “Service”), and (iv) you will not be entitled to any compensation for confirmed Bookings that were
-                        cancelled.
-                    </p>
-                    <p class="li-data-margin">In case of non-material breaches and where appropriate, you will be given notice of any measure by our
-                        company (Qooley, LLC) and an opportunity to resolve the issue to our company’s (Qooley, LLC) reasonable
-                        satisfaction.
-                    </p>
-                    <p class="li-data-margin">Consequences<br /> If you or we terminate this Agreement, we do not have an obligation to delete or return
-                        to you any of your Member Content, including but not limited to any reviews or Feedback. When this
-                        Agreement has been terminated, you are not entitled to a restoration of your Qooley, LLC Account
-                        or any of your Member Content. If your access to or use of the Application and Site has been limited
-                        or your Qooley Member Account has been suspended or this Agreement has been terminated by us, you
-                        may not register a new Qooley Member Account or attempt to access and use the Application and Site
-                        through other Qooley Member Accounts.</p>
-                    <p class="li-data-margin">Survival<br /> If you or we terminate this Agreement, the clauses of these Terms that reasonably should
-                        survive termination of the Agreement will remain in effect.</p>
-                    <p id="19">19.    Disclaimers</p>
-                    <p class="li-data-margin">If you choose to use the Application, Site or Collective Content or participate in the referral program,
-                        you do so at your sole risk. You acknowledge and agree that Qooley, LLC does not have an obligation
-                        to conduct background or registered sex offender checks on any member, including, but not limited
-                        to, Traveler(s) and Qooley(s). But may conduct such background or registered sex offender checks,
-                        in our sole discretion, to the extent permitted by applicable laws and if we have sufficient information
-                        to identify a member. If we choose to conduct such checks, to the extent permitted by applicable
-                        law, we disclaim warranties of any kind, either express or implied, that such checks will identify
-                        prior misconduct by a user or guarantee that a user will not engage in misconduct in the future.</p>
-                    <p class="li-data-margin">The site, application, services, collective content and referral program are provided “as is”, without
-                        warranty of any kind, either express or implied. Without limiting the foregoing, Qooley, LLC explicitly
-                        disclaims any warranties of merchantability, satisfactory quality, fitness for a particular purpose,
-                        quiet enjoyment or non-infringement, and any warranties arising out of course of dealing or usage
-                        of trade. Qooley, LLC makes no warranty that the site, application, services, collective content,
-                        including, but not limited to, the listings or any accommodations, or the referral program will meet
-                        your requirements or be available on an uninterrupted, secure, or error-free basis. Qooley, LLC makes
-                        no warranty regarding the quality of any listings, accommodations, Qooley(s), Traveler(s), your accrual
-                        of Qooley Credits, the services or collective content or the accuracy, timeliness, truthfulness,
-                        completeness or reliability of any collective content obtained through the site, application, services
-                        or referral program.
-                    </p>
-                    <p class="li-data-margin">No advice or information, whether oral or written, obtained from Qooley, LLC or through the site, application,
-                        services or collective content, will create any warranty not expressly made herein.</p>
-                    <p class="li-data-margin">You are solely responsible for all of your communications and interactions with other users of the Application
-                        or Site and with other persons with whom you communicate or interact as a result of your use of the
-                        Application or Site, including, but not limited to, any Qooley(s) or Traveler(s). You understand
-                        that Qooley, LLC does not make any attempt to verify the statements of users of the Application or
-                        Site. Qooley, LLC makes no representations or warranties as to the conduct of users of the Application
-                        or Site or their compatibility with any current or future users of the Application or Site. You agree
-                        to take reasonable precautions in all communications and interactions with other Members of the Application
-                        or Site and with other persons with whom you communicate or interact as a result of your use of the
-                        Application or Site, including, but not limited to, Traveler(s) and Qooley(s), particularly if you
-                        decide to meet offline or in person regardless of whether such meetings are organized by our company
-                        (Qooley, LLC). Qooley, LLC explicitly disclaims all liability for any act or omission of any Traveler
-                        or other third party.</p>
-                    <p id="20">20.    Limitation of Liability</p>
-                    <p class="li-data-margin">You acknowledge and agree that, to the maximum extent permitted by law, the entire risk arising out of
-                        your access to and use of the site, application, services and collective content, your listing or
-                        booking of any “Activity” (or “Service”) via the Application and Site, your participation in the
-                        referral program, and any contact you have with other users of Qooley, LLC whether in person or online
-                        remains with you. Neither Qooley, LLC nor any other party involved in creating, producing, or delivering
-                        the site, application, services, collective content or the referral program will be liable for any
-                        incidental, special, exemplary or consequential damages, including lost profits, loss of data or
-                        loss of goodwill, service interruption, computer damage or system failure or the cost of substitute
-                        products or services, or for any damages for personal or bodily injury or emotional distress arising
-                        out of or in connection with these terms, from the use of or inability to use the Application, Site
-                        or Collective Content, from any communications, interactions or meetings with other users of the
-                        Application, or Site or other persons with whom you communicate or interact as a result of your use
-                        of the Application, Site, or your participation in the referral program or from your listing or booking
-                        of any “Activity” (or “Service”) via the Application and Site, whether based on warranty, contract,
-                        tort (including negligence), product liability or any other legal theory, and whether or not our
-                        company (Qooley, LLC) has been informed of the possibility of such damage, even if a limited remedy
-                        set forth herein is found to have failed of its essential purpose.</p>
-                    <p class="li-data-margin">Except for our obligations to pay amounts to applicable Qooley(s) pursuant to these Terms &amp; Conditions,
-                        in no event will Qooley, LLC’s aggregate liability arising out of or in connection with these Terms
-                        &amp; Conditions and your use of the Application and Site including, but not limited to, from your
-                        listing or Booking of any “Activity” (or “Service”) via the Application and Site, or from the use
-                        of or inability to use the Application, Site, or Collective Content or your participation in the
-                        referral program and in connection with any interactions with any other Members, exceed the amounts
-                        you have paid or owe for Bookings via the Application and Site as a Traveler in the twelve (12) month
-                        period prior to the event giving rise to the liability, or if you are a Qooley, the amounts paid
-                        by Qooley, LLC to you in the twelve (12) month period prior to the event giving rise to the liability,
-                        or one hundred U.S. dollars (US $100), if no such payments have been made, as applicable. The limitations
-                        of damages set forth above are fundamental elements of the basis of the bargain between Qooley, LLC
-                        and you. Some jurisdictions do not allow the exclusion or limitation of liability for consequential
-                        or incidental damages, so the above limitation may not apply to you.</p>
-                    <p id="21">21.    Indemnification</p>
-                    <p class="li-data-margin">You agree to release, defend, indemnify, and hold our company (Qooley, LLC) and its affiliates and subsidiaries,
-                        and their officers, directors, employees and agents, harmless from and against any claims, liabilities,
-                        damages, losses, and expenses, including, without limitation, reasonable legal and accounting fees,
-                        arising out of or in any way connected with (a) your access to or use of the Site, Application, Services,
-                        or Collective Content or your violation of these Terms; (b) your Member Content; (c) your (i) interaction
-                        with any Member, (ii) Booking of an “Activity” (or “Service”), or (iii) creation of an “Activity”
-                        (or “Service”); (d) the participation in, or Booking of an “Activity” (or “Service”) by you, including
-                        but not limited to any injuries, losses, or damages (compensatory, direct, incidental, consequential
-                        or otherwise) of any kind arising in connection with or as a result of a Booking or participation
-                        in an “Activity” (or “Service”); and (e) your participation in the any referral program or your accrual
-                        of any Qooley Credits.
-                    </p>
-                    <p id="22">22.    Entire Agreement</p>
-                    <p class="li-data-margin">Except as they may be supplemented by a document referenced and incorporated herein or by additional
-                        Qooley, LLC policies, guidelines, standards, or terms for a specific product, feature, service or
-                        offering, these Terms &amp; Conditions constitute the entire and exclusive understanding and agreement
-                        between our company (Qooley, LLC) and you regarding the Application, Site, Collective Content (excluding
-                        Payment Services), and any Bookings or listings of “Activity” (or “Service”) made via the Application
-                        and Site (excluding Payment Services), and these Terms &amp; Conditions supersede and replace any
-                        and all prior oral or written understandings or agreements between our company (Qooley, LLC) and
-                        you regarding Bookings or listings of “Activity” (or “Service”), the Application, Site, and Collective
-                        Content (excluding Payment Services).</p>
-                    <p id="23">23.    Controlling Law and Jurisdiction</p>
-                    <p class="li-data-margin">These Terms &amp; Conditions and your use of the Application or Site will be interpreted in accordance
-                        with the laws of the State of Delaware and the United States of America, without regard to its conflict-of-law
-                        provisions. You and we agree to submit to the personal jurisdiction of a state court located in County
-                        of New Castle, Delaware or a United States District Court, located in Wilmington, Delaware for any
-                        actions for which the parties retain the right to seek injunctive or other equitable relief in a
-                        court of competent jurisdiction to prevent the actual or threatened infringement, misappropriation
-                        or violation of a party’s copyrights, trademarks, trade secrets, patents, or other intellectual property
-                        rights, as set forth in the Dispute Resolution provision below.
-                    </p>
-                    <p id="24">24.    Dispute Resolution</p>
-                    <p class="li-data-margin">If you reside in the United States, you and our company (Qooley, LLC) agree that any dispute, claim or
-                        controversy arising out of or relating to these Terms &amp; Conditions or the breach, termination,
-                        enforcement, interpretation or validity thereof, or to the use of the Application, Site or Collective
-                        Content (collectively, “Disputes”) will be settled by binding arbitration, except that each party
-                        retains the right to seek injunctive or other equitable relief in a court of competent jurisdiction
-                        to prevent the actual or threatened infringement, misappropriation or violation of a party’s copyrights,
-                        trademarks, trade secrets, patents, or other intellectual property rights. You acknowledge and agree
-                        that you and Qooley, LLC are each waiving the right to a trial by jury or to participate as a plaintiff
-                        or class member in any purported class action lawsuit, class-wide arbitration, private attorney-general
-                        action, or any other representative proceeding. Further, unless both you and Qooley, LLC otherwise
-                        agree in writing, the arbitrator may not consolidate more than one person’s claims, and may not otherwise
-                        preside over any form of any class or representative proceeding. If this specific paragraph is held
-                        unenforceable, then the entirety of this “Dispute Resolution” section will be deemed void. Except
-                        as provided in the preceding sentence, this “Dispute Resolution” section will survive any termination
-                        of these Terms &amp; Conditions.</p>
-                    <p class="li-data-margin">Arbitration Rules and Governing Law.</p>
-                    <p class="li-data-margin">This agreement to arbitrate evidences a transaction in interstate commerce, and thus the Federal Arbitration
-                        Act governs the interpretation and enforcement of this provision. The arbitration will be administered
-                        by the American Arbitration Association (“AAA“) in accordance with the Consumer Arbitration Rules
-                        (the “AAA Rules“) then in effect, except as modified by this “Dispute Resolution” section. (The AAA
-                        Rules are available at www.adr.org/arb_medor by calling the AAA at 1–800–778–7879.) The Federal Arbitration
-                        Act will govern the interpretation and enforcement of this section.</p>
-                    <p class="li-data-margin">Arbitration Process.</p>
-                    <p class="li-data-margin">A party who desires to initiate arbitration must provide the other party with a written Demand for Arbitration
-                        as specified in the AAA Rules. (The AAA provides a form Demand for Arbitration.) The arbitrator will
-                        be either a retired judge or an attorney licensed to practice law in the state of Delaware and will
-                        be selected by the parties from the AAA’s roster of consumer dispute arbitrators. If the parties
-                        are unable to agree upon an arbitrator within seven (7) days of delivery of the Demand for Arbitration,
-                        then the AAA will appoint the arbitrator in accordance with the AAA Rules.</p>
-                    <p class="li-data-margin">Arbitration Location and Procedure.</p>
-                    <p class="li-data-margin">Unless you and Qooley, LLC otherwise agree, the arbitration will be conducted in the county where you
-                        reside. If your claim does not exceed $5,000, then the arbitration will be conducted solely on the
-                        basis of documents you and Qooley, LLC submit to the arbitrator, unless you request a hearing or
-                        the arbitrator determines that a hearing is necessary. If your claim exceeds $5,000, your right to
-                        a hearing will be determined by the AAA Rules. Subject to the AAA Rules, the arbitrator will have
-                        the discretion to direct a reasonable exchange of information by the parties, consistent with the
-                        expedited nature of the arbitration.</p>
-                    <p class="li-data-margin">Arbitrator’s Decision.</p>
-                    <p class="li-data-margin">The arbitrator will render an award within the time frame specified in the AAA Rules. The arbitrator’s
-                        decision will include the essential findings and conclusions upon which the arbitrator based the
-                        award. Judgment on the arbitration award may be entered in any court having jurisdiction thereof.
-                        The arbitrator’s award damages must be consistent with the terms of the “Limitation of Liability”
-                        section above as to the types and the amounts of damages for which a party may be held liable. The
-                        arbitrator may award declaratory or injunctive relief only in favor of the claimant and only to the
-                        extent necessary to provide relief warranted by the claimant’s individual claim. If you prevail in
-                        arbitration you will be entitled to an award of attorneys’ fees and expenses, to the extent provided
-                        under applicable law. Qooley, LLC will not seek, and hereby waives all rights it may have under applicable
-                        law to recover, attorneys’ fees and expenses if it prevails in arbitration.</p>
-                    <p class="li-data-margin" id="one">Fees.</p>
-                    <p class="li-data-margin">Your responsibility to pay any AAA filing, administrative and arbitrator fees will be solely as set forth
-                        in the AAA Rules. However, if your claim for damages does not exceed $10,000, Qooley, LLC will pay
-                        all such fees unless the arbitrator finds that either the substance of your claim or the relief sought
-                        in your Demand for Arbitration was frivolous or was brought for an improper purpose (as measured
-                        by the standards set forth in Federal Rule of Civil Procedure 11(b)).</p>
-                    <p class="li-data-margin">Changes.</p>
-                    <p class="li-data-margin">Notwithstanding the provisions of the “Modification” section above, if Qooley, LLC changes this “Dispute
-                        Resolution” section after the date you last accepted these Terms (or accepted any subsequent changes
-                        to these Terms), you may reject any such change by sending us written notice (including by email)
-                        within 30 days of the date such change became effective, as indicated in the “Last Updated” date
-                        above or in the date of Qooley, LLC’s email to you notifying you of such change. By rejecting any
-                        change, you are agreeing that you will arbitrate any Dispute between you and Qooley, LLC in accordance
-                        with the provisions of this “Dispute Resolution” section as of the date you last accepted these Terms
-                        &amp; Conditions (or accepted any subsequent changes to these Terms &amp; Conditions).
-                    </p>
-                    <p id="25">25.    Third party beneficiary</p>
-                    <p class="li-data-margin">These Terms do not and are not intended to confer any rights or remedies upon any person other than the
-                        parties.
-                    </p>
+                <div class="menu-index">
+                    <h3>Table of Contents</h3>
+                    <ol>
+                        <li (click)="scrollElement('1');"> General Terms</li>
+                        <li (click)="scrollElement('2');"> Definitions</li>
+                        <li (click)="scrollElement('3');">Terms of Service</li>
+                        <li (click)="scrollElement('4');"> Modifications to Terms & Conditions</li>
+                        <li (click)="scrollElement('5');">Member Eligibility</li>
+                        <li (click)="scrollElement('6');">Member Account Registration</li>
+                        <li (click)="scrollElement('7');">Activity (or “Service”) Listings</li>
+                        <li (click)="scrollElement('8');">No Endorsement</li>
+                        <li (click)="scrollElement('9');">Damage to Property</li>
+                        <li (click)="scrollElement('10');">User Conduct</li>
+                        <li (click)="scrollElement('11');">Reporting Misconduct</li>
+                        <li (click)="scrollElement('12');">Intellectual Property Ownership and Rights Notices</li>
+                        <li (click)="scrollElement('13');"> Application License</li>
+                        <li (click)="scrollElement('14');">Qooley, LLC Content and Member Content License</li>
+                        <li (click)="scrollElement('15');"> Member Content</li>
+                        <li (click)="scrollElement('16');">Links & APIs</li>
+                        <li (click)="scrollElement('17');">Copyright Policy</li>
+                        <li (click)="scrollElement('18');">Termination, Suspension and Other Measures</li>
+                        <li (click)="scrollElement('19');">Disclaimers</li>
+                        <li (click)="scrollElement('20');">Limitation of Liability</li>
+                        <li (click)="scrollElement('21');">Indemnification</li>
+                        <li (click)="scrollElement('22');">Entire Agreement</li>
+                        <li (click)="scrollElement('23');">Controlling Law and Jurisdiction</li>
+                        <li (click)="scrollElement('24');">Dispute Resolution</li>
+                        <li (click)="scrollElement('25');">Third party beneficiary</li>
+                    </ol>
                 </div>
+
+                <p id="1">1.      General Terms</p>
+                <p class="li-data-margin">Qooley provides an online platform that connects locals (the “Qooley”, or “Service Provider”) who offer various
+                    travel-related activities (collectively, the “Activities”, or the “Services”). These Activities are accessible
+                    via applications available on mobile, tablet and other smart devices and application program interfaces
+                    (collectively, the “Application”).</p>
+                <p class="li-data-margin">If you are using the Application or Activities and you reside in the USA, these Terms of Service are between
+                    you and Qooley, LLC. If you are a traveler residing in a different country, but utilize services offered
+                    on the Application when visiting USA, these Terms &amp; Conditions are between you and Qooley, LLC.</p>
+                <p class="li-data-margin">Payment Services provided via the Application by Qooley, LLC are subject to the Payment Policies (“Payments
+                    Terms“).
+                </p>
+                <p id="2">2.      Definitions</p>
+                <p class="li-data-margin">“Qooley Application” means the Application used by Traveler to book any “Activity” or “Service”</p>
+                <p class="li-data-margin">“QooleyBiz Application” means the Application on which a local can register to be a “Qooley”.</p>
+                <p class="li-data-margin">“Site” means the website <a href="#" rel="nofollow">http://www.Qooley.com</a></p>
+                <p class="li-data-margin">“Qooley” means the local (or, the “Service Provider”) who creates “Service” or “Activity” on QooleyBiz Application
+                    for the purposes of listing the “Service” or “Activity” on Qooley Application for the travelers to be
+                    able to book.
+                </p>
+                <p class="li-data-margin">“Traveler” means the person(s) booking any “Activity” or “Service” via the Qooley Application.</p>
+                <p class="li-data-margin">“Activity” means services offered by a Qooley (or, the “Service Providers”).</p>
+                <p class="li-data-margin">“Member” means any user registered on the Application or Site (Traveler and/or Qooley).</p>
+                <p class="li-data-margin">“Qooley Content” means all Content that Qooley, LLC makes available through the Site, Application, Services,
+                    or its related promotional campaigns and official social media channels, including any Content licensed
+                    from a third party, but excluding Member Content.</p>
+                <p class="li-data-margin">“Booking Request Period” means the time period starting from the time when a Booking is requested by a Traveler
+                    (as determined by Qooley, LLC in its sole discretion), within which a Qooley (or, the “Service Provider”)
+                    may decide whether to confirm or reject that Booking Request, as stated on the Site, Application or Services.
+                    Different Booking Request Periods may apply in different places.</p>
+                <p class="li-data-margin">“Communication” means an email, message via the Application, text message or phone call.</p>
+                <p class="li-data-margin">“Content” means text, graphics, images, music, software (excluding the Application), audio, video, information
+                    or other materials.
+                </p>
+                <p class="li-data-margin">“Collective Content” means Member Content and Qooley Content.</p>
+                <p class="li-data-margin">“Qooley Credit” means credits earned by Members as awarded by Qooley, LLC for using the Application or Site.</p>
+                <p id="3">3.      Terms of Service</p>
+                <p class="li-data-margin">By using the Site, Application or Services, you agree to comply with and be legally bound by the terms and
+                    conditions of these Terms of Service, whether or not you become a registered user. These Terms govern
+                    your access to and use of the Site, Application and Services and all Collective Content (defined below),
+                    and your participation in the Referral Program (defined below), and constitute a binding legal agreement
+                    between you and Qooley, LLC. Please also read carefully our Privacy Policy at www.Qooley.com/terms/privacy_policy.</p>
+                <p class="li-data-margin">In addition, certain areas of the Site and Application (and your access to or use of certain aspects of the
+                    Services or Collective Content) may have different terms and conditions, standards, guidelines, or policies
+                    posted or may require you to agree with and accept additional terms and conditions. If there is a conflict
+                    between these Terms and terms and conditions posted for a specific area of the Site, Application, Services,
+                    or Collective Content, the latter terms and conditions will take precedence with respect to your use
+                    of or access to that area of the Site, Application, Services, or Collective Content.</p>
+                <p class="li-data-margin">If you do not agree to these Terms, you have no right to obtain information from or otherwise continue using
+                    the Site, Application or Services. Failure to use the Site, Application or Services in accordance with
+                    these Terms may subject you to civil and criminal penalties.</p>
+                <p class="li-data-margin">The site, application and services comprise an online platform through which a “Qooley” may create listings
+                    for an “Activity” (or “Service”) and travelers may learn about and book the “Activity” (or “Service”)
+                    directly with the Qooley. You understand and agree that Qooley, LLC is not a party to any agreements
+                    entered into between Qooley (or “Service Providers”) and Travelers, nor is Qooley, LLC a travel agent
+                    or travel agency. Qooley has no control over the conduct of Qooley (or “Service Providers”), travelers
+                    and other users of the site, application and services, and disclaims all liability in this regard to
+                    the maximum extent permitted by law.</p>
+                <p class="li-data-margin">As a Qooley, if you choose to create an “Activity” or “Service” on QooleyBiz application for the purposes
+                    of listing it on Qooley Application, you understand and agree that your relationship with Qooley, LLC
+                    is limited to being a member and an independent, third-party contractor, and not an employee, agent,
+                    a joint venture or partner of Qooley, LLC for any reason, and you act exclusively on your own behalf
+                    and for your own benefit, and not on behalf of or for the benefit of Qooley, LLC. Qooley, LLC does not
+                    control, and has no right to control, your listing, your offline activities associated with your listing,
+                    or any other matters related to any listing, that you provide. As a member, you agree not to do anything
+                    to create a false impression that you are endorsed by, partnering with, or acting on behalf of or for
+                    the benefit of Qooley, LLC, including by inappropriately using any Qooley, LLC’s intellectual property.
+                </p>
+                <p class="li-data-margin">You acknowledge and agree that, by accessing or using the site, application or services or by downloading
+                    or posting any content from or on the site, via the application or through the services, you are indicating
+                    that you have read, and that you understand and agree to be bound by these terms and receive our services
+                    (including, where applicable, programs such as the traveler protection insurance program, whether or
+                    not you have registered with the site and application.
+                </p>
+                <p class="li-data-margin">If you do not agree to these terms, then you have no right to access or use the site, application, services,
+                    or collective content. If you accept or agree to these Terms &amp; conditions on behalf of a company
+                    or other legal entity, you represent and warrant that you have the authority to bind that company or
+                    other legal entity to these Terms and, in such event, “you” and “your” will refer and apply to that company
+                    or other legal entity.</p>
+                <p id="4">4.      Modifications to Terms &amp; Conditions</p>
+                <p class="li-data-margin">Qooley, LLC reserves the right, at its sole discretion, to modify the Site, Application or Services or to
+                    modify these Terms, including the Service Fees, at any time and without prior notice. If we modify these
+                    Terms, we will post the modification on the Site or via the Application and/or provide you notice of
+                    the modification by email. We will also update the “Last Updated” date at the top of these Terms. Changes
+                    to the Terms will be effective at the time of posting. Your continued access or use of the Site, Application
+                    or Services will constitute acceptance of the modified Terms. Additionally, if the modified Terms contain
+                    material changes applicable to existing Members (by decreasing your rights or increasing your responsibilities),
+                    we will provide you with notice prior to the changes taking effect. If the modified Terms are not acceptable
+                    to you, your only recourse is to cease using the Site, Application and Services. If you do not close
+                    your Member Account with Qooley, LLC you will be deemed to have accepted the changes.</p>
+                <p id="5">5.      Member Eligibility</p>
+                <p class="li-data-margin">The use of Application and Site are intended solely for persons who are 18 or older. Any access to or use
+                    of the Application and Site by anyone under 18 is expressly prohibited. By accessing or using the Application
+                    and Site you represent and warrant that you are 18 or older.</p>
+                <p class="li-data-margin">For users in the United States, Qooley, LLC will, to the extent permitted by applicable laws and if we have
+                    sufficient information to identify a user, obtain reports from public records of criminal convictions
+                    or sex offender registrations of the user. For users outside the United States, we may, to the extent
+                    permitted by applicable laws and if we have sufficient information to identify a user, obtain the local
+                    version of background or registered sex offender checks in our sole discretion.</p>
+                <p class="li-data-margin">You agree and authorize us to use your personal information, such as your full name and date of birth, to
+                    obtain such reports, including from Qooley, LLC’s vendors.</p>
+                <p id="6">6.      Member Account Registration</p>
+                <p class="li-data-margin">In order to access certain features of the Site and Application, and to book an “Activity” (or “Service”)
+                    or create a listing, you must register to create an account (“Qooley Member Account”) and become a Member.
+                    You may register to join directly via the Application or as described in this section. As a Traveler,
+                    you can register to join by logging into your account with certain third-party social networking sites
+                    (“SNS”) (including, but not limited to, Facebook or Google; each such account, a “Third-Party Account”),
+                    via our Application, as described below.</p>
+                <p class="li-data-margin">As a Member, you can become a Qooley by registering on the QooleyBiz Application. To become a Qooley, you
+                    must register with your telephone number. Qooley, LLC will verify the telephone number by sending a verification
+                    code. In order to proceed with the registration process as a Qooley, the member must be able to verify
+                    the phone number provided at the time of registration.</p>
+                <p class="li-data-margin">As part of the functionality of the Application and Site, you may link your Qooley Member Account with Third-Party
+                    Accounts, by either: (i) providing your Third-Party Account login information to Qooley through the Application;
+                    or (ii) allowing Qooley, LLC to access your Third-Party Account, as permitted under the applicable terms
+                    and conditions that govern your use of each Third-Party Account. You represent that you are entitled
+                    to disclose your Third-Party Account login information to Qooley, LLC and/or grant Qooley, LLC access
+                    to your Third-Party Account (including, but not limited to, for use for the purposes described herein),
+                    without breach by you of any of the terms and conditions that govern your use of the applicable Third-Party
+                    Account and without obligating Qooley, LLC to pay any fees or making Qooley, LLC subject to any usage
+                    limitations imposed by such third-party service providers. By granting Qooley, LLC access to any Third-Party
+                    Accounts, you understand that Qooley, LLC will access, make available and store (if applicable) any Content
+                    that you have provided to and stored in your Third-Party Account (“SNS Content”) so that it is available
+                    on and through the Site and Application via your Qooley Member Account and Qooley Member Account profile
+                    page. Unless otherwise specified in these Terms, all SNS Content, if any, will be considered to be Member
+                    Content for all purposes of these Terms. Depending on the Third-Party Accounts you choose and subject
+                    to the privacy settings that you have set in such Third-Party Accounts, personally identifiable information
+                    that you post to your Third-Party Accounts will be available on and through your Qooley Member Account
+                    on the Site, Services and Application. Please note that if a Third-Party Account or associated service
+                    becomes unavailable or Qooley, LLC’s access to such Third-Party Account is terminated by the third-party
+                    service provider, then SNS Content will no longer be available on and through the Site, Services and
+                    Application. You have the ability to disable the connection between your Qooley Member Account and your
+                    Third-Party Accounts, at any time, by accessing the “Settings” section of the Site and Application.</p>
+                <p class="li-data-margin">PLEASE NOTE THAT YOUR RELATIONSHIP WITH THE THIRD-PARTY SERVICE PROVIDERS ASSOCIATED WITH YOUR THIRD-PARTY
+                    ACCOUNTS IS GOVERNED SOLELY BY YOUR AGREEMENT(S) WITH SUCH THIRD-PARTY SERVICE PROVIDERS.</p>
+                <p class="li-data-margin">Qooley, LLC makes no effort to review any SNS Content for any purpose, including but not limited to for accuracy,
+                    legality or non-infringement and Qooley, LLC is not responsible for any SNS Content.</p>
+                <p class="li-data-margin">Your Qooley Member Account and your Qooley Member Account profile page will be created for your use of the
+                    Site and Application based upon the personal information you provide to us or that we obtain via an SNS
+                    as described above. You may not have more than one (1) active Qooley Member Account. You agree to provide
+                    accurate, current and complete information during the registration process and to update such information
+                    to keep it accurate, current and complete. Qooley, LLC reserves the right to suspend or terminate your
+                    Qooley Member Account and your access to the Site, Application and Services if you create more than one
+                    (1) Qooley Member Account, or if any information provided during the registration process or thereafter
+                    proves to be inaccurate, fraudulent, not current, incomplete, or otherwise in violation of these Terms
+                    of Service.</p>
+                <p class="li-data-margin">You are responsible for safeguarding your password. You agree that you will not disclose your password to
+                    any third party.
+                </p>
+                <p class="li-data-margin">Unless expressly authorized by a specific feature on Qooley Application you are not permitted to share your
+                    Qooley Member Account with anyone or allow others to access or use your Qooley Member Account. Qooley,
+                    LLC may enable Application features, in our discretion, that allow other Members to take certain actions
+                    associated with your Qooley Member Account, on your behalf with your express authorization, such as having
+                    your executive assistant, travel agent, or employer book on your behalf or adding a family member to
+                    your account as an additional “Service Provider”. You agree that you will take sole responsibility for
+                    any activities or actions under your Qooley Member Account, whether or not you have authorized such activities
+                    or actions. You will immediately notify Qooley, LLC of any unauthorized use of your Qooley Member Account.</p>
+                <p id="7">7.      Activity (or “Service”) Listings</p>
+                <p class="li-data-margin">As a registered Qooley, you may create “Activities” (or “Services”). To create an “Activity” (or “Service”),
+                    you will be asked a variety of questions about the “Activity” (or “Service”) to be listed, including,
+                    but not limited to, the location, capacity, size, features, and availability of the “Activity” (or “Service”)
+                    and pricing and related rules and financial terms. In order to be featured in search results via the
+                    Application and Site, all “Activities” (or “Services”) must have valid physical addresses. Listings of
+                    your “Activity” (or “Service”) will be made publicly available via the Application and Site. You understand
+                    and agree that the placement or ranking of such listings in search results may depend on a variety of
+                    factors, including, but not limited to, Traveler and Qooley preferences, ratings, distance and/or ease
+                    of Booking.</p>
+                <p class="li-data-margin">Other Travelers will be able to book your “Activity” (or “Service”) via the Application and Site based upon
+                    the information provided in your listing, your requirements, and Travelers’ search parameters and preferences.
+                    You understand and agree that once a Traveler requests a Booking of your “Activity” (or “Service”), you
+                    may not request the Traveler to pay a higher price than in the Booking request.</p>
+                <p class="li-data-margin">You acknowledge and agree that you alone are responsible for any and all “Activity” (or “Service”) listings
+                    and Member Content you post. Accordingly, you represent and warrant that any listing you post and the
+                    Booking of, or a Traveler’s experience at, an “Activity” (or “Service”) in a listing you post (i) will
+                    not breach any agreements you have entered into with any third parties (ii) will (a) be in compliance
+                    with all applicable laws, Tax requirements, Intellectual Property laws, and rules and regulations that
+                    may apply to any “Activity” (or “Service”)you post (including having all required permits, licenses and
+                    registrations), and (b) not conflict with the rights of third parties.</p>
+                <p class="li-data-margin">PLEASE NOTE THAT QOOLEY, LLC ASSUMES NO RESPONSIBILITY FOR A QOOLEY’S COMPLIANCE WITH ANY AGREEMENTS WITH
+                    OR DUTIES TO THIRD PARTIES, APPLICABLE LAWS, RULES AND REGULATIONS. QOOLEY, LLC RESERVES THE RIGHT, AT
+                    ANY TIME AND WITHOUT PRIOR NOTICE, TO REMOVE OR DISABLE ACCESS TO ANY LISTING OF “ACTIVITY” (OR “SERVICE”)
+                    FOR ANY REASON, INCLUDING LISTINGS THAT QOOLEY, LLC, IN ITS SOLE DISCRETION, CONSIDERS TO BE OBJECTIONABLE
+                    FOR ANY REASON, IN VIOLATION OF THESE TERMS OR QOOLEY, LLC’S THEN-CURRENT POLICIES AND COMMUNITY GUIDELINES OR STANDARDS, TRADEMARK
+                    &amp; BRANDING GUIDELINES, OR OTHERWISE HARMFUL TO THE SITE AND APPLICATION.</p>
+                <p class="li-data-margin">If you are a Qooley, you understand and agree that Qooley, LLC does not act as an insurer or as your contracting
+                    agent. If a Traveler requests a Booking of your “Activity” (or “Service”) and participates in your “Activity”
+                    (or “Service”), any agreement you enter into with such Traveler is between you and the Traveler and Qooley,
+                    LLC is not a party to it.
+                </p>
+                <p class="li-data-margin">If you are a registered Qooley, Qooley, LLC makes certain tools available to you to help you to make informed
+                    decisions about which Members you choose to confirm or preapprove for Booking for your “Activity” (or
+                    “Service”). You acknowledge and agree that, as a registered Qooley, you are responsible for your own
+                    acts and omissions and are also responsible for the acts and omissions of any individuals who present
+                    themselves at the “Activity” (or “Service”) at your request or invitation, excluding the Traveler (and
+                    the individuals the Traveler invites to the “Activity” (or “Service”), if applicable).</p>
+                <p class="li-data-margin">Qooley, LLC recommends that the Qooley(s) obtain appropriate insurance (including, but not limited to Vehicle
+                    Insurance) for their “Activity” (or “Service”). Please review any insurance policy that you may have
+                    for your “Activity” (or “Service”) carefully, and in particular please make sure that you are familiar
+                    with and understand any exclusions to, and any deductibles that may apply for, such insurance policy,
+                    including, but not limited to, whether or not your insurance policy will cover the actions or inactions
+                    of or relating to Travelers (and the individuals the Traveler invites to the “Activity” (or “Service”),
+                    if applicable) while participating in your “Activity” (or “Service”).</p>
+                <p id="8">8.      No Endorsement</p>
+                <p class="li-data-margin">Members are required by these Terms to provide accurate information. Although Qooley, LLC may, for transparency
+                    or fraud prevention or detection purposes, directly or through third parties, ask you to provide a form
+                    of government identification, your date of birth, and other information, or undertake additional checks
+                    and processes designed to help verify or check the identities or backgrounds of Members and/or screen
+                    Member information against third party databases or other sources, we do not make any representations
+                    about, confirm, or endorse any Member or the Member’s purported identity or background.</p>
+                <p class="li-data-margin">By registering for a Qooley Member Account, you agree that Qooley, LLC may &#8211; but is not obligated to
+                    &#8211; request a consumer report on you from a Consumer Reporting Agency. If we do request a consumer
+                    report, we’ll request and use it in compliance with applicable law, including the Fair Credit Reporting
+                    Act.
+                </p>
+                <p class="li-data-margin">Any references in the Site and Application to a Member being “verified” or “connected” (or similar language)
+                    only indicate that the Member has completed a relevant verification or identification process, and does
+                    not represent anything else. Any such description is not an endorsement, certification or guarantee by
+                    Qooley, LLC about any Member, including of the Member’s identity and whether the Member is trustworthy,
+                    safe or suitable. Instead, any such description is intended to be useful information for you to evaluate
+                    when you make your own decisions about the identity and suitability of others whom you contact or interact
+                    with via the Application and Site. We therefore recommend that you always exercise due diligence and
+                    care when deciding whether to interact with a Qooley or to accept or preapprove a Booking request from
+                    a Traveler, or to have any other interaction with any other Member.</p>
+                <p class="li-data-margin">By using the Application or Site, you agree that any legal remedy or liability that you seek to obtain for
+                    actions or omissions of other Members or other third parties will be limited to a claim against the particular
+                    Members or other third parties who caused you harm. You agree not to attempt to impose liability on or
+                    seek any legal remedy from Qooley, LLC with respect to such actions or omissions. Accordingly, we encourage
+                    you to communicate directly with other Members on the Application or Site regarding any Bookings or “Activity”
+                    (or “Service”) listings made by you. This limitation shall not apply to any claim by a Qooley against
+                    Qooley, LLC regarding the remittance of payments received from a Traveler by Qooley, LLC on behalf of
+                    a Qooley, which instead shall be subject to the limitations described elsewhere in this agreement.</p>
+                <p id="9">9.      Damage to Property</p>
+                <p class="li-data-margin">You acknowledge and agree that, as a Traveler, you are responsible for your own acts and omissions and are
+                    also responsible for the acts and omissions of any individuals whom you invite to, or otherwise provide
+                    access to, the “Activity” (or “Service”). In the event that a Qooley claims otherwise and provides evidence
+                    of damage, including but not limited to photographs, you agree to pay the cost of replacing the damaged
+                    items with equivalent items.
+                </p>
+                <p class="li-data-margin">Both Travelers and Qooley(s) agree to cooperate with and assist Qooley, LLC in good faith, and to provide
+                    Qooley, LLC with such information and take such actions as may be reasonably requested by Qooley, LLC,
+                    in connection with any Damage Claims or other complaints or claims made by Members relating to “Activity”
+                    (or “Service”) or with respect to any investigation undertaken by Qooley, LLC or a representative of
+                    Qooley, LLC regarding use or abuse of the Application or Site. If you are a Traveler, upon Qooley, LLC’s
+                    reasonable request, and to the extent you are reasonably able to do so, you agree to participate in mediation
+                    or similar resolution process with a Qooley, at no cost to you, which process will be conducted by Qooley,
+                    LLC or a third party selected by Qooley, LLC or its insurer, with respect to losses for which the Qooley
+                    is requesting payment from Qooley, LLC.</p>
+                <p id="10">10.    User Conduct</p>
+                <p class="li-data-margin">You understand and agree that you are solely responsible for compliance with any and all laws, rules, regulations,
+                    and Tax obligations that may apply to your use of the Application, Site, “Activity” (or “Services”) and
+                    Collective Content. In connection with your use of the Site, Application, “Activity” (or “Service”) and
+                    Collective Content, you may not and you agree that you will not:</p>
+                <p class="li-data-margin">a.       Violate any local, state, provincial, national, or other law or regulation, or any order of a court.</p>
+                <p class="li-data-margin">b.      Use manual or automated software, devices, scripts, robots, backdoors or other means or processes
+                    to access any web pages or other services contained in the Application, Site or Collective Content</p>
+                <p class="li-data-margin">c.       Access or use our Application, Site or the Qooley, LLC API to use, expose, or allow to be used or
+                    exposed, any Qooley, LLC Content: (i) that is not publicly displayed by Qooley, LLC in its search results
+                    pages or listing pages before a Booking is confirmed; (ii) in any way that is inconsistent with the Qooley,
+                    LLC Privacy Policy or Terms &amp; Conditions; or (iii) in any way that otherwise violates the privacy
+                    rights or any other rights of Qooley, LLC’s users or any other third party.</p>
+                <p class="li-data-margin">d.      Use the Application, Site or Collective Content for any commercial or other purposes that are not
+                    expressly permitted by these Terms &amp; Conditions or in a manner that falsely implies Qooley, LLC endorsement,
+                    partnership or otherwise misleads others as to your affiliation with Qooley, LLC; dilute, tarnish or
+                    otherwise harm the Qooley, LLC brand in any way, including through unauthorized use of Collective Content, registering
+                    and/or using Qooley, LLC or derivative terms in domain names, trade names, trademarks or other source
+                    identifiers, or registering and/or using domains names, trade names, trademarks or other source identifiers
+                    that closely imitate or are confusingly similar to Qooley, LLC domains, trademarks, taglines, promotional
+                    campaigns or Collective Content copy, store or otherwise access or use any information contained on the
+                    Application, Site or Collective Content for purposes not expressly permitted by these Terms&amp; Conditions;
+                    infringe the rights of Qooley, LLC or the rights of any other person or entity, including without limitation,
+                    their intellectual property, privacy, publicity or contractual right interfere with or damage our Application
+                    or Site, including, without limitation, through the use of viruses, cancel bots, Trojan horses, harmful
+                    code, flood pings, denial-of-service attacks, backdoors, packet or IP spoofing, forged routing or electronic
+                    mail address information or similar methods or technology; use our Application or Site to transmit, distribute,
+                    post or submit any information concerning any other person or entity, including without limitation, photographs
+                    of others without their permission, personal contact information or credit, debit, calling card or account
+                    numbers.
+                </p>
+                <p class="li-data-margin">e.       Use our Application, Site or Collective Content in connection with the distribution of unsolicited
+                    commercial email (“spam”) or advertisements unrelated to “Activity” (or “Service”) offered on the platform;
+                    “stalk” or harass any other user of our Application, Site or Collective Content, or collect or store
+                    any personally identifiable information about any other user other than for purposes of transacting as
+                    an Qooley, LLC Traveler or Qooley; offer, as a Qooley, any “Activity” (or “Service”) that you do not
+                    yourself list.</p>
+                <p class="li-data-margin">f.       Register for more than one Qooley, LLC Account or register for an Qooley, LLC Account on behalf
+                    of an individual other than yourself; unless Qooley, LLC explicitly permits otherwise.</p>
+                <p class="li-data-margin">g.      Contact another Member for any purpose other than asking a question related to a Booking or “Activity”
+                    (or “Service”) listing; recruit or otherwise solicit any Qooley or other Member to join third-party services
+                    or websites that are competitive to Qooley, LLC, without Qooley, LLC’s prior written approval; recruit
+                    or otherwise solicit any Member to join third-party services, applications or websites, without our prior
+                    written approval.
+                </p>
+                <p class="li-data-margin">h.      Impersonate any person or entity, or falsify or otherwise misrepresent yourself or your affiliation
+                    with any person or entity; use automated scripts to collect information from or otherwise interact with
+                    the Site, Application, Services or Collective Content; use the Application, Site or Collective Content
+                    to find a Qooley or Traveler and then complete a Booking of an “Activity” (or “Service”) independent
+                    of the Site, Application or Services, in order to circumvent the obligation to pay any Service Fees related
+                    to Qooley, LLC’s provision of the Services or for any other reasons.</p>
+                <p class="li-data-margin">i.        As a Qooley, submit any listing of “Activity” (or “Service”) with false or misleading information,
+                    including price information, or submit any listing of “Activity” (or “Service”) with a price that you
+                    do not intend to honor.
+                </p>
+                <p class="li-data-margin">j.        As a Member,  engage in disruptive, circumventive, abusive or harassing behavior in any area or
+                    aspect of our Application or Site; post, upload, publish, submit or transmit any Content that: (i) infringes,
+                    misappropriates or violates a third party’s patent, copyright, trademark, trade secret, moral rights
+                    or other intellectual property rights, or rights of publicity or privacy; (ii) violates, or encourages
+                    any conduct that would violate, any applicable law or regulation or would give rise to civil liability;
+                    (iii) is fraudulent, false, misleading (directly or by omission or failure to update information) or
+                    deceptive; (iv) is defamatory, obscene, pornographic, vulgar or offensive; (v) promotes discrimination,
+                    bigotry, racism, hatred, harassment or harm against any individual or group; (vi) is violent or threatening
+                    or promotes violence or actions that are threatening to any other person; or (vii) promotes illegal or
+                    harmful activities or substances</p>
+                <p class="li-data-margin">k.      As a registered Member or not, systematically retrieve data or other content from our Application
+                    or Site to create or compile, directly or indirectly, in single or multiple downloads, a collection,
+                    compilation, database, directory or the like, whether by manual methods, through the use of bots, “crawlers”,
+                    or “spiders”, or otherwise; use, display, mirror or frame the Site, Application, or Collective Content,
+                    or any individual element within the Site, Application, or Collective Content, our company’s (Qooley,
+                    LLC) name, any Qooley, LLC trademark, logo or other proprietary information, or the layout and design
+                    of any page or form contained on a page in the Application or Site without Qooley, LLC’s express written
+                    consent.
+                </p>
+                <p class="li-data-margin">l.        Access, tamper with, or use non-public areas of the Application or Site, or our company’s (Qooley,
+                    LLC) computer systems, or the technical delivery systems of Qooley, LLC’s providers; attempt to probe,
+                    scan, or test the vulnerability of any Qooley, LLC system or network or breach any security or authentication
+                    measures; avoid, bypass, remove, deactivate, impair, descramble, or otherwise circumvent any technological
+                    measure implemented by Qooley, LLC or any of Qooley, LLC’s providers or any other third party (including
+                    another user) to protect the Site, Application or Collective Content; forge any TCP/IP packet header
+                    or any part of the header information in any email or newsgroup posting, or in any way use the Site,
+                    Application or Collective Content to send altered, deceptive or false source-identifying information;
+                    attempt to decipher, decompile, disassemble or reverse engineer any of the software used to provide the
+                    Site, Application or Collective Content;</p>
+                <p class="li-data-margin">m.     Advocate, encourage, or assist any third party in doing any of the foregoing; or accept or make a
+                    payment for any listings of “Activity” (or “Service”) Fees outside Qooley, LLC Payments. If you do so,
+                    you acknowledge and agree that you: (i) would be in breach of these Terms; (ii) accept all risks and
+                    responsibility for such payment, and (iii) hold Qooley, LLC harmless from any liability for such payment.
+                    Qooley, LLC has the right to investigate and prosecute violations of any of the above to the fullest
+                    extent of the law. In addition, and as set in these Terms &amp; Conditions, Qooley, LLC may take a range
+                    of actions against you, including but not limited to removing or disabling access to any or all of your
+                    Member Content or deactivating or canceling your Qooley Member Account, for a violation of this Section
+                    or these Terms &amp; Conditions.</p>
+                <p class="li-data-margin">n.      Qooley, LLC may access, preserve and disclose any of your information if we are required to do so
+                    by law, or if we believe in good faith that it is reasonably necessary to (i) respond to claims asserted
+                    against Qooley, LLC or to comply with legal process (for example, subpoenas or warrants), (ii) enforce
+                    or administer our agreements with users, such as these Terms &amp; Conditions, (iii) for fraud prevention,
+                    risk assessment, investigation, customer support, product development and de-bugging purposes, or (iv)
+                    protect the rights, property or safety of Qooley, LLC, its users, or members of the public. You acknowledge
+                    that Qooley, LLC has no obligation to monitor your access to or use of the Site, Application, or Collective
+                    Content or to review, remove, disable access to or edit any Member Content, but has the right to do so
+                    for the purpose of operating and improving the Site and Application (including without limitation for
+                    fraud prevention, risk assessment, investigation and customer support purposes), to ensure your compliance
+                    with these Terms &amp; Conditions, to comply with applicable law or the order or requirement of a court,
+                    administrative agency or other governmental body, to respond to content that it determines is otherwise
+                    objectionable or as set forth in these Terms &amp; Conditions. Qooley, LLC reserves the right, at any
+                    time and without prior notice, to remove or disable access to any Collective Content that Qooley, LLC,
+                    at its sole discretion, considers to be objectionable for any reason, in violation of these Terms &amp;
+                    Conditions or otherwise harmful to the Application or Site.</p>
+                <p id="11">11.    Reporting Misconduct</p>
+                <p class="li-data-margin">If you feel the Member(s) participating in any “Activity” (or Service) is acting or has acted inappropriately,
+                    including but not limited to anyone who (i) engages in offensive, violent or sexually inappropriate behavior,
+                    (ii) you suspect of stealing from you, or (iii) engages in any other disturbing conduct, you should immediately
+                    report such person to the appropriate authorities and then to Qooley, LLC by contacting us with your
+                    police station and report number; provided that your report will not obligate us to take any action beyond
+                    that required by law (if any) or cause us to incur any liability to you.</p>
+                <p id="12">12.    Intellectual Property Ownership and Rights Notices</p>
+                <p class="li-data-margin">The Site, Application, and Collective Content are protected by copyright, trademark, and other laws of the
+                    United States and foreign countries. You acknowledge and agree that the Site, Application, and Collective
+                    Content, including all associated intellectual property rights, are the exclusive property of Qooley,
+                    LLC and its licensors. You will not remove, alter or obscure any copyright, trademark, service mark or
+                    other proprietary rights notices incorporated in or accompanying the Site, Application, or Collective
+                    Content. All trademarks, service marks, logos, trade names, and any other proprietary designations of
+                    Qooley, LLC used on or in connection with the Application or Site are trademarks or registered trademarks
+                    of Qooley, LLC in the US and abroad. Trademarks, service marks, logos, trade names and any other proprietary
+                    designations of third parties used on or in connection with the Site, Application, and Qooley, LLC Content
+                    are used for identification purposes only and may be the property of their respective owners.</p>
+                <p id="13">13.    Application License</p>
+                <p class="li-data-margin">Subject to your compliance with these Terms &amp; Conditions, Qooley, LLC grants you a limited non-exclusive,
+                    non-transferable license to download and install a copy of the Application on each mobile device or computer
+                    that you own or control and run such copy of the Application solely for your own personal use. Furthermore,
+                    with respect to any Apple App Store Sourced Application, you will only use the App Store Sourced Application
+                    (i) on an Apple-branded product that runs the iOS (Apple’s proprietary operating system) and (ii) as
+                    permitted by the “Usage Rules” set forth in the Apple App Store Terms of Service. Qooley, LLC reserves
+                    all rights in the Application not expressly granted to you by these Terms &amp; Conditions.</p>
+                <p id="14">14.    Qooley, LLC Content and Member Content License</p>
+                <p class="li-data-margin">Subject to your compliance with these Terms &amp; Conditions, Qooley, LLC grants you a limited, non-exclusive,
+                    non-transferable license, to (i) access and view any Qooley, LLC Content solely for your personal and
+                    non-commercial purposes and (ii) access and view any Member Content to which you are permitted access,
+                    solely for your personal and non-commercial purposes. You have no right to sublicense the license rights
+                    granted in this section.</p>
+                <p class="li-data-margin">You will not use, copy, adapt, modify, prepare derivative works based upon, distribute, license, sell, transfer,
+                    publicly display, publicly perform, transmit, broadcast or otherwise exploit the Site, Application, Services,
+                    or Collective Content, except as expressly permitted in these Terms &amp; Conditions. No licenses or
+                    rights are granted to you by implication or otherwise under any intellectual property rights owned or
+                    controlled by Qooley, LLC or its licensors, except for the licenses and rights expressly granted in these
+                    Terms.
+                </p>
+                <p id="15">15.    Member Content</p>
+                <p class="li-data-margin">We may, in our sole discretion, permit you to post, upload, publish, submit or transmit Member Content. By
+                    making available any Member Content on or through the Site, Application, or through Qooley, LLC’s promotional
+                    campaigns, you hereby grant to Qooley, LLC a worldwide, irrevocable, perpetual (or for the term of the
+                    protection), non-exclusive, transferable, royalty-free license, with the right to sublicense, to use,
+                    view, copy, adapt, translate, modify, distribute, license, sell, transfer, publicly display, publicly
+                    perform, transmit, stream, broadcast, access, view, and otherwise exploit such Member Content on, through,
+                    by means of or to promote or market the Application and Site. Qooley, LLC does not claim any ownership
+                    rights in any such Member Content and nothing in these Terms will be deemed to restrict any rights that
+                    you may have to use and exploit any such Member Content.</p>
+                <p class="li-data-margin">You acknowledge and agree that you are solely responsible for all Member Content that you make available
+                    through the Site, Application, or through Qooley, LLC’s promotional campaigns. Accordingly, you represent
+                    and warrant that: (i) you either are the sole and exclusive owner of all Member Content that you make
+                    available through the Site, Application, or through Qooley, LLC’s promotional campaigns or you have all
+                    rights, licenses, consents and releases that are necessary to grant to Qooley, LLC the rights in such
+                    Member Content, as contemplated under these Terms; and (ii) neither the Member Content nor your posting,
+                    uploading, publication, submission or transmittal of the Member Content or Qooley, LLC’s use of the Member
+                    Content (or any portion thereof) on, through or by means of the Site, Application, or Qooley, LLC’s promotional
+                    campaigns will infringe, misappropriate or violate a third party’s patent, copyright, trademark, trade
+                    secret, moral rights or other proprietary or intellectual property rights, or rights of publicity or
+                    privacy, or result in the violation of any applicable law or regulation.</p>
+                <p id="16">16.    Links &amp; APIs</p>
+                <p class="li-data-margin">The Application and Site may contain links to third-party websites or resources. You acknowledge and agree
+                    that Qooley, LLC is not responsible or liable for: (i) the availability or accuracy of such websites
+                    or resources; or (ii) the content, products, or services on or available from such websites or resources.
+                    Links to such websites or resources do not imply any endorsement by Qooley, LLC of such websites or resources
+                    or the content, products, or services available from such websites or resources. You acknowledge sole
+                    responsibility for and assume all risk arising from your use of any such websites or resources or the
+                    Content, products or services on or available from such websites or resources.</p>
+                <p class="li-data-margin">Some portions of the Qooley Application or Site platform may implement Google Maps/Earth mapping services,
+                    including Google Maps API(s). Your use of Google Maps/Earth is subject to Google’s terms of use.</p>
+                <p id="17">17.    Copyright Policy</p>
+                <p class="li-data-margin">Qooley, LLC respects copyright law and expects its users to do the same. It is our company’s (Qooley, LLC)
+                    policy to terminate in appropriate circumstances the Qooley Member Accounts or other account holders
+                    who repeatedly infringe or are believed to be repeatedly infringing the rights of copyright holders.</p>
+                <p id="18">18.    Termination, Suspension and Other Measures</p>
+                <p class="li-data-margin">Termination<br /> You may terminate these Terms &amp; Conditions at any time via the “Deactivate Account”
+                    feature on the Application or Site. If you cancel your Qooley Member Account as a Qooley, any confirmed
+                    Bookings will be automatically cancelled and your Travelers will receive a full refund. If you cancel
+                    your Qooley, LLC Account as a Traveler, any confirmed Booking will be automatically cancelled and any
+                    refund will depend upon the terms of the applicable cancellation policy.
+                </p>
+                <p class="li-data-margin">Without limiting our rights specified below, Qooley, LLC may terminate these Terms for convenience at any
+                    time by giving you 30 days’ notice via email to your registered email address.</p>
+                <p class="li-data-margin">Termination for breach, suspension and other measures<br /> Qooley, LLC may immediately, without notice terminate
+                    your Qooley Member Account if (i) you have materially breached these Terms &amp; Conditions or our Policies,
+                    including but not limited to any breach of your warranties outlined in these Terms &amp; Conditions or
+                    breach of the “User Conduct” provisions in these Terms &amp; Conditions, (ii) you have provided inaccurate,
+                    fraudulent, outdated or incomplete information during the Qooley Member Account registration, or listing
+                    process of any “Activity” (or “Service”) or thereafter, (iii) you have violated applicable laws, regulations
+                    or third party rights, or (iv) Qooley, LLC believes in good faith that such action is reasonably necessary
+                    to protect the safety or property of other Members, our company (Qooley, LLC) or third parties, for fraud
+                    prevention, risk assessment, security or investigation purposes.</p>
+                <p class="li-data-margin">In addition Qooley, LLC may deactivate or delay listings of any “Activity” (or “Service”), reviews, or other
+                    Member Content, cancel any pending or confirmed Bookings, limit your use of or access to your Qooley
+                    Member Account and the Application or Site, temporarily or permanently revoke any special status associated
+                    with your Qooley Member Account, or temporarily or permanently suspend your Qooley Member Account if
+                    (i) you have breached these Terms &amp; Conditions or our Policies, including material and non-material
+                    breaches and receiving poor ratings from Qooley(s) or Traveler(s) or (ii) our company (Qooley, LLC) believes
+                    in good faith that such action is reasonably necessary to protect the safety or property of Members,
+                    our company (Qooley, LLC) or third parties, for fraud prevention, risk assessment, security or investigation
+                    purposes.
+                </p>
+                <p class="li-data-margin">If we take any of the measures described in this Section 18 (c), we may (i) communicate to your Traveler(s)
+                    or Qooley(s) that a pending or confirmed Booking has been cancelled, (ii) refund your Traveler(s) in
+                    full for any and all confirmed Bookings, irrespective of preexisting cancellation policies, (iii) support
+                    your Traveler(s), on an exceptional basis, in finding potential alternative “Activity” (or “Service”),
+                    and (iv) you will not be entitled to any compensation for confirmed Bookings that were cancelled.</p>
+                <p class="li-data-margin">In case of non-material breaches and where appropriate, you will be given notice of any measure by our company
+                    (Qooley, LLC) and an opportunity to resolve the issue to our company’s (Qooley, LLC) reasonable satisfaction.</p>
+                <p class="li-data-margin">Consequences<br /> If you or we terminate this Agreement, we do not have an obligation to delete or return
+                    to you any of your Member Content, including but not limited to any reviews or Feedback. When this Agreement
+                    has been terminated, you are not entitled to a restoration of your Qooley, LLC Account or any of your
+                    Member Content. If your access to or use of the Application and Site has been limited or your Qooley
+                    Member Account has been suspended or this Agreement has been terminated by us, you may not register a
+                    new Qooley Member Account or attempt to access and use the Application and Site through other Qooley
+                    Member Accounts.</p>
+                <p class="li-data-margin">Survival<br /> If you or we terminate this Agreement, the clauses of these Terms that reasonably should survive
+                    termination of the Agreement will remain in effect.</p>
+                <p id="19">19.    Disclaimers</p>
+                <p class="li-data-margin">If you choose to use the Application, Site or Collective Content or participate in the referral program,
+                    you do so at your sole risk. You acknowledge and agree that Qooley, LLC does not have an obligation to
+                    conduct background or registered sex offender checks on any member, including, but not limited to, Traveler(s)
+                    and Qooley(s). But may conduct such background or registered sex offender checks, in our sole discretion,
+                    to the extent permitted by applicable laws and if we have sufficient information to identify a member.
+                    If we choose to conduct such checks, to the extent permitted by applicable law, we disclaim warranties
+                    of any kind, either express or implied, that such checks will identify prior misconduct by a user or
+                    guarantee that a user will not engage in misconduct in the future.</p>
+                <p class="li-data-margin">The site, application, services, collective content and referral program are provided “as is”, without warranty
+                    of any kind, either express or implied. Without limiting the foregoing, Qooley, LLC explicitly disclaims
+                    any warranties of merchantability, satisfactory quality, fitness for a particular purpose, quiet enjoyment
+                    or non-infringement, and any warranties arising out of course of dealing or usage of trade. Qooley, LLC
+                    makes no warranty that the site, application, services, collective content, including, but not limited
+                    to, the listings or any accommodations, or the referral program will meet your requirements or be available
+                    on an uninterrupted, secure, or error-free basis. Qooley, LLC makes no warranty regarding the quality
+                    of any listings, accommodations, Qooley(s), Traveler(s), your accrual of Qooley Credits, the services
+                    or collective content or the accuracy, timeliness, truthfulness, completeness or reliability of any collective
+                    content obtained through the site, application, services or referral program.
+                </p>
+                <p class="li-data-margin">No advice or information, whether oral or written, obtained from Qooley, LLC or through the site, application,
+                    services or collective content, will create any warranty not expressly made herein.</p>
+                <p class="li-data-margin">You are solely responsible for all of your communications and interactions with other users of the Application
+                    or Site and with other persons with whom you communicate or interact as a result of your use of the Application
+                    or Site, including, but not limited to, any Qooley(s) or Traveler(s). You understand that Qooley, LLC
+                    does not make any attempt to verify the statements of users of the Application or Site. Qooley, LLC makes
+                    no representations or warranties as to the conduct of users of the Application or Site or their compatibility
+                    with any current or future users of the Application or Site. You agree to take reasonable precautions
+                    in all communications and interactions with other Members of the Application or Site and with other persons
+                    with whom you communicate or interact as a result of your use of the Application or Site, including,
+                    but not limited to, Traveler(s) and Qooley(s), particularly if you decide to meet offline or in person
+                    regardless of whether such meetings are organized by our company (Qooley, LLC). Qooley, LLC explicitly
+                    disclaims all liability for any act or omission of any Traveler or other third party.</p>
+                <p id="20">20.    Limitation of Liability</p>
+                <p class="li-data-margin">You acknowledge and agree that, to the maximum extent permitted by law, the entire risk arising out of your
+                    access to and use of the site, application, services and collective content, your listing or booking
+                    of any “Activity” (or “Service”) via the Application and Site, your participation in the referral program,
+                    and any contact you have with other users of Qooley, LLC whether in person or online remains with you.
+                    Neither Qooley, LLC nor any other party involved in creating, producing, or delivering the site, application,
+                    services, collective content or the referral program will be liable for any incidental, special, exemplary
+                    or consequential damages, including lost profits, loss of data or loss of goodwill, service interruption,
+                    computer damage or system failure or the cost of substitute products or services, or for any damages
+                    for personal or bodily injury or emotional distress arising out of or in connection with these terms,
+                    from the use of or inability to use the Application, Site or Collective Content, from any communications,
+                    interactions or meetings with other users of the Application, or Site or other persons with whom you
+                    communicate or interact as a result of your use of the Application, Site, or your participation in the
+                    referral program or from your listing or booking of any “Activity” (or “Service”) via the Application
+                    and Site, whether based on warranty, contract, tort (including negligence), product liability or any
+                    other legal theory, and whether or not our company (Qooley, LLC) has been informed of the possibility
+                    of such damage, even if a limited remedy set forth herein is found to have failed of its essential purpose.</p>
+                <p class="li-data-margin">Except for our obligations to pay amounts to applicable Qooley(s) pursuant to these Terms &amp; Conditions,
+                    in no event will Qooley, LLC’s aggregate liability arising out of or in connection with these Terms &amp;
+                    Conditions and your use of the Application and Site including, but not limited to, from your listing
+                    or Booking of any “Activity” (or “Service”) via the Application and Site, or from the use of or inability
+                    to use the Application, Site, or Collective Content or your participation in the referral program and
+                    in connection with any interactions with any other Members, exceed the amounts you have paid or owe for
+                    Bookings via the Application and Site as a Traveler in the twelve (12) month period prior to the event
+                    giving rise to the liability, or if you are a Qooley, the amounts paid by Qooley, LLC to you in the twelve
+                    (12) month period prior to the event giving rise to the liability, or one hundred U.S. dollars (US $100),
+                    if no such payments have been made, as applicable. The limitations of damages set forth above are fundamental
+                    elements of the basis of the bargain between Qooley, LLC and you. Some jurisdictions do not allow the
+                    exclusion or limitation of liability for consequential or incidental damages, so the above limitation
+                    may not apply to you.</p>
+                <p id="21">21.    Indemnification</p>
+                <p class="li-data-margin">You agree to release, defend, indemnify, and hold our company (Qooley, LLC) and its affiliates and subsidiaries,
+                    and their officers, directors, employees and agents, harmless from and against any claims, liabilities,
+                    damages, losses, and expenses, including, without limitation, reasonable legal and accounting fees, arising
+                    out of or in any way connected with (a) your access to or use of the Site, Application, Services, or
+                    Collective Content or your violation of these Terms; (b) your Member Content; (c) your (i) interaction
+                    with any Member, (ii) Booking of an “Activity” (or “Service”), or (iii) creation of an “Activity” (or
+                    “Service”); (d) the participation in, or Booking of an “Activity” (or “Service”) by you, including but
+                    not limited to any injuries, losses, or damages (compensatory, direct, incidental, consequential or otherwise)
+                    of any kind arising in connection with or as a result of a Booking or participation in an “Activity”
+                    (or “Service”); and (e) your participation in the any referral program or your accrual of any Qooley
+                    Credits.
+                </p>
+                <p id="22">22.    Entire Agreement</p>
+                <p class="li-data-margin">Except as they may be supplemented by a document referenced and incorporated herein or by additional Qooley,
+                    LLC policies, guidelines, standards, or terms for a specific product, feature, service or offering, these
+                    Terms &amp; Conditions constitute the entire and exclusive understanding and agreement between our company
+                    (Qooley, LLC) and you regarding the Application, Site, Collective Content (excluding Payment Services),
+                    and any Bookings or listings of “Activity” (or “Service”) made via the Application and Site (excluding
+                    Payment Services), and these Terms &amp; Conditions supersede and replace any and all prior oral or written
+                    understandings or agreements between our company (Qooley, LLC) and you regarding Bookings or listings
+                    of “Activity” (or “Service”), the Application, Site, and Collective Content (excluding Payment Services).</p>
+                <p id="23">23.    Controlling Law and Jurisdiction</p>
+                <p class="li-data-margin">These Terms &amp; Conditions and your use of the Application or Site will be interpreted in accordance with
+                    the laws of the State of Delaware and the United States of America, without regard to its conflict-of-law
+                    provisions. You and we agree to submit to the personal jurisdiction of a state court located in County
+                    of New Castle, Delaware or a United States District Court, located in Wilmington, Delaware for any actions
+                    for which the parties retain the right to seek injunctive or other equitable relief in a court of competent
+                    jurisdiction to prevent the actual or threatened infringement, misappropriation or violation of a party’s
+                    copyrights, trademarks, trade secrets, patents, or other intellectual property rights, as set forth in
+                    the Dispute Resolution provision below.</p>
+                <p id="24">24.    Dispute Resolution</p>
+                <p class="li-data-margin">If you reside in the United States, you and our company (Qooley, LLC) agree that any dispute, claim or controversy
+                    arising out of or relating to these Terms &amp; Conditions or the breach, termination, enforcement, interpretation
+                    or validity thereof, or to the use of the Application, Site or Collective Content (collectively, “Disputes”)
+                    will be settled by binding arbitration, except that each party retains the right to seek injunctive or
+                    other equitable relief in a court of competent jurisdiction to prevent the actual or threatened infringement,
+                    misappropriation or violation of a party’s copyrights, trademarks, trade secrets, patents, or other intellectual
+                    property rights. You acknowledge and agree that you and Qooley, LLC are each waiving the right to a trial
+                    by jury or to participate as a plaintiff or class member in any purported class action lawsuit, class-wide
+                    arbitration, private attorney-general action, or any other representative proceeding. Further, unless
+                    both you and Qooley, LLC otherwise agree in writing, the arbitrator may not consolidate more than one
+                    person’s claims, and may not otherwise preside over any form of any class or representative proceeding.
+                    If this specific paragraph is held unenforceable, then the entirety of this “Dispute Resolution” section
+                    will be deemed void. Except as provided in the preceding sentence, this “Dispute Resolution” section
+                    will survive any termination of these Terms &amp; Conditions.</p>
+                <p class="li-data-margin">Arbitration Rules and Governing Law.</p>
+                <p class="li-data-margin">This agreement to arbitrate evidences a transaction in interstate commerce, and thus the Federal Arbitration
+                    Act governs the interpretation and enforcement of this provision. The arbitration will be administered
+                    by the American Arbitration Association (“AAA“) in accordance with the Consumer Arbitration Rules (the
+                    “AAA Rules“) then in effect, except as modified by this “Dispute Resolution” section. (The AAA Rules
+                    are available at www.adr.org/arb_medor by calling the AAA at 1–800–778–7879.) The Federal Arbitration
+                    Act will govern the interpretation and enforcement of this section.</p>
+                <p class="li-data-margin">Arbitration Process.</p>
+                <p class="li-data-margin">A party who desires to initiate arbitration must provide the other party with a written Demand for Arbitration
+                    as specified in the AAA Rules. (The AAA provides a form Demand for Arbitration.) The arbitrator will
+                    be either a retired judge or an attorney licensed to practice law in the state of Delaware and will be
+                    selected by the parties from the AAA’s roster of consumer dispute arbitrators. If the parties are unable
+                    to agree upon an arbitrator within seven (7) days of delivery of the Demand for Arbitration, then the
+                    AAA will appoint the arbitrator in accordance with the AAA Rules.</p>
+                <p class="li-data-margin">Arbitration Location and Procedure.</p>
+                <p class="li-data-margin">Unless you and Qooley, LLC otherwise agree, the arbitration will be conducted in the county where you reside.
+                    If your claim does not exceed $5,000, then the arbitration will be conducted solely on the basis of documents
+                    you and Qooley, LLC submit to the arbitrator, unless you request a hearing or the arbitrator determines
+                    that a hearing is necessary. If your claim exceeds $5,000, your right to a hearing will be determined
+                    by the AAA Rules. Subject to the AAA Rules, the arbitrator will have the discretion to direct a reasonable
+                    exchange of information by the parties, consistent with the expedited nature of the arbitration.</p>
+                <p class="li-data-margin">Arbitrator’s Decision.</p>
+                <p class="li-data-margin">The arbitrator will render an award within the time frame specified in the AAA Rules. The arbitrator’s decision
+                    will include the essential findings and conclusions upon which the arbitrator based the award. Judgment
+                    on the arbitration award may be entered in any court having jurisdiction thereof. The arbitrator’s award
+                    damages must be consistent with the terms of the “Limitation of Liability” section above as to the types
+                    and the amounts of damages for which a party may be held liable. The arbitrator may award declaratory
+                    or injunctive relief only in favor of the claimant and only to the extent necessary to provide relief
+                    warranted by the claimant’s individual claim. If you prevail in arbitration you will be entitled to an
+                    award of attorneys’ fees and expenses, to the extent provided under applicable law. Qooley, LLC will
+                    not seek, and hereby waives all rights it may have under applicable law to recover, attorneys’ fees and
+                    expenses if it prevails in arbitration.</p>
+                <p class="li-data-margin" id="one">Fees.</p>
+                <p class="li-data-margin">Your responsibility to pay any AAA filing, administrative and arbitrator fees will be solely as set forth
+                    in the AAA Rules. However, if your claim for damages does not exceed $10,000, Qooley, LLC will pay all
+                    such fees unless the arbitrator finds that either the substance of your claim or the relief sought in
+                    your Demand for Arbitration was frivolous or was brought for an improper purpose (as measured by the
+                    standards set forth in Federal Rule of Civil Procedure 11(b)).</p>
+                <p class="li-data-margin">Changes.</p>
+                <p class="li-data-margin">Notwithstanding the provisions of the “Modification” section above, if Qooley, LLC changes this “Dispute
+                    Resolution” section after the date you last accepted these Terms (or accepted any subsequent changes
+                    to these Terms), you may reject any such change by sending us written notice (including by email) within
+                    30 days of the date such change became effective, as indicated in the “Last Updated” date above or in
+                    the date of Qooley, LLC’s email to you notifying you of such change. By rejecting any change, you are
+                    agreeing that you will arbitrate any Dispute between you and Qooley, LLC in accordance with the provisions
+                    of this “Dispute Resolution” section as of the date you last accepted these Terms &amp; Conditions (or
+                    accepted any subsequent changes to these Terms &amp; Conditions).
+                </p>
+                <p id="25">25.    Third party beneficiary</p>
+                <p class="li-data-margin">These Terms do not and are not intended to confer any rights or remedies upon any person other than the parties.</p>
             </div>
+            <privacy-policy *ngIf="page == 'privacy'"> </privacy-policy>
+            <incident-policy *ngIf="page == 'incident'"> </incident-policy>
+            <payment-policy *ngIf="page == 'payment'"> </payment-policy>
         </div>
     </div>
-
-    <div class="panel-group">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" href="#payment_policy" (click)="toggleIcon($event)"> <i class="more-less glyphicon glyphicon-plus"></i> 
-                        Payment Policy </a>
-                </h4>
-            </div>
-            <div id="payment_policy" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <payment-policy> </payment-policy>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel-group">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" href="#privacy_policy" (click)="toggleIcon($event)"> <i class="more-less glyphicon glyphicon-plus"></i> 
-                        Privacy Policy  </a>
-                </h4>
-            </div>
-            <div id="privacy_policy" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <privacy-policy> </privacy-policy>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel-group">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" href="#incident_policy" (click)="toggleIcon($event)"> <i class="more-less glyphicon glyphicon-plus"></i> 
-                        Incident Policy  </a>
-                </h4>
-            </div>
-            <div id="incident_policy" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <incident-policy> </incident-policy>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 </div>

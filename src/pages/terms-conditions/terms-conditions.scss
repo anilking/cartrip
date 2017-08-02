@@ -16,3 +16,14 @@
 .panel-title > a {
     display: block;
 }
+.side-menu{
+    margin: auto 0;
+    vertical-align: middle;
+    list-style: none;
+    font-size: larger;
+    padding: 49% 0;
+}
+.side-menu li{
+    cursor: pointer;
+    line-height: 36px;
+}
