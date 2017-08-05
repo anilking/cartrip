@@ -7,6 +7,16 @@ import { Component } from '@angular/core';
 })
 export class PaymentPolicyComponent {
     public title: any = "Payment Policy";
+    public page : string = 'terms';
+    public scrollElement(id) {
+    let element = document.getElementById(id);
+    window.scrollTo(0, element.offsetTop - (-670));
+  }
+
+  toggleIcon(value){
+    this.page = value;
+  }
 }
+
 
 

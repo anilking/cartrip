@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class IncidentPolicyComponent {
     public title: any = "Incident Policy";
-}
+    public page : string = 'Incident Policy';
+    public scrollElement(id) {
+    let element = document.getElementById(id);
+    window.scrollTo(0, element.offsetTop - (-670));
+  }
 
+  toggleIcon(value){
+    this.page = value;
+  }
+}
 

@@ -1,4 +1,32 @@
-ol li strong u {
+.menu-index li:hover,li:focus{
+  font-size: 14pt;
+  cursor: pointer;
+  color: #008489;
+  text-decoration: underline;
+}
+
+.panel-body{
+  color:black;
+}
+
+.more-less {
+  float: right;
+  color: #212121;
+}
+.panel-title > a {
+  display: block;
+}
+.side-menu{
+  margin: auto 0;
+  vertical-align: middle;
+  list-style: none;
+  font-size: larger;
+  padding: 49% 0;
+}
+.side-menu li{
+  cursor: pointer;
+  line-height: 36px;
+}ol li strong u {
     font-size: 16pt;
 }
 ul li em{
