@@ -17,16 +17,26 @@
         Join fellow locals who are providing unforgettable experiences and earning a living while doing what they love to do, when
         they want to do it!
       </p>
-      <form class="form" role="form">
+      <form class="form" role="form" [formGroup]="signUpForm">
         <div class="row">
           <div class="col-xs-6 col-md-6">
-            <input type="text" name="firstname" value="" class="form-control input-lg" placeholder="First Name" />
+            <input [formControl]='signUpForm.controls["FirstName"]' type="text" name="FirstName" value="" class="form-control input-lg"
+              placeholder="First Name" />
+            <p class="error" *ngIf="signUpForm.controls['FirstName'].hasError('required') && signUpForm.controls['FirstName'].touched">Please enter First Name</p>
           </div>
           <div class="col-xs-6 col-md-6">
-            <input type="text" name="lastname" value="" class="form-control input-lg" placeholder="Last Name" /> </div>
+            <input [formControl]='signUpForm.controls["LastName"]' type="text" name="LastName" value="" class="form-control input-lg"
+              placeholder="Last Name" /> 
+          <p class="error" *ngIf="signUpForm.controls['LastName'].hasError('required') && signUpForm.controls['LastName'].touched">Please enter Last Name</p>
+            </div>
         </div>
-        <input type="text" name="email" value="" class="form-control input-lg" placeholder="Your Email" />
-        <input type="text" name="hometown" value="" class="form-control input-lg" placeholder="Home Town" />
+        <input [formControl]='signUpForm.controls["Email"]' type="email" name="Email" value="" class="form-control input-lg" placeholder="Your Email"
+        />
+        <p class="error" *ngIf="(signUpForm.controls['Email'].hasError('required') && signUpForm.controls['Email'].touched) || (signUpForm.controls['Email'].touched && signUpForm.controls['Email'].invalid)">Please enter valid Email Id</p>
+
+        <input [formControl]='signUpForm.controls["Town"]' type="text" name="Town" value="" class="form-control input-lg" placeholder="Home Town"
+        />
+        <p class="error" *ngIf="signUpForm.controls['Town'].hasError('required') && signUpForm.controls['Town'].touched">Please enter Town</p>
         <div class="text-left">
           <p class="categories-listcls"> Select the Categories you would be interested in creating Services for: * </p>
           <div class="checkbox">
@@ -49,7 +59,7 @@
           </div>
         </div>
         <br/>
-        <button class="btn btn-lg btn-primary btn-block signup-btn" type="submit"> Submit</button>
+        <a [class.disabled]="signUpForm.invalid" class="btn btn-lg btn-primary btn-block signup-btn"  href="javascript:;"> Submit</a>
       </form>
     </div>
   </div>
