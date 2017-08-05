@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.error{
+        color: red;
+    font-size: 11pt;
+    text-align: left;
+}
+a[disabled], html input[disabled] {
+    cursor: default;
+}
