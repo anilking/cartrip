@@ -65,7 +65,11 @@ figure.col_grid:hover figcaption {
     cursor: pointer;
 }
 figure.col_grid figcaption {
-    padding: 15% !important;
+    padding: 25% !important;
+}
+
+figure.col_grid.food_drink figcaption{
+    padding: 25% 15% 15% 15% !important;
 }
 
 .reduce_width figure figcaption, .reduce_width figure figcaption > a {
@@ -120,10 +124,6 @@ figure.col_grid figcaption::before, figure.col_grid p {
 }
 .head-logo-img{
     margin-bottom: 15px;
-}
-.main-log{
-    padding: 12% 15% 0 15%;
-    width: 50%;
 }
 .tag_line{
     padding-bottom: 5%;

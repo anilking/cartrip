@@ -18,13 +18,6 @@ export class AppComponent {
 
   ngOnInit() {
 
-    $('#mainGrid').backstretch([
-      /* 'assets/img/portfolio/1.jpg', */
-      'assets/img/portfolio/2.jpg',
-      'assets/img/portfolio/3.jpg',
-      /* 'assets/img/portfolio/4.jpg' */],
-      { duration: 5000, fade: 100 });
-
     $('#firstGrid').backstretch([
       'assets/img/AdventureTheme/1.jpg',
       'assets/img/AdventureTheme/2.jpg',
