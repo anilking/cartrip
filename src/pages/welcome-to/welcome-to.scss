@@ -10,13 +10,21 @@ video {
     margin-right: 0 !important;
 }
 .font-color p,h1,h3{
-    color: skyblue;
+    color: #01679a;
     font-family: serif;
 }
 .middle-grid{
   z-index: 2;
-  box-shadow: 1px 1px 1px 1px #11e8d5, 0 0 50px 1px rgba(0, 243, 255, 0.88), 0 0 5px 0px #12e9f1, 0 0 25px 1px #12e9f1, 0 0 5px 1px #12e9f1
+  box-shadow: 1px 1px 1px 1px #e0b104,0 0 1px 1px #e0b104, 0 0 25px 1px #e0b104, 0 0 5px 1px #e0b104
 }
 .grid-align{
     margin-top: -25px;
+}
+.bottom-align {
+  z-index: 2;
+  box-shadow: 1px 1px 1px 1px #e0b104,0 0 1px 1px #e0b104, 0 0 25px 1px #e0b104, 0 0 5px 1px #e0b104
+}
+.grid-align{
+  z-index: 2;
+  box-shadow: 1px 1px 1px 1px #e0b104,0 0 1px 1px #e0b104, 0 0 25px 1px #e0b104, 0 0 5px 1px #e0b104
 }
