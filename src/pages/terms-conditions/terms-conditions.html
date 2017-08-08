@@ -1,12 +1,13 @@
 <div class="content-section">
     <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
         <div class="col-lg-2">
             <ul class="side-menu">
                 <li (click)="toggleIcon('terms')">Terms Conditions </li>
                 <li (click)="toggleIcon('payment')">Payment Policy</li>
                 <li (click)="toggleIcon('privacy')">Privacy Policy</li>
                 <li (click)="toggleIcon('incident')">Incident Policy</li>
-            </ul>
+              </ul>
         </div>
 
         <div class="col-lg-10">
@@ -690,5 +691,6 @@
             <incident-policy *ngIf="page == 'incident'"> </incident-policy>
             <payment-policy *ngIf="page == 'payment'"> </payment-policy>
         </div>
+      </div>
     </div>
 </div>
