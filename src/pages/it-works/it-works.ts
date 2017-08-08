@@ -10,7 +10,7 @@ export class ItWorksComponent {
 
      public scrollElement(id) {
       let element = document.getElementById(id);
-      window.scrollTo(0, element.offsetTop - (-400));
+      window.scrollTo(0, element.offsetTop - (-600));
     }
 }
 
