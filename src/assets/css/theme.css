@@ -109,7 +109,7 @@ a:hover,a:focus {
 		transition:background .5s ease-in-out,padding .5s ease-in-out;
 	}
 		 .navbar-custom.top-nav-collapse {
-		 padding:0;
+		 padding: 10px;
 		border-bottom:1px solid rgba(255,255,255,.3);
 		color:#333;
 			background:#fff;
@@ -649,6 +649,11 @@ section {
 
     -webkit-transition: all 0.3s 1s ease-out;
             transition: all 0.3s 1s ease-out;
+}
+
+.navbar-custom.top-nav-collapse{
+	background-image: url(/assets/img/banner.png);
+    background-position: 50% 50% !important;
 }
 
 

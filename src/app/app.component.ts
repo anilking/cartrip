@@ -95,7 +95,7 @@ export class AppComponent {
 
   scrollToDown() {
     // this.appService.show();
-    window.scrollTo(0, this.elementView.nativeElement.offsetHeight - 10);
+    window.scrollTo(0, this.elementView.nativeElement.offsetHeight - 30 );
   }
 
 }
