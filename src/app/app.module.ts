@@ -21,6 +21,7 @@ import { BecomeQooleyComponent } from './../pages/become-qooley/become-qooley';
 
 //serivces
 import { AppService } from './../providers/services/app.service';
+import { Toastr } from './../providers/services/toastr.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { AppService } from './../providers/services/app.service';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [AppService],
+  providers: [AppService, Toastr],
   bootstrap: [AppComponent]
 })
 export class AppModule {

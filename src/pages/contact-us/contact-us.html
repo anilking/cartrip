@@ -15,18 +15,18 @@
 
       <p>Or write your feedback or suggestions below.</p>
       <form class="form" role="form" [formGroup]="contactForm">
-        <input [formControl]='contactForm.controls["Name"]' type="text" name="name" value="" class="form-control input-lg" placeholder="Name"
+        <input [formControl]='contactForm.controls["Name"]' type="text" name="name" value="" class="form-control input-lg" placeholder="Name *"
         />
         <p class="error" *ngIf="contactForm.controls['Name'].hasError('required') && contactForm.controls['Name'].touched">Please enter Name</p>
-        <input [formControl]='contactForm.controls["Email"]' type="email" name="email" value="" class="form-control input-lg" placeholder="Your Email"
+        <input [formControl]='contactForm.controls["Email"]' type="email" name="email" value="" class="form-control input-lg" placeholder="Your Email *"
         />
         <p class="error" *ngIf="(contactForm.controls['Email'].hasError('required') && contactForm.controls['Email'].touched) || (contactForm.controls['Email'].touched && contactForm.controls['Email'].invalid)">Please enter valid email Id</p>
         <div class="form-group">
-          <textarea [formControl]='contactForm.controls["Comment"]' class="form-control input-lg" rows="5" name="comment" placeholder="Comments"></textarea>
+          <textarea [formControl]='contactForm.controls["Comment"]' class="form-control input-lg" rows="5" name="comment" placeholder="Comments *"></textarea>
           <p class="error" *ngIf="contactForm.controls['Comment'].hasError('required') && contactForm.controls['Comment'].touched">Please enter your comment</p>
         </div>
         <br />
-        <a [class.disabled]='contactForm.invalid' href="javascript:;" class="btn btn-lg btn-primary btn-block signup-btn"> Submit</a>
+        <a [class.disabled]='contactForm.invalid' href="javascript:;" class="btn btn-lg btn-primary btn-block signup-btn" (click)='onSubmit();'> Submit</a>
       </form>
       </div>
     </div>
