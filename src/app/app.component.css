@@ -3,7 +3,7 @@
 }
 
 .navbar-custom .nav li a{
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .text-shorth3{
@@ -114,7 +114,7 @@ figure.col_grid figcaption::before, figure.col_grid p {
 }
 .head-logo{
     display: inline-block;
-    width: 45px;
+    width: 60px;
     padding: 0px 0px 18px 0px;
 }
 .head-logo-img{
@@ -140,4 +140,7 @@ figure.col_grid figcaption::before, figure.col_grid p {
 .set-position-div{
     position: absolute;
     z-index: 1;
+}
+.navbar-brand{
+    padding: 0;
 }

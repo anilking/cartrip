@@ -325,16 +325,16 @@ p.lead {
 	background-color:transparent;
 	padding:15px 20px;
 	letter-spacing:3px;
-	font-size:12px;
+	font-size:16px;
 	text-transform:uppercase;
-	font-weight:400;
-	color:#ffffff;
+	font-weight:600;
+	color: #23527c;
 	margin-top:20px;
 	display:inline-block;
 }
 .btnghost:hover {
 	background-color:#e0b104;
-	color:#333;
+	color: #23527c;
 	border:2px solid #333;
 }
 .bgcover {
