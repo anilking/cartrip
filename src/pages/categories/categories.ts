@@ -92,7 +92,7 @@ export class CategoriesComponent {
 
   public scrollElement() {
     let element = document.getElementById(this.category);
-    window.scrollTo(0, element.offsetTop - 65);
+    window.scrollTo(0, element.offsetTop - 230);
   }
 }
 

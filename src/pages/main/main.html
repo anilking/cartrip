@@ -1,7 +1,7 @@
 <div class="main_div">
   <div class="grid">
     <div class="row reduce_width">
-      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('firstGrid');" (mouseleave)="resumeImage('firstGrid');">
+      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('firstGrid');" (mouseleave)="resumeImage('firstGrid');" [routerLink]="['/categories', 'adventure']">
         <div class="img-desc panel panel-default grid-align">
           <div class="panel-body">
             Adventure
@@ -11,10 +11,10 @@
           <img class="img_height" />
         </div>
         <!-- <figcaption>
-            <h2 [routerLink]="['/categories', 'adventure']">Adventure</h2>
+            <h2>Adventure</h2>
           </figcaption> -->
       </figure>
-      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('secondGrid');" (mouseleave)="resumeImage('secondGrid');">
+      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('secondGrid');" (mouseleave)="resumeImage('secondGrid');" [routerLink]="['/categories', 'entertainment']">
         <div class="img-desc panel panel-default grid-align">
           <div class="panel-body">
             Entertainment
@@ -24,10 +24,11 @@
           <img class="img_height" />
         </div>
         <!-- <figcaption>
-            <h2 [routerLink]="['/categories', 'entertainment']"></h2>
+            <h2 ></h2>
           </figcaption> -->
       </figure>
-      <figure class="col-lg-4 col_grid food_drink" (mouseover)="pauseImage('thirdGrid');" (mouseleave)="resumeImage('thirdGrid');">
+      <figure class="col-lg-4 col_grid food_drink" (mouseover)="pauseImage('thirdGrid');" (mouseleave)="resumeImage('thirdGrid');"
+        [routerLink]="['/categories', 'food']">
         <div class="img-desc panel panel-default grid-align">
           <div class="panel-body">
             Food & Drinks
@@ -37,12 +38,12 @@
           <img class="img_height" />
         </div>
         <!-- <figcaption>
-            <h2  [routerLink]="['/categories', 'food']">Food & Drinks</h2>
+            <h2  >Food & Drinks</h2>
           </figcaption> -->
       </figure>
     </div>
     <div class="row reduce_width">
-      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('fourthGrid');" (mouseleave)="resumeImage('fourthGrid');">
+      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('fourthGrid');" (mouseleave)="resumeImage('fourthGrid');" [routerLink]="['/categories', 'hobbies']">
         <div class="img-desc panel panel-default grid-align">
           <div class="panel-body">
             Hobbies
@@ -52,10 +53,10 @@
           <img class="img_height" />
         </div>
         <!-- <figcaption>
-            <h2 [routerLink]="['/categories', 'hobbies']">Hobbies</h2>
+            <h2 >Hobbies</h2>
           </figcaption> -->
       </figure>
-      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('fifthGrid');" (mouseleave)="resumeImage('fifthGrid');">
+      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('fifthGrid');" (mouseleave)="resumeImage('fifthGrid');" [routerLink]="['/categories', 'drive']">
         <div class="img-desc panel panel-default grid-align">
           <div class="panel-body">
             Drive
@@ -65,11 +66,11 @@
           <img class="img_height" />
         </div>
         <!-- <figcaption>
-            <h2 [routerLink]="['/categories', 'drive']">Drive</h2>
+            <h2>Drive</h2>
           </figcaption> -->
       </figure>
 
-      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('sixthGrid');" (mouseleave)="resumeImage('sixthGrid');">
+      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('sixthGrid');" (mouseleave)="resumeImage('sixthGrid');" [routerLink]="['/categories', 'sightseeing']">
         <div class="img-desc panel panel-default grid-align">
           <div class="panel-body">
             Sightseeing
@@ -79,7 +80,7 @@
           <img class="img_height" />
         </div>
         <!-- <figcaption>
-            <h2 [routerLink]="['/categories', 'sightseeing']">Sightseeing</h2>
+            <h2>Sightseeing</h2>
           </figcaption> -->
       </figure>
     </div>
