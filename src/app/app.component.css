@@ -4,8 +4,9 @@
 
 .navbar-custom .nav li a{
     font-size: 18px;
+    color:#e0b104;
+  font-weight: 700;
 }
-
 .text-shorth3{
 	margin-right: 18px;
     margin-top: 3px;
@@ -73,13 +74,14 @@ figure.col_grid figcaption {
     top: 0;
     left: 0;
     width: 100%;
+    color:#e0b104;
     height: 100%;
     cursor: pointer;
 }
 
 .reduce_width figure figcaption {
     padding: 2em;
-    color: #fff;
+    color: #e0b104;
     text-transform: uppercase;
     font-size: 1.25em;
     -webkit-backface-visibility: hidden;
@@ -126,7 +128,7 @@ figure.col_grid figcaption::before, figure.col_grid p {
 }
 .tag_line{
     padding-bottom: 5%;
-    color: #01679A;
+    color: #e0b104;
 }
 .navbar-nav{
     margin-top: 15px;
@@ -143,4 +145,9 @@ figure.col_grid figcaption::before, figure.col_grid p {
 }
 .navbar-brand{
     padding: 0;
+}
+.head-text{
+  font-size:xx-large;
+ font-weight:700;
+  color:#e0b104;
 }
