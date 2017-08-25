@@ -22,14 +22,10 @@
     list-style: none;
     font-size: larger;
     margin-bottom: 10px;
+    padding-left: 0;
 }
 .side-menu li{
     cursor: pointer;
     line-height: 36px;
 }
 
-@media only screen and (max-width: 1200px) {
-    .side-menu{
-        padding-left: 0;
-    }
-}
