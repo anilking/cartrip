@@ -3,19 +3,16 @@
     <div class="col-lg-8 col-lg-offset-2">
       <h1>Sign Up</h1>
       <p>
-        Hi! This is Kanishka Desai, Co-Founder of Qooley mobile app platform.
-      </p>
-      <p>
         Are you an experienced local, and want to create an activity for tourists visiting your town or city?
       </p>
       <p>
-        If yes, I would like to invite you to become a partner with Qooley. Once you fill out my form below, you will be placed on
-        the invite list for the QooleyBiz app.
+        If yes, we would like to invite you to become a partner with Qooley.
       </p>
-      <h3>Sign Up As A Qooley!</h3>
       <p>
-        Join fellow locals who are providing unforgettable experiences and earning a living while doing what they love to do, when
-        they want to do it!
+        Join fellow locals who are providing unforgettable experiences and earning a living while doing what they love to do, when they want to do it!
+      </p>
+      <p>
+        Once you fill out the form below, you will be placed on the invite list for the QooleyBiz app.
       </p>
       <form class="form" role="form" [formGroup]="signUpForm">
         <div class="row">
@@ -26,7 +23,7 @@
           </div>
           <div class="col-xs-6 col-md-6">
             <input [formControl]='signUpForm.controls["LastName"]' type="text" name="LastName" value="" class="form-control input-lg"
-              placeholder="Last Name" /> 
+              placeholder="Last Name" />
           <p class="error" *ngIf="signUpForm.controls['LastName'].hasError('required') && signUpForm.controls['LastName'].touched">Please enter Last Name</p>
             </div>
         </div>
