@@ -1,61 +1,90 @@
-
-  <div class="main_div">
-    <div class="grid">
-      <div class="row reduce_width">
-        <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('firstGrid');" (mouseleave)="resumeImage('firstGrid');">
-          <div id="firstGrid">
-            <img class="img_height" />
+<div class="main_div">
+  <div class="grid">
+    <div class="row reduce_width">
+      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('firstGrid');" (mouseleave)="resumeImage('firstGrid');">
+        <div class="img-desc panel panel-default grid-align">
+          <div class="panel-body">
+            Adventure
           </div>
-          <figcaption>
+        </div>
+        <div id="firstGrid">
+          <img class="img_height" />
+        </div>
+        <!-- <figcaption>
             <h2 [routerLink]="['/categories', 'adventure']">Adventure</h2>
-          </figcaption>
-        </figure>
-        <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('secondGrid');" (mouseleave)="resumeImage('secondGrid');">
-          <div id="secondGrid">
-            <img class="img_height" />
+          </figcaption> -->
+      </figure>
+      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('secondGrid');" (mouseleave)="resumeImage('secondGrid');">
+        <div class="img-desc panel panel-default grid-align">
+          <div class="panel-body">
+            Entertainment
           </div>
-          <figcaption>
-            <h2 [routerLink]="['/categories', 'entertainment']">Entertainment</h2>
-          </figcaption>
-        </figure>
-        <figure class="col-lg-4 col_grid food_drink" (mouseover)="pauseImage('thirdGrid');" (mouseleave)="resumeImage('thirdGrid');">
-          <div id="thirdGrid">
-            <img class="img_height" />
+        </div>
+        <div id="secondGrid">
+          <img class="img_height" />
+        </div>
+        <!-- <figcaption>
+            <h2 [routerLink]="['/categories', 'entertainment']"></h2>
+          </figcaption> -->
+      </figure>
+      <figure class="col-lg-4 col_grid food_drink" (mouseover)="pauseImage('thirdGrid');" (mouseleave)="resumeImage('thirdGrid');">
+        <div class="img-desc panel panel-default grid-align">
+          <div class="panel-body">
+            Food & Drinks
           </div>
-          <figcaption>
+        </div>
+        <div id="thirdGrid">
+          <img class="img_height" />
+        </div>
+        <!-- <figcaption>
             <h2  [routerLink]="['/categories', 'food']">Food & Drinks</h2>
-          </figcaption>
-        </figure>
-      </div>
-      <div class="row reduce_width">
-        <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('fourthGrid');" (mouseleave)="resumeImage('fourthGrid');">
-          <div id="fourthGrid">
-            <img class="img_height" />
+          </figcaption> -->
+      </figure>
+    </div>
+    <div class="row reduce_width">
+      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('fourthGrid');" (mouseleave)="resumeImage('fourthGrid');">
+        <div class="img-desc panel panel-default grid-align">
+          <div class="panel-body">
+            Hobbies
           </div>
-          <figcaption>
+        </div>
+        <div id="fourthGrid">
+          <img class="img_height" />
+        </div>
+        <!-- <figcaption>
             <h2 [routerLink]="['/categories', 'hobbies']">Hobbies</h2>
-          </figcaption>
-        </figure>
-        <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('fifthGrid');" (mouseleave)="resumeImage('fifthGrid');">
-          <div id="fifthGrid">
-            <img class="img_height" />
+          </figcaption> -->
+      </figure>
+      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('fifthGrid');" (mouseleave)="resumeImage('fifthGrid');">
+        <div class="img-desc panel panel-default grid-align">
+          <div class="panel-body">
+            Drive
           </div>
-          <figcaption>
+        </div>
+        <div id="fifthGrid">
+          <img class="img_height" />
+        </div>
+        <!-- <figcaption>
             <h2 [routerLink]="['/categories', 'drive']">Drive</h2>
-          </figcaption>
-        </figure>
+          </figcaption> -->
+      </figure>
 
-        <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('sixthGrid');" (mouseleave)="resumeImage('sixthGrid');">
-          <div id="sixthGrid">
-            <img class="img_height" />
+      <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('sixthGrid');" (mouseleave)="resumeImage('sixthGrid');">
+        <div class="img-desc panel panel-default grid-align">
+          <div class="panel-body">
+            Sightseeing
           </div>
-          <figcaption>
+        </div>
+        <div id="sixthGrid">
+          <img class="img_height" />
+        </div>
+        <!-- <figcaption>
             <h2 [routerLink]="['/categories', 'sightseeing']">Sightseeing</h2>
-          </figcaption>
-        </figure>
-      </div>
+          </figcaption> -->
+      </figure>
     </div>
   </div>
+</div>
 <video controls width="100%" preload="metadata">
   <source src="assets/videos/qooley.mov" type="video/mp4">
   <source src="assets/videos/qooley.mov" type="video/ogg"> Your browser does not support HTML5 video.
