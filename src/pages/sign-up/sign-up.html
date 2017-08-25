@@ -55,7 +55,30 @@
           </div>
         </div>
         <br/>
-        <a [class.disabled]="signUpForm.invalid" class="btn btn-lg btn-primary btn-block signup-btn"  href="javascript:;"> Submit</a>
+        <a [class.disabled]="signUpForm.invalid" class="btn btn-lg btn-primary btn-block signup-btn" data-toggle="modal" data-target="#sucess" (click)='onSubmit();'  href="javascript:;"> Submit</a>
       </form>
     </div>
+
+    <!-- Modal -->
+  <div class="modal fade" id="sucess" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Alert</h4>
+        </div>
+        <div class="modal-body">
+          <p><b>Thank You! </b> for signing up to register as a Qooley.  You will receive the download link to the QooleyBiz mobile app when it is live.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
 </div>

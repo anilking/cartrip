@@ -20,14 +20,6 @@ export class ContactUsComponent {
   }
 
   onSubmit(){
-    let toastOptions: any = {
-      type: 'success',
-      body: "Thanks for sending your message! We'll get back to you shortly",
-      title: 'Alert',
-      position: 'toast-top-right',
-      url: false
-    };
-    this.toastr.showToastr(toastOptions);
     this.contactForm.reset({});
   }
 }

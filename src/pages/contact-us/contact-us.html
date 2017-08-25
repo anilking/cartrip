@@ -1,31 +1,53 @@
 <div class="container content-section">
-    <div class="col-lg-8 col-lg-offset-2 text-center">
-      <h1>Contact Us </h1>
+  <div class="col-lg-8 col-lg-offset-2 text-center">
+    <h1>Contact Us </h1>
 
-      <h4>Leave your feedback or suggestions below.</h4>
+    <h4>Leave your feedback or suggestions below.</h4>
 
-      <h4>Or, let us know if you’re interested in becoming a Qooley.</h4>
+    <h4>Or, let us know if you’re interested in becoming a Qooley.</h4>
 
-      <p>You may call or e-mail us directly.</p>
+    <p>You may call or e-mail us directly.</p>
 
-      <p><b>Phone:</b> 1-800-9QOOLEY* (In process of obtaining) </p>
+    <p><b>Phone:</b> 1-800-9QOOLEY* (In process of obtaining) </p>
 
-      <p><b>E-mail:</b> support@qooley.com</p>
+    <p><b>E-mail:</b> support@qooley.com</p>
 
-      <p>Or write your feedback or suggestions below.</p>
-      <form class="form" role="form" [formGroup]="contactForm">
-        <input [formControl]='contactForm.controls["Name"]' type="text" name="name" value="" class="form-control input-lg" placeholder="Name *"
-        />
-        <p class="error" *ngIf="contactForm.controls['Name'].hasError('required') && contactForm.controls['Name'].touched">Please enter Name</p>
-        <input [formControl]='contactForm.controls["Email"]' type="email" name="email" value="" class="form-control input-lg" placeholder="Your Email *"
-        />
-        <p class="error" *ngIf="(contactForm.controls['Email'].hasError('required') && contactForm.controls['Email'].touched) || (contactForm.controls['Email'].touched && contactForm.controls['Email'].invalid)">Please enter valid email Id</p>
-        <div class="form-group">
-          <textarea [formControl]='contactForm.controls["Comment"]' class="form-control input-lg" rows="5" name="comment" placeholder="Comments *"></textarea>
-          <p class="error" *ngIf="contactForm.controls['Comment'].hasError('required') && contactForm.controls['Comment'].touched">Please enter your comment</p>
-        </div>
-        <br />
-        <a [class.disabled]='contactForm.invalid' href="javascript:;" class="btn btn-lg btn-primary btn-block signup-btn" (click)='onSubmit();'> Submit</a>
-      </form>
+    <p>Or write your feedback or suggestions below.</p>
+    <form class="form" role="form" [formGroup]="contactForm">
+      <input [formControl]='contactForm.controls["Name"]' type="text" name="name" value="" class="form-control input-lg" placeholder="Name *"
+      />
+      <p class="error" *ngIf="contactForm.controls['Name'].hasError('required') && contactForm.controls['Name'].touched">Please enter Name</p>
+      <input [formControl]='contactForm.controls["Email"]' type="email" name="email" value="" class="form-control input-lg" placeholder="Your Email *"
+      />
+      <p class="error" *ngIf="(contactForm.controls['Email'].hasError('required') && contactForm.controls['Email'].touched) || (contactForm.controls['Email'].touched && contactForm.controls['Email'].invalid)">Please enter valid email Id</p>
+      <div class="form-group">
+        <textarea [formControl]='contactForm.controls["Comment"]' class="form-control input-lg" rows="5" name="comment" placeholder="Comments *"></textarea>
+        <p class="error" *ngIf="contactForm.controls['Comment'].hasError('required') && contactForm.controls['Comment'].touched">Please enter your comment</p>
       </div>
+      <br />
+      <a [class.disabled]='contactForm.invalid' href="javascript:;" class="btn btn-lg btn-primary btn-block signup-btn" data-toggle="modal" data-target="#sucess" (click)='onSubmit();'> Submit</a>
+    </form>
   </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="sucess" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Alert</h4>
+        </div>
+        <div class="modal-body">
+          <p><b>Thank You! </b> for signing up to register as a Qooley. You will receive the download link to the QooleyBiz
+            mobile app when it is live.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

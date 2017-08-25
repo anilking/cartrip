@@ -18,6 +18,10 @@ export class SignUpComponent {
           'Town': [null, Validators.required]
 		  });
     }
+
+    onSubmit(){
+      this.signUpForm.reset({});
+    }
 }
 
 
