@@ -1,4 +1,27 @@
 <div class="main_div">
+
+  <!-- Intro Header -->
+<header class="col-lg-12 intro animated finite zoomIn" #mainScreen>
+  <div class="set-position-div">
+    <img class="main-log" src="assets/img/qlogo.png" />
+    <h3 class="tag_line">Live The Local Experience</h3>
+    <ul class="list-inline banner-social-buttons">
+      <li class="col-xs-6 col-md-6 col-lg-6 left-btn">
+        <a routerLink='welcome' class="btn btnghost btn-lg"><span class="network-name">TRAVEL WITH QOOLEY</span></a>
+      </li>
+      <li class="col-xs-6 col-md-6 col-lg-6">
+        <a routerLink='become-qooley' class="btn btnghost btn-lg"><span class="network-name">BECOME A QOOLEY</span></a>
+      </li>
+    </ul>
+  </div>
+    <video width="100%" loop preload="metadata" autoplay>
+      <source src="assets/videos/Heaven.mp4" type="video/mp4">
+      <source src="assets/videos/Heaven.mp4" type="video/ogg"> Your browser does not support HTML5 video.
+    </video>
+
+</header>
+
+
   <div class="grid">
     <div class="row reduce_width">
       <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('firstGrid');" (mouseleave)="resumeImage('firstGrid');" [routerLink]="['/categories', 'adventure']">

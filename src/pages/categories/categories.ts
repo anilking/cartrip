@@ -7,7 +7,7 @@ declare var $;
   styleUrls: ['categories.scss']
 })
 export class CategoriesComponent {
-  public title: any = "";
+  public title: any = "categories";
   public category: string = 'food';
   public arrayImgs: Array<string> = [];
   constructor(private route: ActivatedRoute) {

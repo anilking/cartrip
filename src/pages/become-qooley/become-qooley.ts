@@ -8,7 +8,7 @@ declare var $;
   styleUrls: ['become-qooley.scss']
 })
 export class BecomeQooleyComponent {
-
+  public title: any = "Becomen Qooley";
   toggleIcon(e) {
     if (e.target.children[0].className == "more-less glyphicon glyphicon-plus") {
       e.target.children[0].className = "more-less glyphicon glyphicon-minus";

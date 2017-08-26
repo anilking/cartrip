@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { AppService } from './../providers/services/app.service';
 
 declare var $;
@@ -11,7 +11,7 @@ export class AppComponent {
 
   title = 'app works!';
   @ViewChild('mainScreen') elementView: ElementRef;
-
+  public isLandingPage: boolean = false;
   constructor(private appService: AppService) {
 
   }
@@ -28,7 +28,7 @@ export class AppComponent {
       'assets/img/AdventureTheme/7.jpg',
       'assets/img/AdventureTheme/8.jpg',
       'assets/img/AdventureTheme/9.jpg',
-      'assets/img/AdventureTheme/10.jpg' ],
+      'assets/img/AdventureTheme/10.jpg'],
       { duration: 3000, fade: 100 });
 
     $('#secondGrid').backstretch([
@@ -56,32 +56,32 @@ export class AppComponent {
       'assets/img/FoodieTheme/11.jpg'],
       { duration: 5000, fade: 100 });
 
-      $('#fourthGrid').backstretch([
-       'assets/img/Hobbies/1.jpg',
-       'assets/img/Hobbies/2.jpg',
-       'assets/img/Hobbies/3.jpg',
-       'assets/img/Hobbies/4.jpg',
-       'assets/img/Hobbies/5.jpg',
-       'assets/img/Hobbies/6.jpg',
-       'assets/img/Hobbies/7.jpg'],
-       { duration: 3000, fade: 100 });
- 
-     $('#fifthGrid').backstretch([
-       'assets/img/RideAlongTheme/1.jpg',
-       'assets/img/RideAlongTheme/2.jpg',
-       'assets/img/RideAlongTheme/3.jpg',
-       'assets/img/RideAlongTheme/4.jpg',
-       'assets/img/RideAlongTheme/5.jpg'],
-       { duration: 2000, fade: 100 });
- 
-     $('#sixthGrid').backstretch([
-       'assets/img/SightseeingTheme/1.jpg',
-       'assets/img/SightseeingTheme/2.jpg',
-       'assets/img/SightseeingTheme/3.jpg',
-       'assets/img/SightseeingTheme/4.jpg',
-       'assets/img/SightseeingTheme/5.jpg',
-       'assets/img/SightseeingTheme/6.jpg'],
-       { duration: 5000, fade: 100 });
+    $('#fourthGrid').backstretch([
+      'assets/img/Hobbies/1.jpg',
+      'assets/img/Hobbies/2.jpg',
+      'assets/img/Hobbies/3.jpg',
+      'assets/img/Hobbies/4.jpg',
+      'assets/img/Hobbies/5.jpg',
+      'assets/img/Hobbies/6.jpg',
+      'assets/img/Hobbies/7.jpg'],
+      { duration: 3000, fade: 100 });
+
+    $('#fifthGrid').backstretch([
+      'assets/img/RideAlongTheme/1.jpg',
+      'assets/img/RideAlongTheme/2.jpg',
+      'assets/img/RideAlongTheme/3.jpg',
+      'assets/img/RideAlongTheme/4.jpg',
+      'assets/img/RideAlongTheme/5.jpg'],
+      { duration: 2000, fade: 100 });
+
+    $('#sixthGrid').backstretch([
+      'assets/img/SightseeingTheme/1.jpg',
+      'assets/img/SightseeingTheme/2.jpg',
+      'assets/img/SightseeingTheme/3.jpg',
+      'assets/img/SightseeingTheme/4.jpg',
+      'assets/img/SightseeingTheme/5.jpg',
+      'assets/img/SightseeingTheme/6.jpg'],
+      { duration: 5000, fade: 100 });
 
     this.appService.hide();
   };
@@ -93,9 +93,33 @@ export class AppComponent {
     $('#' + id).backstretch('resume');
   }
 
-  scrollToDown() {
-    // this.appService.show();
-    window.scrollTo(0, this.elementView.nativeElement.offsetHeight - 30 );
+
+  @HostListener('window:scroll', ['$event'])
+  doSomething(event) {
+    if (!this.isLandingPage) {
+      if ($(".navbar").offset().top > 50) {
+        $(".navbar-fixed-top").addClass("top-nav-collapse");
+      } else {
+        $(".navbar-fixed-top").removeClass("top-nav-collapse");
+      }
+    }
+  }
+
+  //scroll view to top on routing change
+  onActivate(e) {
+    if (e.title) {
+      this.isLandingPage = true;
+    }
+    else {
+      this.isLandingPage = false;
+    }
+    if (window.navigator.userAgent == "Safari") {
+      setTimeout(function () {
+        window.scrollTo(0, 1);
+      }, 0);
+    } else {
+      window.scrollTo(0, 0);
+    }
   }
 
 }

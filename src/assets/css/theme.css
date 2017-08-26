@@ -315,6 +315,16 @@ footer h3.credits{
 	h3,h4{
 		font-size: 16px;
 	}
+	.navbar-brand{
+		margin-top: 10px;
+	}
+	.navbar-toggle{
+		font-size: 25px;
+	}
+	.navbar-banner-cls{
+		background-image: url(/assets/img/banner.png);
+    	background-position: 50% 50% !important;
+	}
 }
 ::-moz-selection {
 	text-shadow:none;
@@ -687,4 +697,7 @@ section {
     margin-top: 0;
 }
 
+.contenter-margin-top{
+	margin-top: 75px;
+}
 
