@@ -36,12 +36,14 @@ export class ContactUsComponent {
       "email": this.contactForm.value['Email'],
       "comment": this.contactForm.value['Comment']
     };
-
+    this.appService.show();
     this.appService.makeRequestWithAction(params, action)
       .subscribe(
       data => {
+        this.appService.hide();
         if (data.message.indexOf('Thank') > -1) {
           this.successMsg = data.message;
+          document.getElementById("onModelPopup").click();
           this.contactForm.reset({});
         } else {
           //Display Toast
@@ -51,6 +53,7 @@ export class ContactUsComponent {
       },
       error => {
         //Display Toast
+        this.appService.hide();
         toastOptions.body = error.message;
         this.toastr.showToastr(toastOptions);
       }
