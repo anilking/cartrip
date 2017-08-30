@@ -124,7 +124,7 @@ a:hover,a:focus {
 	width:100%;
 	height:auto;
 	padding: 0;
-	/* padding:100px 0 100px 0; AnilP*/ 
+	/* padding:100px 0 100px 0; AnilP*/
 	text-align:center;
 	color:#fff;
 	/*background-image:radial-gradient(circle at 50% 50%,rgba(0,0,0,0.46),rgba(0,0,0,0.88)),url('/assets/img/cropped-fullsizerender2.jpg');*/
@@ -246,15 +246,15 @@ a:hover,a:focus {
 	transition:all .3s ease-in-out;
 }
 .btn-default {
-	border:1px solid #42dca3;
-	color:#42dca3;
+	border:1px solid #e0b104;
+	color:#e0b104;
 	background-color:transparent;
 }
 .btn-default:hover,.btn-default:focus {
-	border:1px solid #42dca3;
+	border:1px solid #e0b104;
 	outline:0;
 	color:#000;
-	background-color:#42dca3;
+	background-color:#e0b104;
 }
 ul.banner-social-buttons {
 	margin-top:0;
@@ -362,7 +362,7 @@ p.lead {
 	background-color:transparent;
 	padding:15px 20px;
 	letter-spacing:3px;
-	font-size:16px;
+	font-size:18px;
 	text-transform:uppercase;
 	font-weight:600;
 	color: #23527c;
