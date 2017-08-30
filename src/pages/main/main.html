@@ -1,121 +1,116 @@
 <div class="main_div">
 
   <!-- Intro Header -->
-<header class="col-lg-12 intro animated finite zoomIn" #mainScreen>
-  <div class="set-position-div">
-    <img class="main-log" src="assets/img/qlogo.png" />
-    <h3 class="tag_line">Live The Local Experience</h3>
-    <ul class="list-inline banner-social-buttons">
-      <li class="col-xs-6 col-md-6 col-lg-6 left-btn">
-        <a routerLink='welcome' class="btn btnghost btn-lg"><span class="network-name">TRAVEL WITH QOOLEY</span></a>
-      </li>
-      <li class="col-xs-6 col-md-6 col-lg-6">
-        <a routerLink='become-qooley' class="btn btnghost btn-lg"><span class="network-name">BECOME A QOOLEY</span></a>
-      </li>
-    </ul>
-  </div>
-    <!-- <video width="100%" loop preload="metadata" autoplay>
+  <header class="col-lg-12 intro animated finite zoomIn" #mainScreen>
+    <div class="set-position-div">
+      <img class="main-log" src="assets/img/qlogo.png" />
+      <h3 class="tag_line">Live The Local Experience</h3>
+      <ul class="list-inline banner-social-buttons">
+        <li class="col-xs-6 col-md-6 col-lg-6 left-btn">
+          <a routerLink='welcome' class="btn btnghost btn-lg"><span class="network-name">TRAVEL WITH QOOLEY</span></a>
+        </li>
+        <li class="col-xs-6 col-md-6 col-lg-6">
+          <a routerLink='become-qooley' class="btn btnghost btn-lg"><span class="network-name">BECOME A QOOLEY</span></a>
+        </li>
+      </ul>
+    </div>
+    <video width="100%" loop preload="metadata" autoplay>
       <source src="assets/videos/Heaven.mp4" type="video/mp4">
       <source src="assets/videos/Heaven.mp4" type="video/ogg"> Your browser does not support HTML5 video.
-    </video> -->
-<div class="js-video [vimeo, widescreen]">
-    <iframe src="https://player.vimeo.com/video/230789799?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
-</header>
+    </video>
+
+  </header>
 
 
   <div class="grid">
     <div class="row reduce_width">
       <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('firstGrid');" (mouseleave)="resumeImage('firstGrid');" [routerLink]="['/categories', 'adventure']">
         <div class="img-desc panel panel-default grid-align">
-          <div class="panel-body">
-            Adventure
-          </div>
+          <!--<div class="panel-body">-->
+          <!--Adventure-->
+          <!--</div>-->
         </div>
         <div id="firstGrid">
           <img class="img_height" />
         </div>
-        <!-- <figcaption>
-            <h2>Adventure</h2>
-          </figcaption> -->
+        <figcaption>
+          <h2>Adventure</h2>
+        </figcaption>
       </figure>
       <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('secondGrid');" (mouseleave)="resumeImage('secondGrid');" [routerLink]="['/categories', 'entertainment']">
         <div class="img-desc panel panel-default grid-align">
-          <div class="panel-body">
-            Entertainment
-          </div>
+          <!--<div class="panel-body">-->
+          <!--Entertainment-->
+          <!--</div>-->
         </div>
         <div id="secondGrid">
           <img class="img_height" />
         </div>
-        <!-- <figcaption>
-            <h2 ></h2>
-          </figcaption> -->
+        <figcaption>
+          <h2>Entertainment</h2>
+        </figcaption>
       </figure>
       <figure class="col-lg-4 col_grid food_drink" (mouseover)="pauseImage('thirdGrid');" (mouseleave)="resumeImage('thirdGrid');"
-        [routerLink]="['/categories', 'food']">
+              [routerLink]="['/categories', 'food']">
         <div class="img-desc panel panel-default grid-align">
-          <div class="panel-body">
-            Food & Drinks
-          </div>
+          <!--<div class="panel-body">-->
+          <!--Food & Drinks-->
+          <!--</div>-->
         </div>
         <div id="thirdGrid">
           <img class="img_height" />
         </div>
-        <!-- <figcaption>
-            <h2  >Food & Drinks</h2>
-          </figcaption> -->
+        <figcaption>
+          <h2  >Food & Drinks</h2>
+        </figcaption>
       </figure>
     </div>
     <div class="row reduce_width">
       <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('fourthGrid');" (mouseleave)="resumeImage('fourthGrid');" [routerLink]="['/categories', 'hobbies']">
         <div class="img-desc panel panel-default grid-align">
-          <div class="panel-body">
-            Hobbies
-          </div>
+          <!--<div class="panel-body">-->
+          <!--Hobbies-->
+          <!--</div>-->
         </div>
         <div id="fourthGrid">
           <img class="img_height" />
         </div>
-        <!-- <figcaption>
-            <h2 >Hobbies</h2>
-          </figcaption> -->
+        <figcaption>
+          <h2 >Hobbies</h2>
+        </figcaption>
       </figure>
       <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('fifthGrid');" (mouseleave)="resumeImage('fifthGrid');" [routerLink]="['/categories', 'drive']">
         <div class="img-desc panel panel-default grid-align">
-          <div class="panel-body">
-            Drive
-          </div>
+          <!--<div class="panel-body">-->
+          <!--Drive-->
+          <!--</div>-->
         </div>
         <div id="fifthGrid">
           <img class="img_height" />
         </div>
-        <!-- <figcaption>
-            <h2>Drive</h2>
-          </figcaption> -->
+        <figcaption>
+          <h2>Drive</h2>
+        </figcaption>
       </figure>
 
       <figure class="col-lg-4 col_grid" (mouseover)="pauseImage('sixthGrid');" (mouseleave)="resumeImage('sixthGrid');" [routerLink]="['/categories', 'sightseeing']">
         <div class="img-desc panel panel-default grid-align">
-          <div class="panel-body">
-            Sightseeing
-          </div>
+          <!--<div class="panel-body">-->
+          <!--Sightseeing-->
+          <!--</div>-->
         </div>
         <div id="sixthGrid">
           <img class="img_height" />
         </div>
-        <!-- <figcaption>
-            <h2>Sightseeing</h2>
-          </figcaption> -->
+        <figcaption>
+          <h2>Sightseeing</h2>
+        </figcaption>
       </figure>
     </div>
   </div>
 </div>
-
-<!-- <video controls width="100%" preload="metadata">
+<video controls width="100%" preload="metadata">
   <source src="assets/videos/qooley.mov" type="video/mp4">
   <source src="assets/videos/qooley.mov" type="video/ogg"> Your browser does not support HTML5 video.
-</video> -->
-<div class="js-video [vimeo, widescreen]">
-<iframe src="https://player.vimeo.com/video/230714994?title=0&byline=0&portrait=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
+</video>
+
