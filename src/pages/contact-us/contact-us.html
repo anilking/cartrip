@@ -25,7 +25,8 @@
         <p class="error" *ngIf="contactForm.controls['Comment'].hasError('required') && contactForm.controls['Comment'].touched">Please enter your comment</p>
       </div>
       <br />
-      <a [class.disabled]='contactForm.invalid' href="javascript:;" class="btn btn-lg btn-primary btn-block signup-btn" data-toggle="modal" data-target="#sucess" (click)='onSubmit();'> Submit</a>
+      <a [class.disabled]='contactForm.invalid' href="javascript:;" class="btn btn-lg btn-primary btn-block signup-btn" (click)='onSubmit();'> Submit</a>
+      <a id="onModelPopup" class="btn btn-lg btn-primary btn-block signup-btn display-none" data-toggle="modal" data-target="#sucess"   href="javascript:;"> Model popup</a>
     </form>
   </div>
 

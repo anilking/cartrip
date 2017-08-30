@@ -45,6 +45,12 @@ export class AppService {
       .catch(this.handleError);
   }
 
+  // make request with no parameters
+	makeGetWithAction(action) {
+		return this.http.get(this.url + action, this.options)
+			.map(res => res.json());
+	}
+
   private extractData(res: Response) {
     let body = res.json();
     return body || {};

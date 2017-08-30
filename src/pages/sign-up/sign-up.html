@@ -35,27 +35,13 @@
         <p class="error" *ngIf="signUpForm.controls['Town'].hasError('required') && signUpForm.controls['Town'].touched">Please enter Town</p>
         <div class="text-left">
           <p class="categories-listcls"> Select the Categories you would be interested in creating Services for: * </p>
-          <div class="checkbox">
-            <label><input type="checkbox" value=""> Adventure </label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" value=""> Food & Drinks </label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" value=""> Sightseeing  </label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" value=""> Entertainment & NightLife </label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" value=""> Hobbies & Skills  </label>
-          </div>
-          <div class="checkbox">
-            <label><input type="checkbox" value=""> Driving Services </label>
+          <div class="checkbox" *ngFor="let categorie of categories">
+            <label><input type="checkbox" (change)="onChange(categorie.category.id, $event.target.checked)" value="categorie.category.id"> {{categorie.category.name}} </label>
           </div>
         </div>
         <br/>
-        <a [class.disabled]="signUpForm.invalid" class="btn btn-lg btn-primary btn-block signup-btn" data-toggle="modal" data-target="#sucess" (click)='onSubmit();'  href="javascript:;"> Submit</a>
+        <a [class.disabled]='signUpForm.invalid' class="btn btn-lg btn-primary btn-block signup-btn" (click)='onSubmit();'  href="javascript:;"> Submit</a>
+        <a id="onModelPopup" class="btn btn-lg btn-primary btn-block signup-btn display-none" data-toggle="modal" data-target="#sucess"   href="javascript:;"> Model popup</a>
       </form>
     </div>
 
@@ -70,7 +56,7 @@
           <h4 class="modal-title">Alert</h4>
         </div>
         <div class="modal-body">
-          <p><b>Thank You! </b> for signing up to register as a Qooley.  You will receive the download link to the QooleyBiz mobile app when it is live.</p>
+          <p> {{successMsg}} </p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
