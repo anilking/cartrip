@@ -10,7 +10,7 @@ export class PrivacyPolicyComponent {
     public page : string = 'Privacy Policy';
     public scrollElement(id) {
     let element = document.getElementById(id);
-    window.scrollTo(0, element.offsetTop - (-670));
+    window.scrollTo(0, element.offsetTop);
   }
 
   toggleIcon(value){
