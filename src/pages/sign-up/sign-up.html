@@ -36,7 +36,7 @@
         <div class="text-left">
           <p class="categories-listcls"> Select the Categories you would be interested in creating Services for: * </p>
           <div class="checkbox" *ngFor="let categorie of categories">
-            <label><input type="checkbox" (change)="onChange(categorie.category.id, $event.target.checked)" value="categorie.category.id"> {{categorie.category.name}} </label>
+            <label><input type="checkbox" [checked]="signUpForm.value['category_ids'].indexOf(categorie.category.id) >= 0" (change)="onChange(categorie.category.id, $event.target.checked)" value="categorie.category.id"> {{categorie.category.name}} </label>
           </div>
         </div>
         <br/>
