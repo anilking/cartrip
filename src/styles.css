@@ -109,6 +109,13 @@ and (orientation : portrait) {
     .content-section{
         padding: 6px 2px;
     }
+    .safty-label{
+        padding: 20px;
+        margin-left: 51%;
+    }
+    .termscls{
+        margin-right: 0 !important;
+    }
 }
  
 /* Smartphones (portrait) ----------- */
@@ -150,6 +157,7 @@ and (max-width : 320px) {
     .left-btn{
         left: 12px;
     }
+    
 }
 
 @media only screen
@@ -177,6 +185,12 @@ and (max-width : 479px) {
     .content-section{
         padding: 0;
     }
+    .termscls{
+        float: right;
+        margin-left: 0 !important;
+        margin-right: 24%;
+        text-decoration: underline;
+    }
 }
 
 @media only screen
@@ -201,6 +215,11 @@ and (max-width : 550px) {
     .content-section{
         padding: 6px 2px;
     }
+    .termscls{
+        float: right;
+        margin-right: 26%;
+        text-decoration: underline;
+    }
 }
 
 @media only screen
@@ -224,6 +243,14 @@ and (max-width : 768px) {
     }
     .content-section{
         padding: 6px 2px;
+    }
+    .termscls{
+        float: right;
+        margin-right: 26%;
+        text-decoration: underline;
+    }
+    .safty-label{
+        padding: 20px;
     }
 }
  
