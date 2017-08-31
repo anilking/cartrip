@@ -84,6 +84,7 @@ onChange(id:string, isChecked: boolean) {
       "long": coords.longitude,
       "category_ids": this.signUpForm.value['category_ids']
     };
+
     this.appService.show();
     this.appService.makeRequestWithAction(params, action)
       .subscribe(
