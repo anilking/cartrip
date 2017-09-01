@@ -151,3 +151,6 @@ figure.col_grid figcaption::before, figure.col_grid p {
  font-weight:700;
   color:#e0b104;
 }
+.social-links{
+    z-index: 1000;
+}
