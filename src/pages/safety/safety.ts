@@ -6,6 +6,8 @@ import { Component } from '@angular/core';
 })
 export class SafetyComponent {
     public title: any = "Safety";
+
+    
 }
 
 
